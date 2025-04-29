@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 // Define metadata for the site
 export const metadata: Metadata = {
-  title: "Dieudonne - 3D Designer Portfolio",
-  description: "Portfolio showcasing 3D design projects and creative work by Dieudonne.",
+  title: "Dieudonne - Designer & Developer Portfolio",
+  description: "Portfolio showcasing 3D design, web development, programming, and creative work by Dieudonne.",
   generator: 'v0.dev'
 }
 

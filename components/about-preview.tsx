@@ -20,7 +20,7 @@ export default function AboutPreview() {
           >
             <Image
               src="/passportme.jpg"
-              alt="Dieudonne - 3D Designer"
+              alt="Dieudonne - 3D Designer & Web Developer"
               fill
               className="object-cover"
             />
@@ -34,13 +34,10 @@ export default function AboutPreview() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
             <p className="text-black/70 dark:text-white/70 mb-4">
-              I'm Dieudonne, a passionate 3D designer and visual artist with over 3 years of experience creating
-              immersive digital experiences. My work spans from detailed design to stylized modeling
-              and product rendering.
+              I'm Dieudonne, a multidisciplinary creator with 3+ years of experience in 3D design, web development, and programming. My work spans immersive digital experiences, interactive web applications, and visually stunning 3D assets. I thrive at the intersection of art and technology, using tools like React, Next.js, Blender, Node.js, and more to bring ideas to life.
             </p>
             <p className="text-black/70 dark:text-white/70 mb-6">
-              My design philosophy centers around blending technical precision with artistic expression, creating
-              visually stunning and functionally effective 3D assets and environments.
+              My philosophy is to blend technical precision with creative expression—whether I'm building a web app, designing a 3D environment, or developing a new feature. I love solving problems and telling stories through both code and design.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -54,7 +51,7 @@ export default function AboutPreview() {
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Specialization</h4>
-                <p className="text-black/70 dark:text-white/70">3D Modeling & Animation,Programming and Web development.</p>
+                <p className="text-black/70 dark:text-white/70">3D Design, Web Development, Programming</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Availability</h4>

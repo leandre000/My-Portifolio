@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-xl font-bold mb-4">Dieudonne</h3>
             <p className="text-black/70 dark:text-white/70 max-w-md">
-              Creating immersive 3D experiences and designs that push the boundaries of digital art and visualization.
+              Creating immersive 3D experiences, interactive web applications, and designs that push the boundaries of digital art, technology, and visualization.
             </p>
           </div>
 

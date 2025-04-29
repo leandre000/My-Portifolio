@@ -40,7 +40,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl font-medium mb-6 text-black/80 dark:text-white/80"
           >
-            3D Designer & Visual Artist
+            3D Designer, Web Developer & Programmer
           </motion.h2>
 
           {/* Description paragraph */}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="text-lg md:text-xl text-black/70 dark:text-white/70 max-w-2xl mx-auto mb-10"
           >
-            Creating immersive digital experiences through innovative 3D design and visual storytelling
+            Creating immersive digital experiences, interactive web applications, and stunning 3D visuals using tools like React, Next.js, Blender, Node.js, and more.
           </motion.p>
 
           {/* Call-to-action buttons */}

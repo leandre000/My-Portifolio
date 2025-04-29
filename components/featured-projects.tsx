@@ -22,7 +22,7 @@ const projects = [
   {
     id: 2,
     title: "Stylized Abandoned robot",
-    description: "Default cubes usually get trashed fast, but they’re not useless—this awesome model was made using only cubes! Inspired by the Cubic Worlds course by CGBoost, it proves even the most boring block can build something cool. 🧊🔥",
+    description: "Default cubes usually get trashed fast, but they're not useless—this awesome model was made using only cubes! Inspired by the Cubic Worlds course by CGBoost, it proves even the most boring block can build something cool. 🧊🔥",
     image: "/robot.png",
     category: "Character Design",
     has3DModel: false,
@@ -36,6 +36,16 @@ const projects = [
     category: "Product Visualization",
     has3DModel: false,
     modelUrl: "/models/shoes.glb"
+  },
+  {
+    id: 10,
+    title: "Neuros (AI Business Analytics)",
+    description: "A generative business intelligence platform for analysts. AI-powered analytics, real-time dashboards, and seamless integrations. Built with Next.js, TypeScript, and advanced data visualization.",
+    image: "/neuros.png",
+    category: "Web App / AI / Dashboard",
+    has3DModel: false,
+    github: "https://github.com/Dieudonne000/neuros",
+    live: "https://neuros-omega.vercel.app/",
   },
 ]
 
@@ -99,7 +109,7 @@ export default function FeaturedProjects() {
                 {activeModelIndex === index && project.has3DModel ? (
                   <div className="w-full h-full">
                     {/* 3D model viewer component */}
-                    <ModelViewer modelUrl={project.modelUrl} className="w-full h-full" />
+                    <ModelViewer modelUrl={project.modelUrl || ""} className="w-full h-full" />
                     {/* Button to switch back to image view */}
                     <Button
                       variant="outline"
@@ -137,7 +147,7 @@ export default function FeaturedProjects() {
                     )}
                     {/* Overlay with project details on hover */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6"
+                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6"
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
@@ -148,6 +158,27 @@ export default function FeaturedProjects() {
                         </span>
                         <h3 className="text-xl font-bold text-white mt-1">{project.title}</h3>
                         <p className="text-white/80 mt-2">{project.description}</p>
+                        {/* Add GitHub and Live buttons if available */}
+                        {project.github && project.live && (
+                          <div className="flex gap-2 mt-4">
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 dark:bg-black/80 text-black dark:text-white rounded hover:bg-white hover:text-black hover:underline transition"
+                            >
+                              GitHub
+                            </a>
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block px-3 py-1 text-xs font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                            >
+                              Live Site
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   </>

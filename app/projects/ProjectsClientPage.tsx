@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import ModelViewer from "@/components/model-viewer"
 import { CuboidIcon, PlayIcon } from "lucide-react"
 
-const categories = ["All", "3D Modeling", "Character Design", "Product Visualization", "Architectural", "Animation"]
+const categories = ["All", "3D Modeling", "Character Design", "Product Visualization", "Architectural", "Animation", "Web App", "AI", "Dashboard"]
 
 const projects = [
   {
@@ -88,6 +88,30 @@ const projects = [
     mediaType: "video",
     videoUrl: "/videos/cinematic-opening.mp4",
   },
+  {
+    id: 100,
+    title: "Neuros (AI Business Analytics)",
+    description: "A generative business intelligence platform for analysts. AI-powered analytics, real-time dashboards, and seamless integrations. Built with Next.js, TypeScript, and advanced data visualization.",
+    image: "/neuros.png",
+    categories: ["Web App", "AI", "Dashboard"],
+    year: 2025,
+    has3DModel: false,
+    github: "https://github.com/Dieudonne000/neuros",
+    live: "https://neuros-omega.vercel.app/",
+    mediaType: "image",
+  },
+  {
+    id: 101,
+    title: "Umurava UI Dashboard",
+    description: "A talent portal and dashboard for skills challenges, hackathons, and community engagement. Built with Next.js, TypeScript, and a modern UI/UX.",
+    image: "/umurava.png",
+    categories: ["Web App", "Dashboard"],
+    year: 2025,
+    has3DModel: false,
+    github: "https://github.com/Dieudonne000/UmuravaUI-dashboard",
+    live: "https://umurava-ui-dashboard.vercel.app/talent",
+    mediaType: "image",
+  },
 ]
 
 export default function ProjectsClientPage() {
@@ -108,7 +132,7 @@ export default function ProjectsClientPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Projects</h1>
             <p className="text-xl text-black/70 dark:text-white/70">
-              Explore my portfolio of 3D design work across various categories and styles
+              Explore my portfolio of 3D design work and Web development across various categories and styles
             </p>
           </div>
         </div>
@@ -250,7 +274,7 @@ export default function ProjectsClientPage() {
               <div className="mt-4">
                 {viewMode === "3d" && selectedProject.has3DModel ? (
                   <div className="relative aspect-video rounded-lg overflow-hidden">
-                    <ModelViewer modelUrl={selectedProject.modelUrl} className="w-full h-full" />
+                    <ModelViewer modelUrl={selectedProject.modelUrl || ""} className="w-full h-full" />
                   </div>
                 ) : viewMode === "video" && selectedProject.mediaType === "video" ? (
                   <div className="relative aspect-video rounded-lg overflow-hidden">
@@ -277,6 +301,29 @@ export default function ProjectsClientPage() {
 
               <div className="mt-4">
                 <p className="text-black/70 dark:text-white/70">{selectedProject.description}</p>
+              </div>
+
+              <div className="flex gap-2 mt-4">
+                {selectedProject?.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 dark:bg-black/80 text-black dark:text-white rounded hover:bg-white hover:text-black hover:underline transition"
+                  >
+                    GitHub
+                  </a>
+                )}
+                {selectedProject?.live && (
+                  <a
+                    href={selectedProject.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-3 py-1 text-xs font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                  >
+                    Live Site
+                  </a>
+                )}
               </div>
             </>
           )}
