@@ -16,7 +16,16 @@ export default function Footer() {
           <div>
             <h4 className="font-medium mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>Old porfolio</li>
+              <li>
+                <Link 
+                  href="https://dieudonne-old.vercel.app/" 
+                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Old portfolio
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/about"
