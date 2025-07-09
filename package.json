@@ -69,7 +69,11 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.161.0",
     "vaul": "^0.9.0",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "@react-pdf-viewer/core": "^3.11.0",
+    "@react-pdf-viewer/default-layout": "^3.11.0",
+    "@react-pdf-viewer/toolbar": "^3.11.0",
+    "@react-pdf-viewer/zoom": "^3.11.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
