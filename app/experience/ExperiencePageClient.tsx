@@ -82,7 +82,7 @@ import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from 
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 import dynamic from "next/dynamic"
-const PdfPreviewer = dynamic(() => import("@/components/ui/PdfPreviewer"), { ssr: false })
+const PdfPreviewer = dynamic(() => import("@/components/ui/PdfPreviewer.client"), { ssr: false })
 
 export default function ExperiencePageClient() {
   return (
