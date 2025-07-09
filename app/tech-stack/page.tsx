@@ -131,6 +131,11 @@ const techCategories = [
         description: "Utility-first CSS framework for rapid UI development",
         experience: 90,
       },
+      {
+        name: "Web3",
+        description: "Decentralized web protocols and blockchain integration (Ethereum, smart contracts, etc.)",
+        experience: 50,
+      },
     ],
   },
   {
@@ -161,6 +166,16 @@ const techCategories = [
         description: "Platform for developing web and mobile applications",
         experience: 70,
       },
+      {
+        name: "Spring Boot",
+        description: "Java-based framework for building production-ready web applications and microservices",
+        experience: 60,
+      },
+      {
+        name: "Hibernate",
+        description: "Java ORM framework for database access and management",
+        experience: 60,
+      },
     ],
   },
   {
@@ -180,6 +195,21 @@ const techCategories = [
         name: "C",
         description: "Procedural programming language for system and application development",
         experience: 70,
+      },
+      {
+        name: "Java",
+        description: "Object-oriented programming language used for web, mobile, and enterprise applications",
+        experience: 70,
+      },
+    ],
+  },
+  {
+    name: "Hardware & IoT",
+    items: [
+      {
+        name: "Arduino",
+        description: "Open-source electronics platform for building digital devices and interactive objects",
+        experience: 60,
       },
     ],
   },

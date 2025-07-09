@@ -34,23 +34,54 @@ const education = [
   },
 ]
 
-// const certifications = [
-//   {
-//     name: "Certified Substance Designer Professional",
-//     issuer: "Adobe",
-//     year: "2022",
-//   },
-//   {
-//     name: "Unity Certified 3D Artist",
-//     issuer: "Unity Technologies",
-//     year: "2021",
-//   },
-//   {
-//     name: "Autodesk Maya Professional Certification",
-//     issuer: "Autodesk",
-//     year: "2020",
-//   },
-// ]
+// List of certificate files in public/certificates
+const certificates = [
+  {
+    file: "Intro_to_cyber.pdf",
+    label: "Introduction to Cybersecurity",
+    description: "Covers the basics of cybersecurity principles and practices."
+  },
+  {
+    file: "Penetration_testing.pdf",
+    label: "Penetration Testing",
+    description: "Certificate for hands-on penetration testing skills."
+  },
+  {
+    file: "Network Research.pdf",
+    label: "Network Research",
+    description: "Awarded for research and analysis in computer networks."
+  },
+  {
+    file: "Linux_fundamentals.pdf",
+    label: "Linux Fundamentals",
+    description: "Demonstrates proficiency in Linux operating systems."
+  },
+  {
+    file: "Python_fundamentals.pdf",
+    label: "Python Fundamentals",
+    description: "Certificate for foundational Python programming skills."
+  },
+  {
+    file: "the_hunters.pdf",
+    label: "The Hunters",
+    description: "Recognition for participation in The Hunters project."
+  },
+  {
+    file: "wavumbuzi-entrepreuship-challenge-certificate.pdf",
+    label: "Wavumbuzi Entrepreneurship Challenge",
+    description: "Awarded for excellence in entrepreneurship challenge."
+  },
+  {
+    file: "QCEC Certificate .pdf",
+    label: "QCEC Certificate",
+    description: "Certificate of achievement from QCEC."
+  },
+]
+
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
+import PdfPreviewer from "@/components/ui/PdfPreviewer"
 
 export default function ExperiencePageClient() {
   return (
@@ -128,28 +159,44 @@ export default function ExperiencePageClient() {
       </section>
 
       {/* Certifications */}
-      {/* <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Certifications</h2>
-
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10"
-              >
-                <div className="text-3xl font-bold mb-2">{cert.year}</div>
-                <h3 className="text-lg font-semibold mb-2">{cert.name}</h3>
-                <p className="text-black/70 dark:text-white/70 text-sm">Issued by {cert.issuer}</p>
-              </motion.div>
-            ))}
+          <div className="max-w-3xl mx-auto relative">
+            <Carousel>
+              <CarouselContent>
+                {certificates.map((cert, index) => (
+                  <CarouselItem key={cert.file} className="flex justify-center">
+                    <Dialog>
+                      <div className="bg-white dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col items-center w-full max-w-md">
+                        <div className="text-3xl font-bold mb-2">{index + 1}</div>
+                        <h3 className="text-lg font-semibold mb-2 text-center">{cert.label}</h3>
+                        <div className="text-black/70 dark:text-white/70 text-sm mb-4 text-center min-h-[48px]">{cert.description}</div>
+                        <div className="flex gap-2 w-full">
+                          <DialogTrigger asChild>
+                            <Button variant="outline" className="w-1/2">Preview</Button>
+                          </DialogTrigger>
+                          <a href={`/certificates/${encodeURIComponent(cert.file)}`} download target="_blank" rel="noopener noreferrer" className="w-1/2">
+                            <Button variant="default" className="w-full">Download</Button>
+                          </a>
+                        </div>
+                        <DialogContent className="max-w-3xl w-full h-[80vh] flex flex-col">
+                          <DialogHeader>
+                            <DialogTitle>{cert.label}</DialogTitle>
+                          </DialogHeader>
+                          <PdfPreviewer url={`/certificates/${encodeURIComponent(cert.file)}`} className="flex-1 w-full rounded-lg border" />
+                        </DialogContent>
+                      </div>
+                    </Dialog>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, CuboidIcon as Cube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ModelViewer from "@/components/model-viewer"
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 
 // Sample project data
 const projects = [
@@ -55,6 +56,12 @@ export default function FeaturedProjects() {
   // Track which project has its 3D model active
   const [activeModelIndex, setActiveModelIndex] = useState<number | null>(null)
 
+  // Reorder projects so that those with 'Web App' in the category come first
+  const orderedProjects = [
+    ...projects.filter(p => p.category && p.category.includes('Web App')),
+    ...projects.filter(p => !p.category || !p.category.includes('Web App')),
+  ]
+
   return (
     <section className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
@@ -90,109 +97,116 @@ export default function FeaturedProjects() {
           </motion.div>
         </div>
 
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              whileHover={{ y: -5 }}
-            >
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                {/* Show 3D model if active, otherwise show image */}
-                {activeModelIndex === index && project.has3DModel ? (
-                  <div className="w-full h-full">
-                    {/* 3D model viewer component */}
-                    <ModelViewer modelUrl={project.modelUrl || ""} className="w-full h-full" />
-                    {/* Button to switch back to image view */}
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
-                      onClick={() => setActiveModelIndex(null)}
-                    >
-                      Show Image
-                    </Button>
-                  </div>
-                ) : (
-                  <>
-                    <Link href={`/projects/${project.id}`}>
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </Link>
-                    {/* Button to view 3D model if available */}
-                    {project.has3DModel && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          setActiveModelIndex(index)
-                        }}
-                      >
-                        <Cube className="h-4 w-4 mr-2" />
-                        View 3D Model
-                      </Button>
-                    )}
-                    {/* Overlay with project details on hover */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div>
-                        <span className="text-xs font-medium text-white/80 uppercase tracking-wider">
-                          {project.category}
-                        </span>
-                        <h3 className="text-xl font-bold text-white mt-1">{project.title}</h3>
-                        <p className="text-white/80 mt-2">{project.description}</p>
-                        {/* Add GitHub and Live buttons if available */}
-                        {project.github && project.live && (
-                          <div className="flex gap-2 mt-4">
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 dark:bg-black/80 text-black dark:text-white rounded hover:bg-white hover:text-black hover:underline transition"
+        {/* Projects carousel */}
+        <div className="max-w-6xl mx-auto relative">
+          <Carousel>
+            <CarouselContent>
+              {orderedProjects.map((project, index) => (
+                <CarouselItem key={project.id} className="flex justify-center basis-full md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group w-full h-auto px-2"
+                    onMouseEnter={() => setHoveredProject(project.id)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                      {/* Show 3D model if active, otherwise show image */}
+                      {activeModelIndex === index && project.has3DModel ? (
+                        <div className="w-full h-full">
+                          {/* 3D model viewer component */}
+                          <ModelViewer modelUrl={project.modelUrl || ""} className="w-full h-full" />
+                          {/* Button to switch back to image view */}
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
+                            onClick={() => setActiveModelIndex(null)}
+                          >
+                            Show Image
+                          </Button>
+                        </div>
+                      ) : (
+                        <>
+                          <Link href={`/projects/${project.id}`}>
+                            <Image
+                              src={project.image || "/placeholder.svg"}
+                              alt={project.title}
+                              fill
+                              className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                          </Link>
+                          {/* Button to view 3D model if available */}
+                          {project.has3DModel && (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
+                              onClick={e => {
+                                e.preventDefault()
+                                setActiveModelIndex(index)
+                              }}
                             >
-                              GitHub
-                            </a>
-                            <a
-                              href={project.live}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-block px-3 py-1 text-xs font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                            >
-                              Live Site
-                            </a>
-                          </div>
-                        )}
+                              <Cube className="h-4 w-4 mr-2" />
+                              View 3D Model
+                            </Button>
+                          )}
+                          {/* Overlay with project details on hover */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6"
+                            initial={{ opacity: 0 }}
+                            whileHover={{ opacity: 1 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <div>
+                              <span className="text-xs font-medium text-white/80 uppercase tracking-wider">
+                                {project.category}
+                              </span>
+                              <h3 className="text-xl font-bold text-white mt-1">{project.title}</h3>
+                              <p className="text-white/80 mt-2">{project.description}</p>
+                              {/* Add GitHub and Live buttons if available */}
+                              {project.github && project.live && (
+                                <div className="flex gap-2 mt-4">
+                                  <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 dark:bg-black/80 text-black dark:text-white rounded hover:bg-white hover:text-black hover:underline transition"
+                                  >
+                                    GitHub
+                                  </a>
+                                  <a
+                                    href={project.live}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block px-3 py-1 text-xs font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                                  >
+                                    Live Site
+                                  </a>
+                                </div>
+                              )}
+                            </div>
+                          </motion.div>
+                        </>
+                      )}
+                    </div>
+                    {/* Project title and category below the image/model */}
+                    <div className="mt-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <h3 className="text-lg font-semibold">{project.title}</h3>
                       </div>
-                    </motion.div>
-                  </>
-                )}
-              </div>
-              {/* Project title and category below the image/model */}
-              <div className="mt-4">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-lg font-semibold">{project.title}</h3>
-                </div>
-                <span className="text-sm text-black/60 dark:text-white/60">{project.category}</span>
-              </div>
-            </motion.div>
-          ))}
+                      <span className="text-sm text-black/60 dark:text-white/60">{project.category}</span>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>
