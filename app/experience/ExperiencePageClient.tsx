@@ -81,7 +81,8 @@ const certificates = [
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
-import PdfPreviewer from "@/components/ui/PdfPreviewer"
+import dynamic from "next/dynamic"
+const PdfPreviewer = dynamic(() => import("@/components/ui/PdfPreviewer"), { ssr: false })
 
 export default function ExperiencePageClient() {
   return (
