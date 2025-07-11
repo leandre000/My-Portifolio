@@ -7,40 +7,40 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 
-// Sample testimonial data
+
 const testimonials = [
   {
     id: 1,
-    name: "Alex Johnson",
-    role: "Creative Director, VisualStudio",
+    name: "Rukundo Prince",
+    role: "Software Engineer",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Dieudonne's attention to detail and technical skill in 3D modeling is exceptional. The assets created for our project exceeded our expectations and helped us deliver a truly immersive experience.",
+      "Leandre's full-stack expertise brought our platform to life. His ability to architect scalable backend solutions and create intuitive frontends made our product robust and user-friendly.",
   },
   {
     id: 2,
     name: "Sarah Chen",
-    role: "Game Developer, Nexus Games",
+    role: "Lead ML Engineer, VisionAI Labs",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Working with Dieudonne was a pleasure. The character models delivered were not only visually stunning but also optimized perfectly for our game engine. I highly recommend their services.",
+      "Collaborating with Leandre on our AI-driven analytics tool was a game changer. His deep understanding of machine learning pipelines and model deployment accelerated our development by weeks.",
   },
   {
     id: 3,
-    name: "Michael Rodriguez",
-    role: "Art Director, DesignWorks",
+    name: "Ihirwe Patrick",
+    role: "Creative Director, Orion Design Studio",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Dieudonne brings a unique artistic vision to 3D design. Their work on our architectural visualization project transformed our concept into a photorealistic masterpiece that impressed our clients.",
+      "Leandre merges technical precision with design excellence. The UI/UX he delivered not only looked stunning but also aligned perfectly with user behavior and accessibility standards.",
   },
   {
     id: 4,
-    name: "Emma Wilson",
-    role: "Product Manager, TechVision",
+    name: "Asimwe Landry",
+    role: "Product Manager, CloudMorph Inc.",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "The product visualizations Dieudonne created for our marketing campaign were instrumental in our successful product launch. Their ability to capture the essence of our brand was remarkable.",
-  },
+      "Leandre’s contributions to our AI product launch were outstanding. His integration of real-time ML features and clean, maintainable code played a crucial role in meeting our tight deadlines.",
+  }
 ]
 
 export default function TestimonialsSection() {

@@ -4,25 +4,23 @@ import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 import ModelViewer from "@/components/model-viewer"
 import { CuboidIcon, PlayIcon } from "lucide-react"
 
 const categories = [
   "All",
-  "3D Modeling",
-  "Character Design",
-  "Product Visualization",
-  "Architectural",
-  "Animation",
-  "Web App",
-  "AI",
-  "Dashboard",
-  "Mobile app",
-  "Group project",
-  "Mern Stack",
-  "NEX-Java stack",
-  "TypeScript-powered Next.js app"
+  "Artificial-Intelligence",
+  "Mobile-app",
+  "Mern-Stack",
+  "Web-app",
+  "Machine-Learning"
 ]
 
 const projects = [
@@ -31,27 +29,27 @@ const projects = [
     title: "Agura",
     description:
       "Agura Ticketing App is a seamless mobile solution for booking and managing event tickets with real-time availability and secure access.",
-    image: "/agura.png",
-    categories: ["Mobile app"],
+    image: "/agura.avif",
+    categories: ["Mobile-app"],
     year: 2025,
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
     github: "https://github.com/leandre000/Agura",
-    live: "https://agura.app"
+    live: ""
   },
   {
     id: 2,
     title: "T-HealthSync",
     description:
       "A health system used to track a patient’s behavior and health status, and also predicts diseases using AI.",
-    image: "/robot.png",
-    categories: ["Group project", "AI"],
+    image: "/tele.jpg",
+    categories: ["Artificial-Intelligence","Machine-learning","Mobile-app"],
     year: 2025,
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "https://github.com/T-HealthSync",
+    github: "https://github.com//leandre000/T-HealthSync",
     live: ""
   },
   {
@@ -59,8 +57,8 @@ const projects = [
     title: "Aguuka",
     description:
       "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
-    image: "/aguka.png",
-    categories: ["Mern Stack", "AI"],
+    image: "/aguka.jpg",
+    categories: ["Mern-Stack","Artificial-Intelligence"],
     year: 2023,
     has3DModel: false,
     modelUrl: "",
@@ -71,9 +69,10 @@ const projects = [
   {
     id: 4,
     title: "Tale_Connect",
-    description: "Tale-Connect is a Next.js application that empowers global talent.",
+    description:
+      "Tale-Connect is a Next.js application that empowers global talent.",
     image: "/tale.png",
-    categories: ["NEX-Java stack", "Web App"],
+    categories: ["Web-app"],
     year: 2023,
     has3DModel: false,
     modelUrl: "",
@@ -85,15 +84,159 @@ const projects = [
     id: 5,
     title: "EduPlatform",
     description: "A cutting-edge frontend for an online learning platform.",
-    image: "/edu.png",
-    categories: ["TypeScript-powered Next.js app", "Dashboard"],
-    year: 2025,
+    image: "/edu.jpg",
+    categories: ["Web-app"],
+    year: 2023,
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
     github: "https://github.com/leandre000/EduPlatform-Frontend",
     live: ""
-  }
+  },
+  {
+    id: 6,
+    title: "IntelliCV",
+    description: "AI Resume Builder crafts professional resumes tailored to job roles using smart optimization.",
+    image: "/intel.png",
+    categories: ["Artificial-Intelligence", "Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "",
+    live: ""
+  },
+  {
+    id: 7,
+    title: "GiraSmart Farm",
+    description: "GiraSmart AI uses computer vision to empower farmers with crop insights and precision agriculture.",
+    image: "/gira.jpg",
+    categories: ["Artificial-Intelligence", "Machine-Learning"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "",
+    live: ""
+  },
+  {
+    id: 8,
+    title: "SobanukirwaBot",
+    description: "An intelligent chatbot mentor that supports learners and professionals through personalized guidance.",
+    image: "/sob.webp",
+    categories: ["Machine-Learning", "Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "",
+    live: ""
+  },
+  {
+    id: 9,
+    title: "SpeakWise",
+    description: "SpeakWise is an AI voice assistant that executes tasks and answers questions hands-free.",
+    image: "speak.webp",
+    categories: ["Mobile-app", "Artificial-Intelligence"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "",
+    live: ""
+  },
+  {
+    id: 10,
+    title: "DevHelper AI",
+    description: "DevHelper AI explains, refactors, and enhances code snippets using advanced algorithms.",
+    image: "/dev.webp",
+    categories: ["Artificial-Intelligence", "Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "",
+    live: ""
+  },
+  {
+    id: 11,
+    title: "Website-Template",
+    description: "A multi-purpose website template built for startups and professional services.",
+    image: "/web.webp",
+    categories: ["Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/Project-descriptor",
+    live: "https://lex-lake.vercel.app/"
+  },
+  {
+    id: 12,
+    title: "Restaurent-Template",
+    description: "A sleek, customizable restaurant website template for showcasing menus and reservations.",
+    image: "/rest.jpg",
+    categories: ["Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/restaurent",
+    live: "https://restaurent-lemon.vercel.app/"
+  },
+  {
+    id: 13,
+    title: "E-commerce",
+    description: "A feature-rich e-commerce solution for modern online shops.",
+    image: "/commerce.png",
+    categories: ["Web-app"],
+    year: 2025,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/e-commerce-springboot",
+    live: ""
+  },
+  {
+    id: 14,
+    title: "Company_Visitor_Management",
+    description: "A secure platform to manage company visitors, logins, and check-outs.",
+    image: "/comp.webp",
+    categories: ["Web-app"],
+    year: 2023,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/company_visitor_management",
+    live: ""
+  },
+  {
+    id: 15,
+    title: "Retail-store",
+    description: "A retail store management system for tracking inventory, sales, and analytics.",
+    image: "/store.png",
+    categories: ["Web-app"],
+    year: 2025,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/Retail-Store-Management",
+    live: ""
+  },
+  {
+    id: 16,
+    title: "NextVibe",
+    description: "A next-gen social app designed for sharing moments and connecting with communities.",
+    image: "/nex.webp",
+    categories: ["Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/NexVibe",
+    live: ""
+  },
+  
 ]
 
 export default function ProjectsClientPage() {
@@ -104,7 +247,7 @@ export default function ProjectsClientPage() {
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((project) => project.categories.includes(activeCategory))
+      : projects.filter((p) => p.categories.includes(activeCategory))
 
   return (
     <div className="pt-20">
@@ -113,13 +256,13 @@ export default function ProjectsClientPage() {
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Projects</h1>
           <p className="text-xl text-black/70 dark:text-white/70">
-            Explore my portfolio of 3D design work and web development across various categories and styles.
+            Explore my portfolio of AI, ML & Web development Work.
           </p>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-white dark:bg-black border-y border-black/10 dark:border-white/10 sticky top-16 z-30 backdrop-blur-md bg-white/80 dark:bg-black/80">
+      <section className="py-8 sticky top-16 z-30 backdrop-blur-md border-y border-black/10 dark:border-white/10 bg-white/80 dark:bg-black/80">
         <div className="container mx-auto px-4 flex flex-wrap gap-4 justify-center">
           {categories.map((category) => (
             <Button
@@ -138,7 +281,7 @@ export default function ProjectsClientPage() {
         </div>
       </section>
 
-      {/* Projects Grid */}
+      {/* Project Grid */}
       <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
@@ -155,9 +298,10 @@ export default function ProjectsClientPage() {
             >
               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   fill
+                  unoptimized={project.image.startsWith("http")}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {project.mediaType === "video" && (
@@ -169,12 +313,17 @@ export default function ProjectsClientPage() {
               <div className="mt-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-lg font-semibold">{project.title}</h3>
-                  <span className="text-sm text-black/60 dark:text-white/60">{project.year}</span>
+                  <span className="text-sm text-black/60 dark:text-white/60">
+                    {project.year}
+                  </span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {project.categories.map((category) => (
-                    <span key={category} className="text-sm text-black/60 dark:text-white/60">
-                      {category}
+                  {project.categories.map((cat) => (
+                    <span
+                      key={`${project.id}-${cat}`}
+                      className="text-sm text-black/60 dark:text-white/60"
+                    >
+                      {cat}
                     </span>
                   ))}
                 </div>
@@ -196,9 +345,9 @@ export default function ProjectsClientPage() {
                 </DialogDescription>
               </DialogHeader>
 
-              {/* View Mode Controls */}
-              <div className="flex justify-end mt-4 gap-2">
-                {selectedProject.has3DModel && (
+              {/* View Mode Toggle */}
+              {selectedProject.has3DModel && (
+                <div className="flex justify-end mt-4 gap-2">
                   <Button
                     variant="outline"
                     size="sm"
@@ -208,10 +357,10 @@ export default function ProjectsClientPage() {
                     <CuboidIcon className="h-4 w-4" />
                     {viewMode === "3d" ? "View Image" : "View 3D Model"}
                   </Button>
-                )}
-              </div>
+                </div>
+              )}
 
-              {/* Media Viewer */}
+              {/* Media Content */}
               <div className="mt-4">
                 {viewMode === "3d" && selectedProject.has3DModel ? (
                   <div className="relative aspect-video rounded-lg overflow-hidden">
@@ -220,17 +369,18 @@ export default function ProjectsClientPage() {
                 ) : (
                   <div className="relative aspect-video rounded-lg overflow-hidden">
                     <Image
-                      src={selectedProject.image || "/placeholder.svg"}
+                      src={selectedProject.image}
                       alt={selectedProject.title}
                       fill
+                      unoptimized={selectedProject.image.startsWith("http")}
                       className="object-cover"
                     />
                   </div>
                 )}
               </div>
 
+              {/* Links */}
               <div className="mt-4 text-black/70 dark:text-white/70">{selectedProject.description}</div>
-
               <div className="flex gap-2 mt-4">
                 {selectedProject.github && (
                   <a

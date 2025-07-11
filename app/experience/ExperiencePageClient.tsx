@@ -4,15 +4,39 @@ import { motion } from "framer-motion"
 
 const workExperience = [
   {
-    title: "Agura",
+    id: 1,
+    title: "Mobile Developer",
     company: "Agura Ticketing App",
-    period: "June 2025 - present",
-    description:
-      "Mobile developer .",
+    period: "June 2025 - Present",
+    description: "Developing a seamless mobile solution for booking and managing event tickets with real-time availability and secure access.",
     responsibilities: [
-      "Mobile development",
-      "Integration and Testing",
-      "Mentor web developer and provide technical direction",
+      "Mobile application development",
+      "Integration and testing",
+      "Mentoring junior web developers and providing technical guidance",
+    ],
+  },
+  {
+    id: 2,
+    title: "AI Enthusiast",
+    company: "T-HealthSync",
+    period: "January 2025 - July",
+    description: "Developing a health system that tracks patient behavior and health status, and predicts diseases using AI.",
+    responsibilities: [
+      "AI model integration",
+      "Data tracking and analysis",
+      "Ensuring system reliability and performance",
+    ],
+  },
+  {
+    id: 3,
+    title: "Fullstack Developer",
+    company: "Aguuka",
+    period: "2025",
+    description: "Built a fullstack MERN app with AI integration for smarter content creation and task automation.",
+    responsibilities: [
+      "Frontend and backend development",
+      "AI integration for content automation",
+      "Task automation implementation",
     ],
   },
 ]

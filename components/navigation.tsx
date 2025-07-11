@@ -53,7 +53,7 @@ export default function Navigation() {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <Link href="/" className="text-xl font-bold tracking-tighter">
             <span className="bg-gradient-to-r from-black to-black/80 dark:from-white dark:to-white/80 bg-clip-text text-transparent">
-              Dieudonne
+             Leandre
             </span>
           </Link>
 

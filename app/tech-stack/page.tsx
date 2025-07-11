@@ -49,7 +49,6 @@ const techCategories: TechCategory[] = [
       },
     ],
   },
-  
   {
     name: "Animation & Rigging",
     items: [
@@ -114,6 +113,16 @@ const techCategories: TechCategory[] = [
         experience: 85,
       },
       {
+        name: "Spring Boot",
+        description: "Java-based framework for building production-ready web applications and microservices",
+        experience: 85,
+      },
+      {
+        name: "Hibernate",
+        description: "Java ORM framework for database access and management",
+        experience: 80,
+      },
+      {
         name: "PHP",
         description: "Server-side scripting language for web development",
         experience: 80,
@@ -129,14 +138,9 @@ const techCategories: TechCategory[] = [
         experience: 80,
       },
       {
-        name: "Spring Boot",
-        description: "Java-based framework for building production-ready web applications and microservices",
-        experience: 90,
-      },
-      {
-        name: "Hibernate",
-        description: "Java ORM framework for database access and management",
-        experience: 80,
+        name: "PostgreSQL",
+        description: "Advanced open-source relational database",
+        experience: 85,
       },
     ],
   },
@@ -166,6 +170,91 @@ const techCategories: TechCategory[] = [
     ],
   },
   {
+    name: "AI & Machine Learning",
+    items: [
+      {
+        name: "TensorFlow",
+        description: "Open-source machine learning framework for deep learning and neural networks",
+        experience: 80,
+      },
+      {
+        name: "Flask",
+        description: "Python micro-framework often used to serve ML models as APIs",
+        experience: 80,
+      },
+      {
+        name: "scikit-learn",
+        description: "Python library for traditional machine learning algorithms",
+        experience: 80,
+      },
+      {
+        name: "Keras",
+        description: "High-level neural networks API, running on top of TensorFlow",
+        experience: 80,
+      },
+    ],
+  },
+  {
+    name: "Cloud & Deployment",
+    items: [
+      {
+        name: "Vercel",
+        description: "Platform for frontend deployment and edge computing",
+        experience: 85,
+      },
+      {
+        name: "Netlify",
+        description: "All-in-one platform for automating modern web projects",
+        experience: 80,
+      },
+      {
+        name: "AWS",
+        description: "Amazon Web Services — cloud computing services for scalable backend and storage",
+        experience: 75,
+      },
+      {
+        name: "Docker",
+        description: "Tool for containerizing and deploying applications",
+        experience: 80,
+      },
+    ],
+  },
+  {
+    name: "Testing & CI/CD",
+    items: [
+      {
+        name: "Jest",
+        description: "JavaScript testing framework for unit and integration tests",
+        experience: 80,
+      },
+      {
+        name: "Jenkins",
+        description: "Automation server for CI/CD pipelines and build deployment",
+        experience: 80,
+      },
+      {
+        name: "Postman",
+        description: "Tool for testing APIs and endpoints",
+        experience: 85,
+      },
+    ],
+  },
+  {
+    name: "Cybersecurity Tools",
+    items: [
+      {
+        name: "OWASP ZAP",
+        description: "Security scanner for finding vulnerabilities in web applications",
+        experience: 70,
+      },
+      {
+        name: "Burp Suite",
+        description: "Integrated platform for performing security testing of web applications",
+        experience: 70,
+      }
+    ],
+  },
+  {
     name: "Hardware & IoT",
     items: [
       {
@@ -192,7 +281,7 @@ export default function TechStackPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Tech Stack</h1>
             <p className="text-xl text-black/70 dark:text-white/70">
-              The tools and technologies I use to create immersive 3D experiences and web applications
+              The tools and technologies I use to create immersive 3D experiences, intelligent applications, and scalable web platforms.
             </p>
           </div>
         </div>

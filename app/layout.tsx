@@ -1,4 +1,3 @@
-import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -9,14 +8,15 @@ import Footer from "@/components/footer"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-// Load Inter font with Latin subset
 const inter = Inter({ subsets: ["latin"] })
 
-// Define metadata for the site
+// ✅ This must remain in a server component (no "use client")
 export const metadata: Metadata = {
-  title: "Dieudonne - Designer & Developer Portfolio",
-  description: "Portfolio showcasing 3D design, web development, programming, and creative work by Dieudonne.",
-  generator: 'v0.dev'
+  title: "Leandre - Designer & Developer Portfolio",
+  description: "Portfolio showcasing Web development, Artificial-Intelligence & Machine-Learning Work.",
+  icons: {
+    icon: "/placeholder-logo.webp", // Ensure this image is in the public folder
+  },
 }
 
 export default function RootLayout({
@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        {/* Theming & Client UI */}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -38,6 +39,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+
+        {/* Analytics */}
         <SpeedInsights />
         <Analytics />
       </body>

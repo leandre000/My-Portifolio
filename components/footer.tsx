@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Dieudonne</h3>
+            <h3 className="text-xl font-bold mb-4">Leandre</h3>
             <p className="text-black/70 dark:text-white/70 max-w-md">
-              Creating immersive 3D experiences, interactive web applications, and designs that push the boundaries of digital art, technology, and visualization.
+             Web Developer leveraging AI & ML to build intelligent, problem-solving digital products that drive innovation and real-world impact.
             </p>
           </div>
 
@@ -18,12 +18,12 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link 
-                  href="https://dieudonne-old.vercel.app/" 
+                  href="https://shema-leandre.vercel.app/" 
                   className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Old portfolio
+                  My portifolio
                 </Link>
               </li>
               <li>
@@ -57,7 +57,7 @@ export default function Footer() {
             <h4 className="font-medium mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/Dieudonne000"
+                href="https://github.com/leandre000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
@@ -75,7 +75,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a> */}
               <a
-                href="https://x.com/DieudonneM47638"
+                href="https://x.com/shema_Leandre"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
@@ -84,7 +84,7 @@ export default function Footer() {
                 <Twitter size={20} />
               </a>
               <a
-                href="https://www.instagram.com/m_di.os/"
+                href="https://www.instagram.com/_shemaleandre_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10 text-center text-sm text-black/60 dark:text-white/60">
-          <p>© {new Date().getFullYear()} Dieudonne. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Leandre. All rights reserved.</p>
         </div>
       </div>
     </footer>

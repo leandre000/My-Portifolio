@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "About | Leandre - Designer & Developer Portfolio",
   description:
-    "Explore Leandre's Web development,AI,ML projects",
+    "Explore Leandre's Web development,Artificial-Intelligence,Machine-Learning work",
 }
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
               <div className="sticky top-32">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/passport.png"
+                    src="/passport.jpg"
                     alt="Leandre - Designer & Developer"
                     fill
                     className="object-cover"
@@ -76,28 +76,28 @@ export default function AboutPage() {
 
               <h2 className="text-3xl font-bold mb-6">Philosophy</h2>
               <p className="text-black/70 dark:text-white/70 mb-6">
-                My approach centers around three core principles:
+              At the heart of my process are three foundational principles:
               </p>
 
               <div className="space-y-6 mb-10">
                 <div className="bg-black/5 dark:bg-white/5 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Attention to Detail</h3>
                   <p className="text-black/70 dark:text-white/70">
-                    Whether it's designing, maintainable code in web development, I believe the smallest details make the biggest impact.
+                   In web development, I believe thoughtful design and clean, maintainable code—down to the smallest detail—make the biggest impact
                   </p>
                 </div>
 
                 <div className="bg-black/5 dark:bg-white/5 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Functional Aesthetics</h3>
                   <p className="text-black/70 dark:text-white/70">
-                    Beautiful design and robust code should serve a purpose. I ensure that form and function work together, whether I'm creating models, web interfaces, or backend systems.
+                    Beautiful design and strong code must serve a purpose, seamlessly blending form and function across models, interfaces, and backend systems
                   </p>
                 </div>
 
                 <div className="bg-black/5 dark:bg-white/5 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Narrative & Problem Solving</h3>
                   <p className="text-black/70 dark:text-white/70">
-                    Every project tells a story and solves a problem. I approach each challenge with a narrative mindset and a problem-solving attitude, considering how both visual and technical elements contribute to the broader experience.
+                   Every project tells a story and solves a problem, blending visuals and tech with a problem-solving mindset.
                   </p>
                 </div>
               </div>

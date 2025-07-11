@@ -5,7 +5,7 @@ import ProjectsClientPage from "./ProjectsClientPage"
 // we'll need to handle metadata differently in a production app
 export const metadata: Metadata = {
   title: "Tech Stack | Leandre - Designer & Developer Portfolio",
-  description: "Explore Leandre's Web development,AI,ML projects.",
+  description: "Explore Leandre's Web development, Artificial-Intelligence & Machine-Learning projects.",
 }
 
 export default function ProjectsPage() {
