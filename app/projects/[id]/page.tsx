@@ -13,34 +13,78 @@ import LoadingAnimation from "@/components/loading-animation"
 const projects = [
   {
     id: "1",
-    title: "Futuristic City",
+    title: "agura",
     description:
-      "A detailed 3D model of a futuristic cityscape with advanced architecture and environmental elements. This project explores the possibilities of urban design in a near-future setting.",
+      "Agura Ticketing App is a seamless mobile solution for booking and managing event tickets with real-time availability and secure access.",
     fullDescription:
-      "This futuristic city concept was created as part of a larger exploration into how urban environments might evolve in the next 50 years. The project involved extensive research into sustainable architecture, smart city technologies, and innovative transportation systems.\n\nThe modeling process began with blocking out the major structures and infrastructure, followed by detailed modeling of individual buildings and environmental elements. Special attention was paid to the integration of green spaces and the flow of pedestrian and vehicle traffic.\n\nThe final render includes atmospheric effects and lighting designed to evoke a sense of a living, breathing city of the future.",
-    image: "/boat.png",
-    category: "3D Modeling",
-    year: 2023,
-    client: "Personal Project",
-    tools: ["Blender", "Substance Painter", "Cinema 4D"],
+      "Agura Ticketing App is a modern, mobile-first solution for booking and managing event tickets seamlessly. Built with React Native, Spring Boot, and PostgreSQL, the app features secure authentication, real-time ticket availability, and a user-friendly interface — making event access easier and more efficient for both organizers and attendees.",
+    image: "/agura.png",
+    category: "Mobile app",
+    year: 2025,
+    client: "Client Project",
+    tools: ["React Native"],
     has3DModel: false,
-    modelUrl: "/models/boat.glb",
+    modelUrl: false
+  },
+  {id: "2",
+    title: "T-HealthSync",
+    description:
+      "A health system used to track a patients behavior and health status and also predicts diseases using AI",
+    fullDescription:
+      "A health system used to track a patients behavior and health status and also predicts diseases using AI with A machine learning model that predicts diseases from health data collected",
+    image: "/tele.png",
+    category: "Group project",
+    year: 2025,
+    client: "Hackathon Project",
+    tools: ["Node.js, Python, ML, AI"],
+    has3DModel: false,
+    modelUrl:"https://github.com/T-HealthSync",
   },
   {
-    id: "2",
-    title: "Character Design",
+    id: "3",
+    title: "Aguuka",
     description:
-      "Sci-fi character design with detailed texturing and rigging for animation. This character was created for a game project, with a focus on realistic proportions and expressive features.",
+      "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation",
     fullDescription:
-      "This character was designed for a science fiction game set in a post-apocalyptic world. The brief called for a character that balanced realism with stylized elements, capable of expressing a range of emotions through facial animations.\n\nThe design process began with concept sketches and mood boards, followed by blocking out the basic form in 3D. Detailed sculpting was done to create the facial features and clothing details, with careful attention to anatomical accuracy and material properties.\n\nThe character was then rigged with a full skeleton and facial rig to allow for a wide range of animations. The texturing process involved creating multiple texture maps for different surface properties, including diffuse, normal, roughness, and subsurface scattering.",
-    image: "/placeholder.svg?height=600&width=800",
-    category: "Character Design",
-    year: 2023,
-    client: "GameVerse Interactive",
-    tools: ["ZBrush", "Maya", "Substance Painter"],
+      "Aguuka is a modern web application built with the MERN stack, featuring AI-powered tools to streamline content generation and automate workflows. It enhances user productivity with intelligent recommendations and seamless user experience..",
+    image: "/aguka.png",
+    category: "Mern Stack",
+    year: 2025,
+    client: "",
+    tools: ["Node.js", "React", "MongoDB"],
     has3DModel: false,
-    modelUrl: "/models/boat.glb",
+    modelUrl: false,
   },
+   {
+    id: "4",
+    title: "Tale-Connect",
+    description:
+      "Tale-Connect is a Next.js application that empowers global talent to gain visibility, secure job opportunities, and advance their careers.",
+    fullDescription:
+      "Tale-Connect is a Next.js application that empowers global talent to gain visibility, secure job opportunities, and advance their careers.",
+    image: "/tale.png",
+    category: "NEX-Java stack",
+    year: 2025,
+    client: "",
+    tools: ["java", "React", "Next.js"],
+    has3DModel: false,
+    modelUrl:"https://github.com/leandre000/Tale-connect",
+  },
+  {
+    id: "5",
+    title: "EduPlatform",
+    description:
+      "A cutting-edge frontend for an online learning platform.",
+    fullDescription:
+      "A cutting-edge frontend for an online learning platform delivering a lightning-fast, responsive, and intuitive user experience to revolutionize course management",
+    image: "/edu.png",
+    category: "TypeScript-powered Next.js app",
+    year: 2025,
+    client: "",
+    tools: ["Typescript", "Next.js"],
+    has3DModel: false,
+    modelUrl: "https://github.com/leandre000/EduPlatform-Frontend",
+  }
   // Add more projects as needed
 ]
 

@@ -2,14 +2,25 @@
 
 import { TechIcon } from "@/components/tech-icons"
 
-const techCategories = [
+type TechItem = {
+  name: string
+  description: string
+  experience: number
+}
+
+type TechCategory = {
+  name: string
+  items: TechItem[]
+}
+
+const techCategories: TechCategory[] = [
   {
     name: "3D Modeling & Design",
     items: [
       {
         name: "Blender",
         description: "Open-source 3D creation suite for modeling, animation, rendering, and more",
-        experience: 90,
+        experience: 70,
       },
     ],
   },
@@ -19,68 +30,29 @@ const techCategories = [
       {
         name: "Figma",
         description: "I mostly use this when creating simple textures",
-        experience: 90,
+        experience: 80,
       },
       {
         name: "Adobe Illustrator",
         description: "Vector graphics editor",
-        experience: 70,
+        experience: 80,
       },
       {
         name: "Adobe Photoshop",
         description: "Raster graphics editor for texture creation and image manipulation",
-        experience: 90,
+        experience: 80,
       },
       {
         name: "Blender",
         description: "Open-source 3D creation suite for modeling, animation, rendering, and more",
-        experience: 90,
-      },
-    ],
-  },
-  {
-    name: "Real-time & Game Engines",
-    items: [
-      {
-        name: "Unity",
-        description: "Cross-platform game engine for 2D and 3D development",
-        experience: 70,
-      },
-      {
-        name: "Unreal Engine",
-        description: "Advanced real-time 3D creation platform",
         experience: 70,
       },
     ],
   },
-  {
-    name: "Rendering & Visualization",
-    items: [
-      {
-        name: "Cycles",
-        description: "Advanced Photorealistic rendering plugin for blender",
-        experience: 90,
-      },
-      {
-        name: "Eevee",
-        description: "Realtime rendering engine for blender.",
-        experience: 100,
-      },
-      {
-        name: "FoxRender farm",
-        description: "Cloud rendering service for complex project which saves a lot of time",
-        experience: 90,
-      },
-    ],
-  },
+  
   {
     name: "Animation & Rigging",
     items: [
-      {
-        name: "Mixamo",
-        description: "Character animation service with auto-rigging",
-        experience: 90,
-      },
       {
         name: "Blender",
         description: "Open-source 3D creation suite for modeling, animation, rendering, and more",
@@ -94,16 +66,6 @@ const techCategories = [
       {
         name: "Three.js",
         description: "JavaScript 3D library for creating 3D content on the web",
-        experience: 70,
-      },
-      {
-        name: "WebGL",
-        description: "JavaScript API for rendering interactive 3D graphics in browsers",
-        experience: 40,
-      },
-      {
-        name: "Spline",
-        description: "A place to design and collaborate in 3D",
         experience: 70,
       },
       {
@@ -144,43 +106,48 @@ const techCategories = [
       {
         name: "Node.js",
         description: "JavaScript runtime for server-side development",
-        experience: 70,
+        experience: 85,
       },
       {
         name: "Express.js",
         description: "Web application framework for Node.js",
-        experience: 70,
+        experience: 85,
       },
       {
         name: "PHP",
         description: "Server-side scripting language for web development",
-        experience: 70,
+        experience: 80,
       },
       {
         name: "MongoDB",
         description: "NoSQL database for modern applications",
-        experience: 70,
+        experience: 90,
       },
       {
         name: "Firebase",
         description: "Platform for developing web and mobile applications",
-        experience: 70,
+        experience: 80,
       },
       {
         name: "Spring Boot",
         description: "Java-based framework for building production-ready web applications and microservices",
-        experience: 60,
+        experience: 90,
       },
       {
         name: "Hibernate",
         description: "Java ORM framework for database access and management",
-        experience: 60,
+        experience: 80,
       },
     ],
   },
   {
     name: "Programming Languages",
     items: [
+      {
+        name: "Java",
+        description: "Object-oriented programming language used for web, mobile, and enterprise applications",
+        experience: 90,
+      },
       {
         name: "Python",
         description: "High-level programming language for general-purpose programming",
@@ -194,11 +161,6 @@ const techCategories = [
       {
         name: "C",
         description: "Procedural programming language for system and application development",
-        experience: 70,
-      },
-      {
-        name: "Java",
-        description: "Object-oriented programming language used for web, mobile, and enterprise applications",
         experience: 70,
       },
     ],
@@ -215,19 +177,16 @@ const techCategories = [
   },
 ]
 
-// Helper to map numeric experience to word
-function getExperienceLabel(exp: number) {
-  if (typeof exp === 'string') return exp;
-  if (exp >= 100) return 'Pro';
-  if (exp >= 90) return 'Advanced';
-  if (exp >= 70) return 'Intermediate';
-  return 'Basic';
+function getExperienceLabel(exp: number): string {
+  if (exp >= 100) return "Pro"
+  if (exp >= 90) return "Advanced"
+  if (exp >= 70) return "Intermediate"
+  return "Basic"
 }
 
 export default function TechStackPage() {
   return (
     <div className="pt-20">
-      {/* Hero section */}
       <section className="py-20 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -239,7 +198,6 @@ export default function TechStackPage() {
         </div>
       </section>
 
-      {/* Tech stack categories */}
       <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="space-y-20">

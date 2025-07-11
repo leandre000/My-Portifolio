@@ -4,15 +4,15 @@ import { motion } from "framer-motion"
 
 const workExperience = [
   {
-    title: "Senior 3D Designer",
-    company: "Mashirika Ubumuntu event",
-    period: "May 2024 - August 2024",
+    title: "Agura",
+    company: "Agura Ticketing App",
+    period: "June 2025 - present",
     description:
-      "3D designer for VR traditional culture Gallery. Collaborated with my team to make 3D assets and animations for the gallery.",
+      "Mobile developer .",
     responsibilities: [
-      "Create detailed 3D models and environments for the project",
-      "Develop texturing and lighting for more appealing presentation",
-      "Mentor junior designers and provide technical direction",
+      "Mobile development",
+      "Integration and Testing",
+      "Mentor web developer and provide technical direction",
     ],
   },
 ]
@@ -61,21 +61,9 @@ const certificates = [
     label: "Python Fundamentals",
     description: "Certificate for foundational Python programming skills."
   },
-  {
-    file: "the_hunters.pdf",
-    label: "The Hunters",
-    description: "Recognition for participation in The Hunters project."
-  },
-  {
-    file: "wavumbuzi-entrepreuship-challenge-certificate.pdf",
-    label: "Wavumbuzi Entrepreneurship Challenge",
-    description: "Awarded for excellence in entrepreneurship challenge."
-  },
-  {
-    file: "QCEC Certificate .pdf",
-    label: "QCEC Certificate",
-    description: "Certificate of achievement from QCEC."
-  },
+  
+  
+ 
 ]
 
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
@@ -93,7 +81,7 @@ export default function ExperiencePageClient() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Experience & Education</h1>
             <p className="text-xl text-black/70 dark:text-white/70">
-              My professional journey and educational background in 3D design
+              My professional journey and educational background in Web Development 
             </p>
           </div>
         </div>
