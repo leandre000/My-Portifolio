@@ -21,7 +21,7 @@ const projects = [
     title: "Agura",
     description:
       "Agura Ticketing App is a seamless mobile solution for booking and managing event tickets with real-time availability and secure access.",
-    image: "/agura.jpg",
+    image: "/agura.avif",
     categories: ["Mobile-app"],
     year: 2025,
     has3DModel: false,
@@ -36,12 +36,12 @@ const projects = [
     description:
       "A health system used to track a patient’s behavior and health status, and also predicts diseases using AI.",
     image: "/tele.jpg",
-    categories: ["Artificial-Intelligence"],
+    categories: ["Artificial-Intelligence", "Machine-learning", "Mobile-app"],
     year: 2025,
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "https://github.com/T-HealthSync",
+    github: "https://github.com//leandre000/T-HealthSync",
     live: ""
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     description:
       "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
     image: "/aguka.jpg",
-    categories: ["Mern-Stack"],
+    categories: ["Mern-Stack", "Artificial-Intelligence"],
     year: 2023,
     has3DModel: false,
     modelUrl: "",
@@ -88,12 +88,12 @@ const projects = [
   },
   {
     id: 6,
-    title: "AI Resume Builder",
+    title: "IntelliCV",
     description:
-      "A smart resume generator that uses AI to optimize content based on job descriptions and industry trends.",
-    image: "https://cdn.dribbble.com/users/1162077/screenshots/15681859/media/4d458e7ff4d5f879e5f7a3f2e0e98650.png",
+      "AI Resume Builder crafts professional resumes tailored to job roles using smart optimization.",
+    image: "/intel.png",
     categories: ["Artificial-Intelligence", "Web-app"],
-    year: 2025,
+    year: 2024,
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
@@ -102,10 +102,10 @@ const projects = [
   },
   {
     id: 7,
-    title: "SmartFarm AI",
+    title: "GiraSmart Farm",
     description:
-      "AI-powered agriculture platform to monitor crops and provide real-time insights using computer vision.",
-    image: "https://cdn.pixabay.com/photo/2020/04/22/06/55/tractor-5072032_960_720.jpg",
+      "GiraSmart AI uses computer vision to empower farmers with crop insights and precision agriculture.",
+    image: "/gira.jpg",
     categories: ["Artificial-Intelligence", "Machine-Learning"],
     year: 2024,
     has3DModel: false,
@@ -116,10 +116,10 @@ const projects = [
   },
   {
     id: 8,
-    title: "ChatMentor",
+    title: "SobanukirwaBot",
     description:
-      "An intelligent chatbot mentor for students and professionals built using NLP and machine learning.",
-    image: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*6D4vLAO4ZTg3gGthfl6FDw.png",
+      "An intelligent chatbot mentor that supports learners and professionals through personalized guidance.",
+    image: "/sob.webp",
     categories: ["Machine-Learning", "Web-app"],
     year: 2024,
     has3DModel: false,
@@ -130,10 +130,10 @@ const projects = [
   },
   {
     id: 9,
-    title: "VoicePilot",
+    title: "SpeakWise",
     description:
-      "A mobile AI assistant that uses voice recognition to execute tasks and retrieve information.",
-    image: "https://cdn.dribbble.com/users/2399021/screenshots/15238979/media/8fd44944e0a73df9943e5f43b5ed4307.jpg",
+      "SpeakWise is an AI voice assistant that executes tasks and answers questions hands-free.",
+    image: "speak.webp",
     categories: ["Mobile-app", "Artificial-Intelligence"],
     year: 2024,
     has3DModel: false,
@@ -144,10 +144,10 @@ const projects = [
   },
   {
     id: 10,
-    title: "CodeSnap AI",
+    title: "DevHelper AI",
     description:
-      "A browser-based tool that explains and refactors code snippets using advanced AI algorithms.",
-    image: "https://cdn.dribbble.com/userupload/11252052/file/original-3ab9ce4cfa4f762a6e3c5d7087b2c502.png",
+      "DevHelper AI explains, refactors, and enhances code snippets using advanced algorithms.",
+    image: "/dev.webp",
     categories: ["Artificial-Intelligence", "Web-app"],
     year: 2024,
     has3DModel: false,
@@ -156,6 +156,7 @@ const projects = [
     github: "",
     live: ""
   }
+ 
 ]
 
 export default function FeaturedProjects() {
