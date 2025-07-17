@@ -80,6 +80,7 @@ const projects = [
     "tools": ["TypeScript", "Next.js"],
     "has3DModel": false,
      "github": "https://github.com/leandre000/EduPlatform",
+     "live":"https://eduplatform-iota.vercel.app/",
     "modelUrl": ""
   },
   {

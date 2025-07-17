@@ -92,7 +92,7 @@ const projects = [
     modelUrl: "",
     mediaType: "image",
     github: "https://github.com/leandre000/EduPlatform-Frontend",
-    live: "eduplatform-iota.vercel.app"
+    live:"https://eduplatform-iota.vercel.app/"
   },
   {
     id: 6,
