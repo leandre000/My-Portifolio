@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { memo } from "react"
 
 interface BlogCardProps {
   id: string
@@ -11,9 +12,10 @@ interface BlogCardProps {
   image: string
   date: string
   slug: string
+  priority?: boolean
 }
 
-export default function BlogCard({ id, title, description, image, date, slug }: BlogCardProps) {
+function BlogCardComponent({ id, title, description, image, date, slug, priority = false }: BlogCardProps) {
   return (
     <motion.div
       whileHover={{ y: -4, boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}
@@ -26,7 +28,8 @@ export default function BlogCard({ id, title, description, image, date, slug }: 
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"
-          priority={id === "1"}
+          priority={priority}
+          loading={priority ? undefined : "lazy"}
         />
       </div>
       <div className="flex flex-col flex-1 p-6">
@@ -40,3 +43,5 @@ export default function BlogCard({ id, title, description, image, date, slug }: 
     </motion.div>
   )
 }
+
+export default memo(BlogCardComponent)
