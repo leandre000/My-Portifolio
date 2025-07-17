@@ -88,6 +88,38 @@ const testimonials = [
     content:
       "I’ve mentored hundreds of devs — Leandre stands out. His proactive learning, speed, and mastery of full-stack tools make him ideal for fast-paced, high-impact product teams.",
   },
+  {
+    id: 11,
+    name: "Grace Uwimana",
+    role: "Community Leader, Kigali Digital Initiative",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Leandre volunteered his time to teach Linux and Excel to our youth group. His patience and clarity made a real difference in our community's digital skills.",
+  },
+  {
+    id: 12,
+    name: "Samuel Mugisha",
+    role: "Operations Manager, AgriSmart Co-op",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "We relied on Leandre's expertise in data automation with Excel and Linux scripts to streamline our agricultural reporting. His solutions saved us countless hours.",
+  },
+  {
+    id: 13,
+    name: "Linda Nkurunziza",
+    role: "Founder, Women in Tech Rwanda",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Leandre is a true mentor. He supported our hackathons and workshops, always encouraging innovation and inclusion in tech.",
+  },
+  {
+    id: 14,
+    name: "Alexis Ndayisenga",
+    role: "IT Consultant, Freelance",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Whenever I need a reliable collaborator for complex web or AI projects, Leandre is my first call. His professionalism and technical depth are unmatched.",
+  },
 ]
 
 export default function TestimonialsSection() {

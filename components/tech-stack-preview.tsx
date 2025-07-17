@@ -60,6 +60,18 @@ const techStack = [
       "Library for building fast, reusable UI components in modern single-page apps.",
     experience: 95,
   },
+  {
+    name: "Excel",
+    description:
+      "Powerful spreadsheet tool for data analysis, automation, and reporting in business and technical workflows.",
+    experience: 85,
+  },
+  {
+    name: "Linux",
+    description:
+      "Open-source operating system used for development, server management, and automation. Experienced in community services since 2020.",
+    experience: 80,
+  },
 ]
 
 export default function TechStackPreview() {

@@ -39,6 +39,19 @@ const workExperience = [
       "Task automation implementation",
     ],
   },
+  {
+    id: 4,
+    title: "Community Services Volunteer (Excel & Linux)",
+    company: "Various Community Projects",
+    period: "2020 - Present",
+    description: "Utilized Excel and Linux to support data management, automation, and digital literacy in community service initiatives.",
+    responsibilities: [
+      "Organized and analyzed community data using Excel",
+      "Automated repetitive tasks and improved workflows with Linux scripting",
+      "Provided digital literacy training on Linux systems",
+      "Supported local organizations with open-source solutions"
+    ],
+  },
 ]
 
 const education = [
