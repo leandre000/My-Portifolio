@@ -192,7 +192,7 @@ export default function FeaturedProjects() {
             className="mt-6 md:mt-0"
           >
             <Link href="/projects">
-              <Button variant="ghost" className="group">
+              <Button variant="ghost" className="w-full sm:w-auto rounded-full px-6 py-4 text-base font-medium group">
                 View All Projects
                 <motion.span initial={{ x: 0 }} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                   <ArrowRight className="ml-2 h-4 w-4" />

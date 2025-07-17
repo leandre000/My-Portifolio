@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTheme } from "next-themes"
 import Image from "next/image"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface LoadingAnimationProps {
   duration?: number
@@ -26,47 +27,15 @@ export default function LoadingAnimation({ duration = 2000 }: LoadingAnimationPr
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          key="loading-screen"
-          className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center ${
-            isDark ? "bg-black" : "bg-white"
-          }`}
+          key="loading-skeleton"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-            className="mb-6"
-          >
-            <Image
-              src="/placeholder-logo.webp"
-              alt="Leandre Logo"
-              width={100}
-              height={100}
-              className="rounded-xl object-contain"
-              priority
-            />
-          </motion.div>
-
-          <motion.div
-            className="w-12 h-12 rounded-full border-4 border-t-transparent"
-            style={{
-              borderColor: isDark ? "#ffffff40" : "#00000025",
-            }}
-            animate={{ rotate: 360 }}
-            transition={{
-              repeat: Infinity,
-              ease: "linear",
-              duration: 1,
-            }}
-          />
+          <Skeleton className="w-24 h-24 rounded-xl mb-6" />
+          <Skeleton className="w-40 h-6 mb-2" />
+          <Skeleton className="w-32 h-4" />
         </motion.div>
       )}
     </AnimatePresence>

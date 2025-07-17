@@ -104,7 +104,7 @@ export default function TechStackPreview() {
         {/* CTA */}
         <div className="mt-12 text-center">
           <Link href="/tech-stack">
-            <Button variant="outline" className="rounded-full">
+            <Button variant="outline" className="w-full sm:w-auto rounded-full px-6 py-4 text-base font-medium">
               View Full Tech Stack
             </Button>
           </Link>

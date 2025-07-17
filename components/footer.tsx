@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Social Links */}
           <div>
             <h4 className="font-medium mb-4">Connect</h4>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-2">
               <a
                 href="https://github.com/leandre000"
                 target="_blank"
@@ -99,6 +99,16 @@ export default function Footer() {
                 className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
               >
                 <Instagram size={20} />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/leandre000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors font-medium"
+              >
+                github.com/leandre000
               </a>
             </div>
           </div>

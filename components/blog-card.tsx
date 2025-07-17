@@ -1,31 +1,42 @@
 "use client"
 
+import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
-import BlogCard from "@/components/blog-card"
-import { blogs } from "@/data/blog"
 
-export default function BlogPage() {
+interface BlogCardProps {
+  id: string
+  title: string
+  description: string
+  image: string
+  date: string
+  slug: string
+}
+
+export default function BlogCard({ id, title, description, image, date, slug }: BlogCardProps) {
   return (
-    <section className="py-20 bg-black/5 dark:bg-white/5 min-h-screen">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Insights & Innovation</h2>
-          <p className="text-black/70 dark:text-white/70 max-w-2xl mx-auto">
-            Explore expert articles and innovative ideas driving modern software, AI, and sustainable engineering.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogs.map((blog) => (
-            <BlogCard key={blog.id} {...blog} />
-          ))}
-        </div>
+    <motion.div
+      whileHover={{ y: -4, boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}
+      className="bg-white dark:bg-black/80 border border-black/10 dark:border-white/10 rounded-2xl overflow-hidden shadow-sm flex flex-col h-full transition-all duration-200"
+    >
+      <div className="relative w-full h-48">
+        <Image
+          src={image || "/placeholder.png"}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+          priority={id === "1"}
+        />
       </div>
-    </section>
+      <div className="flex flex-col flex-1 p-6">
+        <span className="text-xs text-black/60 dark:text-white/60 mb-2">{new Date(date).toLocaleDateString()}</span>
+        <h3 className="text-lg font-bold mb-2 text-black dark:text-white line-clamp-2">{title}</h3>
+        <p className="text-sm text-black/70 dark:text-white/70 mb-4 flex-1 line-clamp-3">{description}</p>
+        <Link href={`/blog/${slug}`} className="mt-auto text-blue-600 dark:text-blue-400 font-medium hover:underline text-sm">
+          Read More
+        </Link>
+      </div>
+    </motion.div>
   )
 }
