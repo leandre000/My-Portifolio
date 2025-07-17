@@ -8,6 +8,7 @@ import Footer from "@/components/footer"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 // ✅ This must remain in a server component (no "use client")

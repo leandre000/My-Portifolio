@@ -77,7 +77,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "https://github.com/leandre000/Tale-connect",
+    github: "https://github.com/leandre000/T-conekt",
     live: ""
   },
   {
@@ -91,7 +91,7 @@ const projects = [
     modelUrl: "",
     mediaType: "image",
     github: "https://github.com/leandre000/EduPlatform-Frontend",
-    live: ""
+    live: "eduplatform-iota.vercel.app"
   },
   {
     id: 6,
@@ -103,7 +103,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "",
+    github: "https://github.com/leandre000/IntelliCV",
     live: ""
   },
   {
@@ -116,7 +116,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "",
+    github: "https://github.com/leandre000/GiraSmart-Farm",
     live: ""
   },
   {
@@ -129,7 +129,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "",
+    github: "https://github.com/leandre000/SobanukirwaBot",
     live: ""
   },
   {
@@ -142,7 +142,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "",
+    github: "https://github.com/leandre000/SpeakWise",
     live: ""
   },
   {
@@ -155,7 +155,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "",
+    github: "https://github.com/leandre000/DevHelper-AI",
     live: ""
   },
   {
@@ -229,14 +229,40 @@ const projects = [
     description: "A next-gen social app designed for sharing moments and connecting with communities.",
     image: "/nex.webp",
     categories: ["Web-app"],
-    year: 2024,
+    year: 2025,
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
     github: "https://github.com/leandre000/NexVibe",
     live: ""
   },
+  {
+    id: 17,
+    title: "Genzura",
+    description: "online inventory management system",
+    image: "/genzura.png",
+    categories: ["Web-app"],
+    year: 2025,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/genzura",
+    live: ""
+  },
   
+  {
+    id: 18,
+    title: "HingaAi",
+    description: "agro_senseai is made  for helping farmers manage pests and  diseases of crops",
+    image: "/hinga.jpg",
+    categories: ["Web-app"],
+    year: 2024,
+    has3DModel: false,
+    modelUrl: "",
+    mediaType: "image",
+    github: "https://github.com/leandre000/Hinga-Ai",
+    live: ""
+  }
 ]
 
 export default function ProjectsClientPage() {

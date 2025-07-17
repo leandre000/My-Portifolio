@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTheme } from "next-themes"
 import Image from "next/image"
@@ -12,7 +12,8 @@ interface LoadingAnimationProps {
 export default function LoadingAnimation({ duration = 2000 }: LoadingAnimationProps) {
   const [isLoading, setIsLoading] = useState(true)
   const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === "dark"
+
+  const isDark = useMemo(() => resolvedTheme === "dark", [resolvedTheme])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,20 +26,21 @@ export default function LoadingAnimation({ duration = 2000 }: LoadingAnimationPr
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className={`fixed inset-0 z-50 flex flex-col items-center justify-center ${
+          key="loading-screen"
+          className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center ${
             isDark ? "bg-black" : "bg-white"
           }`}
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* Logo Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: [0.95, 1, 0.95] }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 2,
+              duration: 1,
               repeat: Infinity,
+              repeatType: "reverse",
               ease: "easeInOut",
             }}
             className="mb-6"
@@ -53,7 +55,6 @@ export default function LoadingAnimation({ duration = 2000 }: LoadingAnimationPr
             />
           </motion.div>
 
-          {/* Spinner */}
           <motion.div
             className="w-12 h-12 rounded-full border-4 border-t-transparent"
             style={{

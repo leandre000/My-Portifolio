@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 
-
 const testimonials = [
   {
     id: 1,
@@ -40,19 +39,63 @@ const testimonials = [
     avatar: "/placeholder.svg?height=100&width=100",
     content:
       "Leandre’s contributions to our AI product launch were outstanding. His integration of real-time ML features and clean, maintainable code played a crucial role in meeting our tight deadlines.",
-  }
+  },
+  {
+    id: 5,
+    name: "Aline Uwase",
+    role: "CTO, FinEdge",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Leandre quickly understood our fintech requirements and built secure, scalable services using Spring Boot and PostgreSQL. His speed and precision saved our team weeks of work.",
+  },
+  {
+    id: 6,
+    name: "Kevin Musoni",
+    role: "AI Researcher, DeepScale AI",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "What impressed me most was Leandre's ability to bridge software engineering and machine learning. He helped productionize TensorFlow models and optimized serving pipelines.",
+  },
+  {
+    id: 7,
+    name: "Denise Mutesi",
+    role: "UX Lead, HumaSpace",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Leandre is a rare dev who thinks like a designer. He turned our wireframes into highly polished React components with beautiful Tailwind styling and attention to accessibility.",
+  },
+  {
+    id: 8,
+    name: "Brian Niyonsaba",
+    role: "DevOps Engineer, StackPilot",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Working with Leandre was seamless. His Docker setups, CI pipelines, and clean monorepo architecture helped our cross-functional teams work efficiently across multiple environments.",
+  },
+  {
+    id: 9,
+    name: "Stacy Kim",
+    role: "Director of Product, KineticGrid",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "Leandre's agile delivery, deep technical knowledge, and clear communication made him a top contributor. He regularly anticipated edge cases and improved our product design thinking.",
+  },
+  {
+    id: 10,
+    name: "Elvis Habimana",
+    role: "Startup Mentor & CTO-in-Residence",
+    avatar: "/placeholder.svg?height=100&width=100",
+    content:
+      "I’ve mentored hundreds of devs — Leandre stands out. His proactive learning, speed, and mastery of full-stack tools make him ideal for fast-paced, high-impact product teams.",
+  },
 ]
 
 export default function TestimonialsSection() {
-  // Track which testimonial is currently active
   const [activeIndex, setActiveIndex] = useState(0)
-  // Control autoplay functionality
   const [autoplay, setAutoplay] = useState(true)
-  // Get current theme
   const { resolvedTheme } = useTheme()
   const isDark = resolvedTheme === "dark"
 
-  // Navigation functions
   const nextTestimonial = () => {
     setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
   }
@@ -61,21 +104,16 @@ export default function TestimonialsSection() {
     setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
   }
 
-  // Autoplay functionality
   useEffect(() => {
     if (!autoplay) return
-
-    const interval = setInterval(() => {
-      nextTestimonial()
-    }, 5000) // Change testimonial every 5 seconds
-
+    const interval = setInterval(() => nextTestimonial(), 5000)
     return () => clearInterval(interval)
   }, [autoplay, activeIndex])
 
   return (
     <section className="py-20 bg-black/5 dark:bg-white/5">
       <div className="container mx-auto px-4">
-        {/* Section header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,21 +123,21 @@ export default function TestimonialsSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
           <p className="text-black/70 dark:text-white/70 max-w-2xl mx-auto">
-            Hear what clients and collaborators have to say about working with me
+            Hear what clients and collaborators have to say about working with me.
           </p>
         </motion.div>
 
-        {/* Testimonials carousel */}
+        {/* Carousel */}
         <div className="relative max-w-4xl mx-auto">
           <div
             className="overflow-hidden"
-            onMouseEnter={() => setAutoplay(false)} // Pause autoplay on hover
-            onMouseLeave={() => setAutoplay(true)} // Resume autoplay when not hovering
+            onMouseEnter={() => setAutoplay(false)}
+            onMouseLeave={() => setAutoplay(true)}
           >
             <motion.div
               className="flex"
               initial={false}
-              animate={{ x: `-${activeIndex * 100}%` }} // Slide to show active testimonial
+              animate={{ x: `-${activeIndex * 100}%` }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
             >
               {testimonials.map((testimonial) => (
@@ -113,24 +151,20 @@ export default function TestimonialsSection() {
                     } border border-black/10 dark:border-white/10`}
                   >
                     <div className="flex items-center mb-6">
-                      {/* Avatar */}
                       <div className="relative w-14 h-14 rounded-full overflow-hidden mr-4">
                         <Image
-                          src={testimonial.avatar || "/placeholder.svg"}
+                          src={testimonial.avatar}
                           alt={testimonial.name}
                           fill
                           className="object-cover"
                         />
                       </div>
-                      {/* Name and role */}
                       <div>
                         <h3 className="font-semibold text-lg">{testimonial.name}</h3>
                         <p className="text-black/60 dark:text-white/60 text-sm">{testimonial.role}</p>
                       </div>
-                      {/* Quote icon */}
                       <Quote className="ml-auto text-black/20 dark:text-white/20" size={32} />
                     </div>
-                    {/* Testimonial content */}
                     <p className="text-black/80 dark:text-white/80 italic">{testimonial.content}</p>
                   </motion.div>
                 </div>
@@ -138,7 +172,7 @@ export default function TestimonialsSection() {
             </motion.div>
           </div>
 
-          {/* Pagination dots */}
+          {/* Dots */}
           <div className="flex justify-center mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
@@ -154,7 +188,7 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Navigation buttons */}
+          {/* Arrows */}
           <Button
             variant="outline"
             size="icon"

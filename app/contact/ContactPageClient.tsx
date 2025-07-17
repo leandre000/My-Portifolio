@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Github,
-  Linkedin,
   Twitter,
   Instagram,
   Mail,
@@ -60,12 +59,12 @@ export default function ContactPageClient() {
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Me</h1>
           <p className="text-xl text-black/70 dark:text-white/70">
-            Let's discuss about project 
+            Let's discuss your next project or collaboration.
           </p>
         </div>
       </section>
 
-      {/* Contact */}
+      {/* Contact Section */}
       <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4 grid gap-16 lg:grid-cols-2">
           {/* Form */}
@@ -82,7 +81,7 @@ export default function ContactPageClient() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
                 <p className="text-black/70 dark:text-white/70">
-                  Thank you for reaching out. I'll get back to you as soon as possible.
+                  Thank you for reaching out. I’ll get back to you shortly.
                 </p>
                 <Button className="mt-6" onClick={() => setIsSubmitted(false)}>
                   Send Another Message
@@ -119,7 +118,7 @@ export default function ContactPageClient() {
                       type="email"
                       value={formState.email}
                       onChange={handleChange}
-                      placeholder="Your email address"
+                      placeholder="Your email"
                       required
                     />
                   </div>
@@ -133,7 +132,7 @@ export default function ContactPageClient() {
                     name="subject"
                     value={formState.subject}
                     onChange={handleChange}
-                    placeholder="What is this regarding?"
+                    placeholder="What is this about?"
                     required
                   />
                 </div>
@@ -158,7 +157,7 @@ export default function ContactPageClient() {
             )}
           </motion.div>
 
-          {/* Info */}
+          {/* Info Section */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -166,21 +165,39 @@ export default function ContactPageClient() {
           >
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
             <div className="space-y-8">
-              <ContactInfo icon={<Mail className="h-5 w-5" />} label="Email" link="mailto:Iamshemaleandre@gmail.com" display="Iamshemaleandre@gmail.com" />
-              <ContactInfo icon={<MapPin className="h-5 w-5" />} label="Location" display="Kigali, Rwanda" />
+              <ContactInfo
+                icon={<Mail />}
+                label="Email"
+                link="mailto:Iamshemaleandre@gmail.com"
+                display="Iamshemaleandre@gmail.com"
+              />
+              <ContactInfo
+                icon={<MapPin />}
+                label="Location"
+                display="Kigali, Rwanda"
+              />
               <div>
                 <h3 className="font-medium mb-4">Connect with me</h3>
                 <div className="flex space-x-4">
-                  <SocialLink href="https://github.com/leandre000" ariaLabel="GitHub"><Github /></SocialLink>
-                  <SocialLink href="https://x.com/shema_Leandre" ariaLabel="X (Twitter)"><Twitter /></SocialLink>
-                  <SocialLink href="https://www.instagram.com/_shemaleandre_/" ariaLabel="Instagram"><Instagram /></SocialLink>
+                  <SocialLink href="https://github.com/leandre000" ariaLabel="GitHub">
+                    <Github />
+                  </SocialLink>
+                  <SocialLink href="https://x.com/shema_Leandre" ariaLabel="X">
+                    <Twitter />
+                  </SocialLink>
+                  <SocialLink href="https://www.instagram.com/_shemaleandre_/" ariaLabel="Instagram">
+                    <Instagram />
+                  </SocialLink>
                 </div>
               </div>
               <div className="bg-black/5 dark:bg-white/5 p-6 rounded-lg">
                 <h3 className="font-medium mb-2">Availability</h3>
-                <p className="text-black/70 dark:text-white/70 mb-4">I'm available for freelance work. Typical response within 32 hours.</p>
+                <p className="text-black/70 dark:text-white/70 mb-4">
+                  Available for freelance work. Response within 24–32 hours.
+                </p>
                 <div className="flex items-center">
-                  <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span> <span className="text-sm">Available for new projects</span>
+                  <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                  <span className="text-sm">Open to new projects</span>
                 </div>
               </div>
             </div>
@@ -191,6 +208,7 @@ export default function ContactPageClient() {
   );
 }
 
+// Contact Info Block
 function ContactInfo({
   icon,
   label,
@@ -205,12 +223,19 @@ function ContactInfo({
   return (
     <div className="flex items-start">
       <div className="bg-black/5 dark:bg-white/5 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-        {icon}
+        {React.cloneElement(icon as React.ReactElement, {
+          className: "w-5 h-5 text-black dark:text-white"
+        })}
       </div>
       <div>
         <h3 className="font-medium mb-1">{label}</h3>
         {link ? (
-          <a href={link} className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white">{display}</a>
+          <a
+            href={link}
+            className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white"
+          >
+            {display}
+          </a>
         ) : (
           <p className="text-black/70 dark:text-white/70">{display}</p>
         )}
@@ -219,6 +244,7 @@ function ContactInfo({
   );
 }
 
+// Social Icon Button
 function SocialLink({
   href,
   ariaLabel,
@@ -236,7 +262,9 @@ function SocialLink({
       rel="noopener noreferrer"
       className="bg-black/5 dark:bg-white/5 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
     >
-      {children}
+      {React.cloneElement(children as React.ReactElement, {
+        className: "w-6 h-6 text-black dark:text-white"
+      })}
     </a>
   );
 }

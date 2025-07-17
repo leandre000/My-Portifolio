@@ -15,8 +15,10 @@ const navItems = [
   { name: "Projects", path: "/projects" },
   { name: "Tech Stack", path: "/tech-stack" },
   { name: "Experience", path: "/experience" },
+  { name: "Blog", path: "/blog" }, 
   { name: "Contact", path: "/contact" },
 ]
+
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)

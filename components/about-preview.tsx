@@ -36,10 +36,6 @@ export default function AboutPreview() {
             <p className="text-black/70 dark:text-white/70 mb-4">
               I'm Leandre, Web Developer leveraging AI & ML to build intelligent, problem-solving digital products that drive innovation and real-world impact.
             </p>
-            <p className="text-black/70 dark:text-white/70 mb-6">
-              I leverage AI & ML to build intelligent, problem-solving digital products, crafting solutions that drive innovation and tell impactful stories through both code and design.
-            </p>
-
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div>
                 <h4 className="font-semibold mb-2">Based in</h4>
