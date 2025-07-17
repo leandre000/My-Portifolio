@@ -91,7 +91,7 @@ const projects = [
     has3DModel: false,
     modelUrl: "",
     mediaType: "image",
-    github: "https://github.com/leandre000/EduPlatform-Frontend",
+    github: "https://github.com/leandre000/EduPlatform-Frontend",   //live link on vercel
     live:"https://eduplatform-iota.vercel.app/"
   },
   {
