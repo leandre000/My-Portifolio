@@ -11,7 +11,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import ModelViewer from "@/components/model-viewer"
+import dynamic from "next/dynamic"
+const ModelViewer = dynamic(() => import("@/components/model-viewer"), { ssr: false })
 import { CuboidIcon, PlayIcon } from "lucide-react"
 
 const categories = [

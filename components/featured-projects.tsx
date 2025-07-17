@@ -6,7 +6,8 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, CuboidIcon as Cube } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import ModelViewer from "@/components/model-viewer"
+import dynamic from "next/dynamic"
+const ModelViewer = dynamic(() => import("@/components/model-viewer"), { ssr: false })
 import {
   Carousel,
   CarouselContent,

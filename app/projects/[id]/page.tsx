@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 import LoadingAnimation from "@/components/loading-animation"
-import ModelViewer from "@/components/model-viewer"
+import dynamic from "next/dynamic"
+const ModelViewer = dynamic(() => import("@/components/model-viewer"), { ssr: false })
 
 const projects = [
    {
