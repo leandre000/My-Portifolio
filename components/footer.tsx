@@ -3,7 +3,8 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Instagram
+  Instagram,
+  Facebook
 } from "lucide-react";
 
 export default function Footer() {
@@ -99,6 +100,15 @@ export default function Footer() {
                 className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
               >
                 <Instagram size={20} />
+              </a>
+              <a
+                href="https://web.facebook.com/profile.php?id=100049296231548&ref=_ig_profile_ac&_rdc=1&_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+              >
+                <Facebook size={20} />
               </a>
             </div>
             <div>

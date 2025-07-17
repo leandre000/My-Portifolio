@@ -101,6 +101,12 @@ importers:
       '@react-pdf-viewer/bookmark':
         specifier: ^3.12.0
         version: 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/core':
+        specifier: ^3.12.0
+        version: 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/default-layout':
+        specifier: ^3.12.0
+        version: 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-pdf-viewer/full-screen':
         specifier: ^3.12.0
         version: 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1429,6 +1435,12 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
+  '@react-pdf-viewer/default-layout@3.12.0':
+    resolution: {integrity: sha512-K2fS4+TJynHxxCBFuIDiFuAw3nqOh4bkBgtVZ/2pGvnFn9lLg46YGLMnTXCQqtyZzzXYh696jmlFViun3is4pA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
   '@react-pdf-viewer/full-screen@3.12.0':
     resolution: {integrity: sha512-hQouJ26QUaRBCXNMU1aI1zpJn4l4PJRvlHhuE2dZYtLl37ycjl7vBCQYZW1FwnuxMWztZsY47R43DKaZORg0pg==}
     peerDependencies:
@@ -1497,6 +1509,12 @@ packages:
 
   '@react-pdf-viewer/thumbnail@3.12.0':
     resolution: {integrity: sha512-Vc8j3bO6wumWZV4o6pAbktPWKDSC9tQAzOCJ3cof541u4i44C11ccYC4W9aNcsMMUSO3bNwAGWtP8OFthV5akQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@react-pdf-viewer/toolbar@3.12.0':
+    resolution: {integrity: sha512-qACTU3qXHgtNK8J+T13EWio+0liilj86SJ87BdapqXynhl720OKPlSKOQqskUGqg3oTUJAhrse9XG6SFdHJx+g==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -4332,6 +4350,18 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
+  '@react-pdf-viewer/default-layout@3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@react-pdf-viewer/attachment': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/bookmark': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/core': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/thumbnail': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/toolbar': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - pdfjs-dist
+
   '@react-pdf-viewer/full-screen@3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@react-pdf-viewer/core': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4423,6 +4453,26 @@ snapshots:
   '@react-pdf-viewer/thumbnail@3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@react-pdf-viewer/core': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - pdfjs-dist
+
+  '@react-pdf-viewer/toolbar@3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@react-pdf-viewer/core': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/full-screen': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/get-file': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/open': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/page-navigation': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/print': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/properties': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/rotate': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/scroll-mode': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/search': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/selection-mode': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/theme': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-pdf-viewer/zoom': 3.12.0(pdfjs-dist@3.11.174)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
