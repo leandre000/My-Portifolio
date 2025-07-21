@@ -96,16 +96,6 @@ export default function HeroSection() {
                 </Button>
               </a>
             </motion.div>
-
-            {/* CV */}
-            <motion.div className="flex-1 min-w-[180px]" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <a href="/docs/cv.pdf" download>
-                <Button className="w-full rounded-full px-6 py-4 text-base font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90" size="lg">
-                  CV
-                  <Download className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-            </motion.div>
           </motion.div>
         </motion.div>
       </div>

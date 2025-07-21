@@ -52,7 +52,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Experience</h4>
-                    <p>3+ Years</p>
+                    <p>2 Years</p>
                   </div>
                 </div>
               </div>

@@ -45,7 +45,7 @@ export default function BlogPage() {
               ))
             : paginatedBlogs.map((blog, i) => (
                 <BlogCard key={blog.id} {...blog} priority={i === 0 && page === 1} />
-              ))}
+          ))}
         </div>
 
         {/* Pagination Controls */}

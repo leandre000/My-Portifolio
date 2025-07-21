@@ -43,7 +43,7 @@ export default function AboutPreview() {
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Experience</h4>
-                <p className="text-black/70 dark:text-white/70">3+ Years</p>
+                <p className="text-black/70 dark:text-white/70">2 Years</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Specialization</h4>

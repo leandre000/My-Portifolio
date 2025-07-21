@@ -17,147 +17,56 @@ import {
 } from "@/components/ui/carousel"
 
 const projects = [
-   {
+  {
     id: 1,
-    title: "Agura",
-    description:
-      "Agura Ticketing App is a seamless mobile solution for booking and managing event tickets with real-time availability and secure access.",
-    image: "/agura.avif",
-    categories: ["Mobile-app"],
-    year: 2025,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "https://github.com/leandre000/Agura",
-    live: ""
+    title: "Aguuka",
+    description: "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
+    image: "/aguka.jpg",
+    categories: ["Web Development", "Fullstack"],
+    year: 2023,
+    github: "https://github.com/leandre000/Aguuka",
+    live: "https://hrms-frontend-ashen.vercel.app/"
   },
   {
     id: 2,
-    title: "T-HealthSync",
-    description:
-      "A health system used to track a patient’s behavior and health status, and also predicts diseases using AI.",
-    image: "/tele.jpg",
-    categories: ["Artificial-Intelligence", "Machine-learning", "Mobile-app"],
+    title: "Stoka",
+    description: "Stoka is an online inventory management system designed to help businesses track stock, sales, and analytics in real time. Features include product management, reporting, and seamless integrations.",
+    image: "/blog/stoka-inventory.jpg",
+    categories: ["Web Development", "Fullstack"],
     year: 2025,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "https://github.com//leandre000/T-HealthSync",
-    live: ""
+    github: "https://github.com/leandre000/stoka",
+    live: "https://stoka-green.vercel.app/"
   },
   {
     id: 3,
-    title: "Aguuka",
-    description:
-      "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
-    image: "/aguka.jpg",
-    categories: ["Mern-Stack", "Artificial-Intelligence"],
+    title: "EduPlatform",
+    description: "A cutting-edge frontend for an online learning platform.",
+    image: "/edu.jpg",
+    categories: ["Web Development", "Academic Curriculars"],
     year: 2023,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "https://github.com/leandre000/Aguuka",
-    live: ""
+    github: "https://github.com/leandre000/EduPlatform-Frontend",
+    live: "https://eduplatform-iota.vercel.app/"
   },
   {
     id: 4,
-    title: "Tale_Connect",
-    description:
-      "Tale-Connect is a Next.js application that empowers global talent.",
-    image: "/tale.png",
-    categories: ["Web-app"],
-    year: 2023,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "https://github.com/leandre000/Tale-connect",
-    live: ""
+    title: "Restaurent-Template",
+    description: "A sleek, customizable restaurant website template for showcasing menus and reservations.",
+    image: "/rest.jpg",
+    categories: ["Web Development"],
+    year: 2024,
+    github: "https://github.com/leandre000/restaurent",
+    live: "https://restaurent-lemon.vercel.app/"
   },
   {
     id: 5,
-    title: "EduPlatform",
-    description:
-      "A cutting-edge frontend for an online learning platform.",
-    image: "/edu.jpg",
-    categories: ["Web-app"],
-    year: 2023,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "https://github.com/leandre000/EduPlatform-Frontend",
-    live: ""
-  },
-  {
-    id: 6,
-    title: "IntelliCV",
-    description:
-      "AI Resume Builder crafts professional resumes tailored to job roles using smart optimization.",
-    image: "/intel.png",
-    categories: ["Artificial-Intelligence", "Web-app"],
+    title: "Website-Template",
+    description: "A multi-purpose website template built for startups and professional services.",
+    image: "/web.webp",
+    categories: ["Web Development"],
     year: 2024,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "",
-    live: ""
-  },
-  {
-    id: 7,
-    title: "GiraSmart Farm",
-    description:
-      "GiraSmart AI uses computer vision to empower farmers with crop insights and precision agriculture.",
-    image: "/gira.jpg",
-    categories: ["Artificial-Intelligence", "Machine-Learning"],
-    year: 2024,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "",
-    live: ""
-  },
-  {
-    id: 8,
-    title: "SobanukirwaBot",
-    description:
-      "An intelligent chatbot mentor that supports learners and professionals through personalized guidance.",
-    image: "/sob.webp",
-    categories: ["Machine-Learning", "Web-app"],
-    year: 2024,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "",
-    live: ""
-  },
-  {
-    id: 9,
-    title: "SpeakWise",
-    description:
-      "SpeakWise is an AI voice assistant that executes tasks and answers questions hands-free.",
-    image: "speak.webp",
-    categories: ["Mobile-app", "Artificial-Intelligence"],
-    year: 2024,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "",
-    live: ""
-  },
-  {
-    id: 10,
-    title: "DevHelper AI",
-    description:
-      "DevHelper AI explains, refactors, and enhances code snippets using advanced algorithms.",
-    image: "/dev.webp",
-    categories: ["Artificial-Intelligence", "Web-app"],
-    year: 2024,
-    has3DModel: false,
-    modelUrl: "",
-    mediaType: "image",
-    github: "",
-    live: ""
+    github: "https://github.com/leandre000/Project-descriptor",
+    live: "https://lex-lake.vercel.app/"
   }
- 
 ]
 
 export default function FeaturedProjects() {

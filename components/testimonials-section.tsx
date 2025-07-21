@@ -11,114 +11,42 @@ const testimonials = [
   {
     id: 1,
     name: "Rukundo Prince",
-    role: "Software Engineer",
+    role: "Fullstack using MERN",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Leandre's full-stack expertise brought our platform to life. His ability to architect scalable backend solutions and create intuitive frontends made our product robust and user-friendly.",
+      "Leandre's MERN stack expertise brought our platform to life. His ability to architect scalable backend solutions and create intuitive frontends made our product robust and user-friendly.",
   },
   {
     id: 2,
-    name: "Sarah Chen",
-    role: "Lead ML Engineer, VisionAI Labs",
+    name: "Asimwe Landry",
+    role: "Web Development using Nextjs",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Collaborating with Leandre on our AI-driven analytics tool was a game changer. His deep understanding of machine learning pipelines and model deployment accelerated our development by weeks.",
+      "Leandre’s contributions to our Next.js web project were outstanding. His integration of modern features and clean, maintainable code played a crucial role in meeting our tight deadlines.",
   },
   {
     id: 3,
-    name: "Ihirwe Patrick",
-    role: "Creative Director, Orion Design Studio",
+    name: "Ndizeye Blaise",
+    role: "UI & UX",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
       "Leandre merges technical precision with design excellence. The UI/UX he delivered not only looked stunning but also aligned perfectly with user behavior and accessibility standards.",
   },
   {
     id: 4,
-    name: "Asimwe Landry",
-    role: "Product Manager, CloudMorph Inc.",
+    name: "Dushimire Aine",
+    role: "Mobile development",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Leandre’s contributions to our AI product launch were outstanding. His integration of real-time ML features and clean, maintainable code played a crucial role in meeting our tight deadlines.",
+      "Leandre’s mobile development skills helped us launch a seamless app experience. His attention to detail and user-centric approach made our app a success.",
   },
   {
     id: 5,
-    name: "Aline Uwase",
-    role: "CTO, FinEdge",
+    name: "Mahinga Rodin",
+    role: "AI integration and ML",
     avatar: "/placeholder.svg?height=100&width=100",
     content:
-      "Leandre quickly understood our fintech requirements and built secure, scalable services using Spring Boot and PostgreSQL. His speed and precision saved our team weeks of work.",
-  },
-  {
-    id: 6,
-    name: "Kevin Musoni",
-    role: "AI Researcher, DeepScale AI",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "What impressed me most was Leandre's ability to bridge software engineering and machine learning. He helped productionize TensorFlow models and optimized serving pipelines.",
-  },
-  {
-    id: 7,
-    name: "Denise Mutesi",
-    role: "UX Lead, HumaSpace",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre is a rare dev who thinks like a designer. He turned our wireframes into highly polished React components with beautiful Tailwind styling and attention to accessibility.",
-  },
-  {
-    id: 8,
-    name: "Brian Niyonsaba",
-    role: "DevOps Engineer, StackPilot",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Working with Leandre was seamless. His Docker setups, CI pipelines, and clean monorepo architecture helped our cross-functional teams work efficiently across multiple environments.",
-  },
-  {
-    id: 9,
-    name: "Stacy Kim",
-    role: "Director of Product, KineticGrid",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre's agile delivery, deep technical knowledge, and clear communication made him a top contributor. He regularly anticipated edge cases and improved our product design thinking.",
-  },
-  {
-    id: 10,
-    name: "Elvis Habimana",
-    role: "Startup Mentor & CTO-in-Residence",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "I’ve mentored hundreds of devs — Leandre stands out. His proactive learning, speed, and mastery of full-stack tools make him ideal for fast-paced, high-impact product teams.",
-  },
-  {
-    id: 11,
-    name: "Grace Uwimana",
-    role: "Community Leader, Kigali Digital Initiative",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre volunteered his time to teach Linux and Excel to our youth group. His patience and clarity made a real difference in our community's digital skills.",
-  },
-  {
-    id: 12,
-    name: "Samuel Mugisha",
-    role: "Operations Manager, AgriSmart Co-op",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "We relied on Leandre's expertise in data automation with Excel and Linux scripts to streamline our agricultural reporting. His solutions saved us countless hours.",
-  },
-  {
-    id: 13,
-    name: "Linda Nkurunziza",
-    role: "Founder, Women in Tech Rwanda",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre is a true mentor. He supported our hackathons and workshops, always encouraging innovation and inclusion in tech.",
-  },
-  {
-    id: 14,
-    name: "Alexis Ndayisenga",
-    role: "IT Consultant, Freelance",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Whenever I need a reliable collaborator for complex web or AI projects, Leandre is my first call. His professionalism and technical depth are unmatched.",
+      "Leandre’s expertise in AI and machine learning integration transformed our product. His innovative solutions and deep technical knowledge set our project apart.",
   },
 ]
 

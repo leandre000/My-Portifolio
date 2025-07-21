@@ -52,6 +52,23 @@ const workExperience = [
       "Supported local organizations with open-source solutions"
     ],
   },
+  {
+    id: 5,
+    title: "Fullstack & Cloud Developer (Modern Stacks)",
+    company: "Freelance & Open Source Projects",
+    period: "2022 - Present",
+    description: "Designed and built scalable web apps, APIs, and SaaS platforms using modern stacks: React, Vue.js, Next.js, NestJS, Express, GraphQL, Appwrite, Docker, Vercel, Render, and more.",
+    responsibilities: [
+      "Developed and deployed fullstack apps with React, Vue.js, and Next.js",
+      "Built secure APIs with Express, NestJS, GraphQL, and Appwrite",
+      "Implemented authentication with passport.js and modern auth flows",
+      "Containerized apps with Docker and automated CI/CD pipelines",
+      "Deployed to Vercel, Render, and cloud platforms",
+      "Integrated shadcn/ui, HeroUI, and Tailwind for beautiful UIs",
+      "Worked with TypeORM, PostgreSQL, and cloud databases",
+      "Built and maintained embedded systems and IoT solutions"
+    ],
+  },
 ]
 
 const education = [
@@ -68,6 +85,13 @@ const education = [
     period: "2020 - 2023",
     description:
       "I completed my junior secondary studies at this school, from Grade 7 to Grade 9.",
+  },
+  {
+    degree: "Modern Web & Cloud Technologies (Self-Taught)",
+    institution: "Online & Community Learning",
+    period: "2021 - Present",
+    description:
+      "Completed advanced courses and hands-on projects in fullstack development, cloud deployment, DevOps, and embedded systems. Specialized in React, Vue.js, Next.js, NestJS, Docker, Vercel, Render, and modern backend technologies.",
   },
 ]
 

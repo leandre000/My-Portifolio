@@ -176,23 +176,11 @@ export default function ContactPageClient() {
                 label="Location"
                 display="Kigali, Rwanda"
               />
-              <ContactInfo
-                icon={<span className='font-bold'>📞</span>}
-                label="Phone"
-                link="tel:+250793373953"
-                display="+250 793 373 953"
-              />
               <div>
                 <h3 className="font-medium mb-4">Connect with me</h3>
                 <div className="flex space-x-4">
                   <SocialLink href="https://github.com/leandre000" ariaLabel="GitHub">
                     <Github />
-                  </SocialLink>
-                  <SocialLink href="https://x.com/shema_Leandre" ariaLabel="X">
-                    <Twitter />
-                  </SocialLink>
-                  <SocialLink href="https://www.instagram.com/_shemaleandre_/" ariaLabel="Instagram">
-                    <Instagram />
                   </SocialLink>
                 </div>
               </div>

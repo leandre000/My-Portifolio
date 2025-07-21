@@ -92,26 +92,14 @@ export default function Footer() {
               >
                 <Twitter size={20} />
               </a>
-              <a
-                href="https://www.instagram.com/_shemaleandre_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://web.facebook.com/profile.php?id=100049296231548&ref=_ig_profile_ac&_rdc=1&_rdr#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
             </div>
             <div>
+              <a
+                href="mailto:Iamshemaleandre@gmail.com"
+                className="inline-block text-sm text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors font-medium mr-4"
+              >
+                Iamshemaleandre@gmail.com
+              </a>
               <a
                 href="https://github.com/leandre000"
                 target="_blank"
