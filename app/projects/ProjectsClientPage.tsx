@@ -177,14 +177,14 @@ export default function ProjectsClientPage() {
         >
           Others
         </Button>
-        <Button
+            <Button
           variant={activeTab === "future" ? "default" : "ghost"}
           onClick={() => handleTabClick("future", futureRef)}
           className={activeTab === "future" ? "font-bold" : ""}
         >
           Future Use
-        </Button>
-      </div>
+            </Button>
+        </div>
 
       {/* Completed Projects */}
       <section ref={completedRef} id="completed-projects" className="py-12 bg-white dark:bg-black">
@@ -192,8 +192,8 @@ export default function ProjectsClientPage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Completed Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {completedProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
+            <motion.div
+              key={project.id}
                 className="group relative rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow bg-white dark:bg-black border border-black/10 dark:border-white/10"
                 whileHover={{ scale: 1.03 }}
               >
@@ -228,9 +228,9 @@ export default function ProjectsClientPage() {
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
+                  ))}
+                </div>
+              </div>
       </section>
 
       {/* Case Studies */}
@@ -254,8 +254,8 @@ export default function ProjectsClientPage() {
                 />
                 <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
                 <p className="text-black/70 dark:text-white/70 mb-2">{study.description}</p>
-              </motion.div>
-            ))}
+            </motion.div>
+          ))}
           </div>
         </div>
       </section>
@@ -269,14 +269,14 @@ export default function ProjectsClientPage() {
               <a
                 key={project.id}
                 href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 className="block rounded-lg overflow-hidden shadow bg-white dark:bg-black border border-black/10 dark:border-white/10 p-6 hover:shadow-lg transition-shadow"
-              >
+                  >
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-black/70 dark:text-white/70 mb-2">{project.description}</p>
                 <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 dark:bg-black/80 text-black dark:text-white rounded hover:bg-white hover:text-black hover:underline transition">
-                  GitHub
+                    GitHub
                 </span>
               </a>
             ))}

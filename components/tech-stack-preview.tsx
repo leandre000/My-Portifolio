@@ -9,52 +9,27 @@ import { TechIcon } from "@/components/tech-icons"
 const techGroups = [
   {
     group: "Web Development",
-    items: [
-      { name: "React", description: "Library for building fast, reusable UI components in modern single-page apps." },
-      { name: "Tanstack (React Query)", description: "Powerful data-fetching and state management library for React applications." },
-      { name: "Next.js", description: "React-based framework for full-stack web applications with built-in SSR and API routes." },
-      { name: "Tailwind CSS", description: "Utility-first CSS framework for fast UI styling with fully customizable design systems." },
-    ]
-  },
-  {
-    group: "Fullstack & Backend",
-    items: [
-      { name: "Next.js", description: "React-based framework for full-stack web applications with built-in SSR and API routes." },
-      { name: "Node.js", description: "JavaScript runtime for server-side development." },
-      { name: "Express.js", description: "Minimal and flexible Node.js web application framework for building APIs and web servers." },
-      { name: "NestJS", description: "Progressive Node.js framework for building efficient, scalable server-side applications." },
-      { name: "Spring Boot", description: "Java-based framework for building production-ready, scalable, and fast backend applications." },
-    ]
+    items: ["React", "React Query", "Next.js", "Spring Boot", "Express", "NestJS", "Node.js"]
   },
   {
     group: "Academic Curriculars",
-    items: [
-      { name: "Penetration Testing", description: "Hands-on skills in identifying and exploiting security vulnerabilities." },
-      { name: "Network Research", description: "Research and analysis in computer networks." },
-      { name: "Linux Fundamentals", description: "Proficiency in Linux operating systems." },
-      { name: "Linux", description: "Open-source operating system used for development, server management, and automation." },
-      { name: "Word", description: "Document creation and editing." },
-      { name: "Excel", description: "Data analysis, automation, and reporting." },
-      { name: "PowerPoint", description: "Presentation creation and delivery." },
-      { name: "Canva", description: "Graphic design and content creation." },
-      { name: "Hardware", description: "Computer hardware basics and troubleshooting." },
-      { name: "Photoshop", description: "Raster graphics editor for image manipulation." },
-      { name: "Adobe Illustrator", description: "Vector graphics editor." },
-      { name: "Python", description: "High-level programming language for general-purpose scripting and automation." },
-      { name: "SpringAI", description: "Spring ecosystem extension for integrating AI and machine learning into Java applications." },
-    ]
+    items: ["Cybersecurity", "Linux", "Photoshop", "Adobe Illustrator"]
+  },
+  {
+    group: "Computer Basics",
+    items: ["Word", "Excel", "PowerPoint", "Canva", "Hardware"]
+  },
+  {
+    group: "AI & ML",
+    items: ["Python", "Spring AI"]
   },
   {
     group: "Mobile Development",
-    items: [
-      { name: "React Native", description: "Framework for building native mobile apps using React." },
-    ]
+    items: ["React Native"]
   },
   {
     group: "Design",
-    items: [
-      { name: "Figma", description: "Collaborative interface design tool for UI/UX and prototyping." },
-    ]
+    items: ["Figma"]
   },
 ];
 
@@ -78,28 +53,26 @@ export default function TechStackPreview() {
         </div>
 
         {/* Tech Cards Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {techGroups.map((group, groupIndex) => (
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {techGroups.map((group, idx) => (
             <motion.div
               key={group.group}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: groupIndex * 0.05 }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10"
+              className="bg-white dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col items-center shadow hover:shadow-lg transition-shadow"
             >
-              <div className="bg-black/5 dark:bg-white/5 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <TechIcon name={group.group} className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{group.group}</h3>
-              <div className="grid gap-2">
-                {group.items.map((item, itemIndex) => (
-                  <div key={item.name} className="flex items-start gap-2 text-sm text-black/70 dark:text-white/70">
-                    <span>{item.name}:</span>
-                    <span>{item.description}</span>
-                  </div>
+              <h3 className="text-lg font-bold mb-4 tracking-wide text-center font-sans text-gray-900 dark:text-white">
+                {group.group}
+              </h3>
+              <ul className="list-none space-y-2 w-full text-center">
+                {group.items.map((item) => (
+                  <li key={item} className="text-base font-medium text-gray-800 dark:text-gray-100 py-1 px-2 rounded transition-colors bg-gray-50 dark:bg-black/10 hover:bg-blue-50 dark:hover:bg-blue-900/30">
+                    {item}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
           ))}
         </div>
