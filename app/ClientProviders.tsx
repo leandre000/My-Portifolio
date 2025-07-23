@@ -9,6 +9,7 @@ export default function ClientProviders({ children }: { children: React.ReactNod
   return (
     <UserProvider>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+        {/* Always show the navigation bar at the top */}
         <Navigation />
         <MouseTrail />
         {children}

@@ -134,9 +134,9 @@ const SidebarProvider = React.forwardRef<
         <TooltipProvider delayDuration={0}>
           <div
             style={{
-              "--sidebar-width": SIDEBAR_WIDTH,
-              "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
-              ...style,
+                "--sidebar-width": SIDEBAR_WIDTH,
+                "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
+                ...style,
             } as React.CSSProperties}
             className={cn(
               "group/sidebar-wrapper flex min-h-svh w-[--sidebar-width] bg-white dark:bg-black p-4 border-r border-black/10 dark:border-white/10",
@@ -189,7 +189,7 @@ const Sidebar = React.forwardRef<
             data-mobile="true"
             className="w-[--sidebar-width] bg-white dark:bg-black p-4 text-sidebar-foreground [&>button]:hidden border-r border-black/10 dark:border-white/10"
             style={{
-              "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
+                "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
             } as React.CSSProperties}
             side={side}
           >
@@ -205,8 +205,8 @@ const Sidebar = React.forwardRef<
         ref={ref}
         className="fixed inset-y-0 left-0 z-10 h-svh w-[--sidebar-width] bg-white dark:bg-black p-4 border-r border-black/10 dark:border-white/10 flex flex-col"
         {...props}
-      >
-        {children}
+          >
+            {children}
       </div>
     )
   }

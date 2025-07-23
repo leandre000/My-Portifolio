@@ -6,7 +6,7 @@ export const blogs = [
     image: "/blog/agtech.jpg",
     date: "2025-07-10",
     slug: "sustainable-agtech",
-    content: `
+    fullContent: `
 Agriculture is the backbone of civilization, but it faces unprecedented challenges: climate change, resource scarcity, and a growing global population. Enter AgTech—where engineering, data, and AI are transforming how we grow food.
 
 ## The Challenge: Feeding the World Sustainably
@@ -37,35 +37,30 @@ AgTech isn’t just for big farms. Open-source platforms and affordable sensors 
     title: "Deploying AI Agents in Real-world SaaS",
     description: "Explore practical use cases of AI agents in scalable SaaS products.",
     image: "/blog/ai-saas-agents.jpg",
-    date: "2025-07-08",
-    slug: "ai-saas-agents",
-    content: `
-Software as a Service (SaaS) has changed how we work, collaborate, and innovate. But the next leap is here: AI agents that automate, optimize, and personalize SaaS platforms like never before.
+    date: "2024-06-01",
+    slug: "ai-agents-saas",
+    fullContent: `
+AI agents are no longer a futuristic concept—they’re a practical tool for SaaS companies looking to scale, automate, and deliver better user experiences. But what does it really look like to deploy AI agents in a real SaaS product?
 
-## What Are AI Agents?
+Background:
+When our SaaS platform started, we handled customer support, onboarding, and analytics manually. As we grew, these tasks became bottlenecks. We needed a way to automate repetitive work without sacrificing quality.
 
-AI agents are autonomous programs that can learn, reason, and act on behalf of users. In SaaS, they:
-- Automate repetitive tasks (e.g., data entry, scheduling)
-- Analyze large datasets to uncover insights
-- Personalize user experiences in real time
-- Detect anomalies and prevent security threats
+The Solution:
+We began by integrating an AI-powered chatbot for customer support. This agent could answer FAQs, route complex issues to humans, and even learn from new questions over time. Next, we used AI agents to personalize onboarding—guiding users through setup based on their goals and usage patterns.
 
-## Real-World Examples
+Key Insights:
+- Start Small: We didn’t try to automate everything at once. We picked one pain point (support) and solved it well.
+- Human-in-the-loop: For tricky cases, the AI agent would escalate to a real person, ensuring users always got the help they needed.
+- Continuous Learning: We regularly reviewed chat logs and user feedback to retrain our agents and improve their accuracy.
 
-- **Customer Support:** AI chatbots resolve issues instantly, freeing up human agents for complex cases.
-- **Sales & Marketing:** AI agents score leads, recommend content, and optimize campaigns for better ROI.
-- **Finance:** Automated agents reconcile transactions, flag fraud, and generate reports in seconds.
+Results:
+- Support response times dropped by 60%.
+- Onboarding completion rates increased by 30%.
+- Our team could focus on building new features instead of answering repetitive questions.
 
-## The Benefits: Speed, Scale, and Smarts
-
-AI agents help SaaS companies deliver faster, smarter, and more reliable services. They reduce costs, improve accuracy, and let teams focus on what matters most—innovation and customer value.
-
-## The Future: Human + AI Collaboration
-
-The best SaaS platforms will blend human creativity with AI efficiency. As AI agents become more capable, they’ll empower users to achieve more with less effort.
-
-**The SaaS of tomorrow is intelligent, adaptive, and always learning. Are you ready?**
-    `
+Takeaway:
+Deploying AI agents in SaaS isn’t about replacing people—it’s about freeing them to do higher-value work. Start with a clear problem, measure your results, and keep improving. The future of SaaS is smart, scalable, and user-centric.
+`,
   },
   {
     id: "5",
@@ -74,7 +69,7 @@ The best SaaS platforms will blend human creativity with AI efficiency. As AI ag
     image: "/blog/ai-future.jpg",
     date: "2025-07-15",
     slug: "ai-future-everyday-life",
-    content: `
+    fullContent: `
 Artificial intelligence is no longer science fiction—it’s woven into the fabric of our daily lives. From the moment we wake up to the time we go to bed, AI is working behind the scenes to make our routines smarter, safer, and more efficient.
 
 ## AI at Home
@@ -107,7 +102,7 @@ As AI continues to evolve, it will unlock new possibilities we can’t yet imagi
     image: "/blog/embedded-iot.jpg",
     date: "2025-08-11",
     slug: "embedded-systems-iot",
-    content: `
+    fullContent: `
 From smart thermostats to wearable health trackers, embedded systems are everywhere. In the age of the Internet of Things (IoT), these tiny computers are powering a revolution in how we live, work, and play.
 
 ## What are Embedded Systems?
@@ -147,7 +142,7 @@ Embedded systems are the unsung heroes of the IoT era. By combining smart hardwa
     image: "/blog/design-thinking.jpg",
     date: "2025-07-20",
     slug: "design-thinking-webdev",
-    content: `
+    fullContent: `
 In today’s digital world, building a website or app isn’t just about code—it’s about creating experiences that delight users and solve real problems. That’s where design thinking comes in.
 
 ## What is Design Thinking?
