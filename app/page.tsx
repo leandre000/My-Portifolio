@@ -1,42 +1,49 @@
-import { Suspense } from "react"
-import HeroSection from "@/components/hero-section"
-import FeaturedProjects from "@/components/featured-projects"
-import TechStackPreview from "@/components/tech-stack-preview"
-import AboutPreview from "@/components/about-preview"
-import TestimonialsSection from "@/components/testimonials-section"
-import BlogPreview from "@/components/blog-preview"
-import LoadingAnimation from "@/components/loading-animation"
-import { MouseTrailer } from "@/components/mouse-trailer"
+// Home Page: Clean, DRY, KISS, and clear section order
+// 1. Hero
+// 2. Featured Projects
+// 3. Tech Expertise
+// 4. Latest Blog Insights
+// 5. Client Testimonials (last)
+import { Suspense } from "react";
+import HeroSection from "@/components/hero-section";
+import FeaturedProjects from "@/components/featured-projects";
+import TechStackPreview from "@/components/tech-stack-preview";
+import BlogPreview from "@/components/blog-preview";
+import TestimonialsSection from "@/components/testimonials-section";
+import LoadingAnimation from "@/components/loading-animation";
+import { MouseTrailer } from "@/components/mouse-trailer";
 
 export default function Home() {
   return (
     <>
+      {/* Optional: Loading animation and mouse trailer */}
       <LoadingAnimation duration={1500} />
       <MouseTrailer />
 
+      {/* 1. Hero Section */}
       <Suspense fallback={<div className="min-h-screen" />}>
         <HeroSection />
       </Suspense>
 
-      <Suspense fallback={<div className="h-96" />}>
-        <AboutPreview />
-      </Suspense>
-
+      {/* 2. Featured Projects */}
       <Suspense fallback={<div className="h-96" />}>
         <FeaturedProjects />
       </Suspense>
 
+      {/* 3. Tech Expertise */}
       <Suspense fallback={<div className="h-96" />}>
-        <TestimonialsSection />
+        <TechStackPreview />
       </Suspense>
 
+      {/* 4. Latest Blog Insights */}
       <Suspense fallback={<div className="h-96" />}>
         <BlogPreview />
       </Suspense>
 
+      {/* 5. Client Testimonials (last) */}
       <Suspense fallback={<div className="h-96" />}>
-        <TechStackPreview />
+        <TestimonialsSection />
       </Suspense>
     </>
-  )
+  );
 }

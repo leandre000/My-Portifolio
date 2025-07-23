@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Leandre - Designer & Developer Portfolio",
   description: "Portfolio showcasing Web development, Artificial-Intelligence & Machine-Learning Work.",
   icons: {
-    icon: "/placeholder-logo.webp", // Ensure this image is in the public folder
+    icon: "/placeholder-logo.webp", // Use this as favicon
   },
 }
 
