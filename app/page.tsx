@@ -2,13 +2,11 @@
 // 1. Hero
 // 2. Featured Projects
 // 3. Tech Expertise
-// 4. Latest Blog Insights
-// 5. Client Testimonials (last)
+// 4. Client Testimonials (last)
 import { Suspense } from "react";
 import HeroSection from "@/components/hero-section";
 import FeaturedProjects from "@/components/featured-projects";
 import TechStackPreview from "@/components/tech-stack-preview";
-import BlogPreview from "@/components/blog-preview";
 import TestimonialsSection from "@/components/testimonials-section";
 import LoadingAnimation from "@/components/loading-animation";
 import { MouseTrailer } from "@/components/mouse-trailer";
@@ -35,12 +33,7 @@ export default function Home() {
         <TechStackPreview />
       </Suspense>
 
-      {/* 4. Latest Blog Insights */}
-      <Suspense fallback={<div className="h-96" />}>
-        <BlogPreview />
-      </Suspense>
-
-      {/* 5. Client Testimonials (last) */}
+      {/* 4. Client Testimonials (last) */}
       <Suspense fallback={<div className="h-96" />}>
         <TestimonialsSection />
       </Suspense>
