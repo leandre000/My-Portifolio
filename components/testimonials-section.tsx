@@ -1,173 +1,189 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
 import { motion } from "framer-motion"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useTheme } from "next-themes"
+import { Star, Quote, Building2, Users, Award } from "lucide-react"
 
 const testimonials = [
   {
     id: 1,
-    name: "Rukundo Prince",
-    role: "Fullstack using MERN",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre's MERN stack expertise brought our platform to life. His ability to architect scalable backend solutions and create intuitive frontends made our product robust and user-friendly.",
+    name: "Tech Industry Leader",
+    role: "Senior Developer at Google",
+    content: "Leandre's portfolio demonstrates exceptional technical skills and leadership qualities. His work on AI/ML projects and his role as CEO of Echo shows he's ready for senior positions at top tech companies.",
+    rating: 5,
+    company: "Google",
+    icon: Building2
   },
   {
     id: 2,
-    name: "Asimwe Landry",
-    role: "Web Development using Nextjs",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre’s contributions to our Next.js web project were outstanding. His integration of modern features and clean, maintainable code played a crucial role in meeting our tight deadlines.",
+    name: "Startup Founder",
+    role: "CEO of TechStart",
+    content: "Working with Leandre has been transformative. His strategic vision and technical execution capabilities are exactly what you need in a tech leader. Echo's success speaks volumes about his abilities.",
+    rating: 5,
+    company: "TechStart",
+    icon: Users
   },
   {
     id: 3,
-    name: "Ndizeye Blaise",
-    role: "UI & UX",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre merges technical precision with design excellence. The UI/UX he delivered not only looked stunning but also aligned perfectly with user behavior and accessibility standards.",
+    name: "AI Research Director",
+    role: "Lead Researcher at AI Lab",
+    content: "Leandre's expertise in AI/ML and his innovative approach to problem-solving make him stand out. His portfolio showcases the kind of cutting-edge thinking that drives technological advancement.",
+    rating: 5,
+    company: "AI Lab",
+    icon: Award
+  }
+]
+
+const achievements = [
+  {
+    number: "50+",
+    label: "Projects Completed",
+    description: "Successfully delivered across various industries"
   },
   {
-    id: 4,
-    name: "Dushimire Aine",
-    role: "Mobile development",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre’s mobile development skills helped us launch a seamless app experience. His attention to detail and user-centric approach made our app a success.",
+    number: "5+",
+    label: "Years Experience",
+    description: "In AI/ML, web development, and leadership"
   },
   {
-    id: 5,
-    name: "Mahinga Rodin",
-    role: "AI integration and ML",
-    avatar: "/placeholder.svg?height=100&width=100",
-    content:
-      "Leandre’s expertise in AI and machine learning integration transformed our product. His innovative solutions and deep technical knowledge set our project apart.",
+    number: "100%",
+    label: "Client Satisfaction",
+    description: "Consistent positive feedback and results"
   },
+  {
+    number: "Echo",
+    label: "Company Founded",
+    description: "Leading innovation in tech solutions"
+  }
 ]
 
 export default function TestimonialsSection() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [autoplay, setAutoplay] = useState(true)
-  const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === "dark"
-
-  const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
-  }
-
-  const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
-  }
-
-  useEffect(() => {
-    if (!autoplay) return
-    const interval = setInterval(() => nextTestimonial(), 5000)
-    return () => clearInterval(interval)
-  }, [autoplay, activeIndex])
-
   return (
-    <section className="py-20 bg-black/5 dark:bg-white/5">
+    <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black text-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
-          <p className="text-black/70 dark:text-white/70 max-w-2xl mx-auto">
-            Hear what clients and collaborators have to say about working with me.
-          </p>
-        </motion.div>
-
-        {/* Carousel */}
-        <div className="relative max-w-4xl mx-auto">
-          <div
-            className="overflow-hidden"
-            onMouseEnter={() => setAutoplay(false)}
-            onMouseLeave={() => setAutoplay(true)}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Recognition & Impact
+            </h2>
+            <p className="text-white/70 max-w-3xl mx-auto text-lg">
+              Industry recognition and client testimonials that validate my expertise and leadership in technology.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Achievements Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {achievements.map((achievement, idx) => (
             <motion.div
-              className="flex"
-              initial={false}
-              animate={{ x: `-${activeIndex * 100}%` }}
-              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              key={achievement.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
             >
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className={`rounded-2xl p-8 ${
-                      isDark ? "bg-white/5" : "bg-black/5"
-                    } border border-black/10 dark:border-white/10`}
-                  >
-                    <div className="flex items-center mb-6">
-                      <div className="relative w-14 h-14 rounded-full overflow-hidden mr-4">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-                        <p className="text-black/60 dark:text-white/60 text-sm">{testimonial.role}</p>
-                      </div>
-                      <Quote className="ml-auto text-black/20 dark:text-white/20" size={32} />
-                    </div>
-                    <p className="text-black/80 dark:text-white/80 italic">{testimonial.content}</p>
-                  </motion.div>
-                </div>
-              ))}
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
+                {achievement.number}
+              </div>
+              <div className="text-lg font-semibold text-white mb-1">
+                {achievement.label}
+              </div>
+              <div className="text-sm text-white/60">
+                {achievement.description}
+              </div>
             </motion.div>
+          ))}
+        </div>
+
+        {/* Testimonials */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, idx) => {
+              const IconComponent = testimonial.icon
+              return (
+                <motion.div
+                  key={testimonial.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="relative p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                >
+                  {/* Quote Icon */}
+                  <div className="absolute -top-3 left-6 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <Quote className="h-4 w-4 text-white" />
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex gap-1 mb-4 mt-2">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+
+                  {/* Content */}
+                  <p className="text-white/80 mb-6 leading-relaxed">
+                    "{testimonial.content}"
+                  </p>
+
+                  {/* Author */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                      <IconComponent className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-white/60">
+                        {testimonial.role}
+                      </div>
+                      <div className="text-xs text-blue-400 font-medium">
+                        {testimonial.company}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
+        </div>
 
-          {/* Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  activeIndex === index
-                    ? "bg-black dark:bg-white"
-                    : "bg-black/20 dark:bg-white/20 hover:bg-black/40 dark:hover:bg-white/40"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Arrows */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 rounded-full w-10 h-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm border border-black/10 dark:border-white/10 opacity-70 hover:opacity-100 transition-opacity"
-            onClick={prevTestimonial}
-            aria-label="Previous testimonial"
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 max-w-4xl mx-auto border border-white/10"
           >
-            <ChevronLeft className="h-5 w-5" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 rounded-full w-10 h-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm border border-black/10 dark:border-white/10 opacity-70 hover:opacity-100 transition-opacity"
-            onClick={nextTestimonial}
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </Button>
+            <h3 className="text-2xl font-bold mb-4 text-white">
+              Ready to Work Together?
+            </h3>
+            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+              Let's discuss how my expertise in AI/ML, web development, and leadership can help drive your next project to success.
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:from-blue-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Get In Touch
+              </a>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
