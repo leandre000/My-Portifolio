@@ -48,9 +48,9 @@ const certificates = [
   },
   {
     id: 6,
-    title: "Penetration Testing Advanced",
-    description: "Advanced penetration testing techniques including social engineering, wireless security, and web application testing.",
-    file: "/certificates/Penetration_testing1.pdf",
+    title: "CYBERIUM",
+    description: "Advanced cybersecurity and ethical hacking certification covering comprehensive security methodologies.",
+    file: "/certificates/CYBERIUM.pdf",
     icon: Shield,
     color: "from-red-600 to-pink-600"
   }

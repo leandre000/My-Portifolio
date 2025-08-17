@@ -1,0 +1,5 @@
+app/experience/ExperiencePageClient.tsx
+app/page.tsx
+components/certificates-section.tsx
+components/featured-projects.tsx
+components/testimonials-section.tsx

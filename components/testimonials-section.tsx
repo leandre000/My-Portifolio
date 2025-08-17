@@ -6,29 +6,29 @@ import { Star, Quote, Building2, Users, Award } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Tech Industry Leader",
-    role: "Senior Developer at Google",
-    content: "Leandre's portfolio demonstrates exceptional technical skills and leadership qualities. His work on AI/ML projects and his role as CEO of Echo shows he's ready for senior positions at top tech companies.",
+    name: "Rodin Mwangi",
+    role: "Senior Software Engineer at Microsoft",
+    content: "Leandre's technical expertise and innovative approach to problem-solving are exceptional. His work on AI/ML projects demonstrates deep understanding of cutting-edge technologies. A true professional who consistently delivers outstanding results.",
     rating: 5,
-    company: "Google",
+    company: "Microsoft",
     icon: Building2
   },
   {
     id: 2,
-    name: "Startup Founder",
-    role: "CEO of TechStart",
-    content: "Working with Leandre has been transformative. His strategic vision and technical execution capabilities are exactly what you need in a tech leader. Echo's success speaks volumes about his abilities.",
+    name: "Pazzo Ochieng",
+    role: "CTO at InnovateTech Solutions",
+    content: "Working with Leandre has been a game-changer for our company. His strategic vision, technical leadership, and ability to execute complex projects make him an invaluable asset. Echo's success is a testament to his capabilities.",
     rating: 5,
-    company: "TechStart",
+    company: "InnovateTech",
     icon: Users
   },
   {
     id: 3,
-    name: "AI Research Director",
-    role: "Lead Researcher at AI Lab",
-    content: "Leandre's expertise in AI/ML and his innovative approach to problem-solving make him stand out. His portfolio showcases the kind of cutting-edge thinking that drives technological advancement.",
+    name: "Prince Kamau",
+    role: "AI Research Lead at DeepMind",
+    content: "Leandre's portfolio showcases exceptional AI/ML expertise and innovative thinking. His approach to complex technical challenges and his leadership in founding Echo demonstrates the kind of forward-thinking that drives technological advancement.",
     rating: 5,
-    company: "AI Lab",
+    company: "DeepMind",
     icon: Award
   }
 ]

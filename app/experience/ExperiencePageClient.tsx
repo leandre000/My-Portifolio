@@ -5,6 +5,19 @@ import { motion } from "framer-motion"
 const workExperience = [
   {
     id: 1,
+    title: "Software Engineer",
+    company: "LOXOTECH TECH",
+    period: "August 2025 - Present",
+    description: "Working on cutting-edge software solutions and contributing to innovative projects in a dynamic tech environment.",
+    responsibilities: [
+      "Full-stack development using modern technologies",
+      "Collaborating with cross-functional teams",
+      "Implementing best practices and coding standards",
+      "Contributing to product architecture and design decisions",
+    ],
+  },
+  {
+    id: 2,
     title: "Mobile Developer",
     company: "Agura Ticketing App",
     period: "June 2025 - Present",
@@ -16,7 +29,7 @@ const workExperience = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "AI Enthusiast",
     company: "T-HealthSync",
     period: "January 2025 - July",
@@ -28,7 +41,7 @@ const workExperience = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Fullstack Developer",
     company: "Aguuka",
     period: "2025",
@@ -40,7 +53,7 @@ const workExperience = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Community Services Volunteer (Excel & Linux)",
     company: "Various Community Projects",
     period: "2020 - Present",
@@ -53,7 +66,7 @@ const workExperience = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Fullstack & Cloud Developer (Modern Stacks)",
     company: "Freelance & Open Source Projects",
     period: "2022 - Present",

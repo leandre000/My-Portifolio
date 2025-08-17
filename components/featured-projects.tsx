@@ -64,6 +64,7 @@ const projects = [
     title: "EduPlatform",
     description: "A cutting-edge frontend for an online learning platform with modern UI/UX and responsive design.",
     image: "/edu.jpg",
+    categories: ["Web Development", "Frontend", "Education"],
     year: 2023,
     github: "https://github.com/leandre000/EduPlatform-Frontend",
     live: "https://eduplatform-iota.vercel.app/"

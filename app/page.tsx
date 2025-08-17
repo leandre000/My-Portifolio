@@ -10,8 +10,8 @@ import HeroSection from "@/components/hero-section";
 import AboutPreview from "@/components/about-preview";
 import FeaturedProjects from "@/components/featured-projects";
 import TechStackPreview from "@/components/tech-stack-preview";
-import CertificatesSection from "@/components/certificates-section";
-import TestimonialsSection from "@/components/testimonials-section";
+// import CertificatesSection from "@/components/certificates-section";
+// import TestimonialsSection from "@/components/testimonials-section";
 import LoadingAnimation from "@/components/loading-animation";
 import MouseTrailer from "@/components/mouse-trailer";
 
@@ -42,15 +42,14 @@ export default function Home() {
         <TechStackPreview />
       </Suspense>
 
-      {/* 5. Professional Certifications */}
-      <Suspense fallback={<div className="h-96" />}>
+      {/* Temporarily disabled for debugging */}
+      {/* <Suspense fallback={<div className="h-96" />}>
         <CertificatesSection />
       </Suspense>
 
-      {/* 6. Client Testimonials (last) */}
       <Suspense fallback={<div className="h-96" />}>
         <TestimonialsSection />
-      </Suspense>
+      </Suspense> */}
     </>
   );
 }
