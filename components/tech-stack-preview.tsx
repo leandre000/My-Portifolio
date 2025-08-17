@@ -61,7 +61,7 @@ export default function TechStackPreview() {
               Tech Expertise
             </h2>
             <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto">
-              Comprehensive expertise across modern technologies, from AI/ML to project management, enabling me to lead Echo and deliver cutting-edge solutions.
+              Comprehensive expertise across modern technologies, from AI/ML to project management, enabling me to lead Echo and deliver innovative solutions.
             </p>
           </motion.div>
         </div>

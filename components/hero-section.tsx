@@ -41,6 +41,10 @@ export default function HeroSection() {
                 src="/myportifolio.jpg"
                 alt="Leandre - CEO & Founder of Echo"
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  console.log('Image failed to load:', e);
+                  e.currentTarget.src = '/placeholder.png';
+                }}
               />
             </div>
           </motion.div>

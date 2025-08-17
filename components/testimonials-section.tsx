@@ -35,14 +35,14 @@ const testimonials = [
 
 const achievements = [
   {
-    number: "50+",
+    number: "20+",
     label: "Projects Completed",
     description: "Successfully delivered across various industries"
   },
   {
-    number: "5+",
+    number: "2",
     label: "Years Experience",
-    description: "In AI/ML, web development, and leadership"
+    description: "In software development and AI/ML"
   },
   {
     number: "100%",
@@ -71,8 +71,8 @@ export default function TestimonialsSection() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Recognition & Impact
             </h2>
-            <p className="text-white/70 max-w-3xl mx-auto text-lg">
-              Industry recognition and client testimonials that validate my expertise and leadership in technology.
+            <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto text-lg">
+              Industry recognition and client testimonials that validate my expertise in software development and AI/ML.
             </p>
           </motion.div>
         </div>
@@ -170,7 +170,7 @@ export default function TestimonialsSection() {
               Ready to Work Together?
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-              Let's discuss how my expertise in AI/ML, web development, and leadership can help drive your next project to success.
+              Let's discuss how my expertise in software development, AI/ML, and leadership can help drive your next project to success.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}

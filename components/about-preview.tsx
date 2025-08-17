@@ -49,7 +49,7 @@ export default function AboutPreview() {
                 About Me
               </h2>
               <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto text-lg">
-                As the CEO and Founder of Echo, I combine entrepreneurial leadership with deep technical expertise to drive innovation and deliver exceptional results.
+                As the CEO and Founder of Echo, I combine entrepreneurial vision with 2 years of software development and AI experience to deliver innovative solutions.
               </p>
             </motion.div>
           </div>
@@ -71,7 +71,7 @@ export default function AboutPreview() {
                   As the CEO and Founder of Echo, I lead a dynamic team focused on creating cutting-edge technology solutions that solve real-world problems. My journey combines entrepreneurial vision with hands-on technical expertise.
                 </p>
                 <p>
-                  With over 5 years of experience in AI/ML, full-stack development, and cybersecurity, I bring a unique perspective to both technical challenges and business strategy. Echo specializes in AI-powered applications, secure web solutions, and innovative digital experiences.
+                  With 2 years of experience in software development, AI/ML, and cybersecurity, I bring a unique perspective to both technical challenges and business strategy. Echo, formed this month, specializes in AI-powered applications, secure web solutions, and innovative digital experiences.
                 </p>
                 <p>
                   My approach combines strategic thinking with technical execution, ensuring that every project not only meets technical requirements but also drives business value and user satisfaction.
