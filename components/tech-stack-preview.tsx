@@ -60,8 +60,8 @@ export default function TechStackPreview() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
               Tech Expertise
             </h2>
-            <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto">
-              Comprehensive expertise across modern technologies, from AI/ML to project management, enabling me to lead Echo and deliver innovative solutions.
+            <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto text-lg leading-relaxed">
+              With over 2+ years of experience in software development and AI, I've mastered a comprehensive tech stack that enables me to build innovative, scalable solutions. My expertise spans from frontend frameworks to AI/ML technologies, allowing me to create cutting-edge applications that solve real-world problems.
             </p>
           </motion.div>
         </div>

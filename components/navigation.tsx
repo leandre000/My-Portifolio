@@ -13,6 +13,7 @@ const navigationItems = [
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Tech Stack", href: "/tech-stack" },
+  { name: "Resume", href: "/resume" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -51,24 +52,20 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <motion.div
-              className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Building2 className="h-5 w-5" />
-            </motion.div>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative">
+              <img 
+                src="/echo-logo.png" 
+                alt="Echo Tech Logo" 
+                className="w-10 h-10"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder-logo.png"
+                }}
+              />
+            </div>
             <div className="hidden sm:block">
-              <motion.div
-                className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
-                whileHover={{ scale: 1.05 }}
-              >
-                Echo Tech
-              </motion.div>
-              <div className="text-xs text-black/60 dark:text-white/60 -mt-1">
-                CEO & Founder
-              </div>
+              <h1 className="text-xl font-bold text-black dark:text-white">Echo Tech</h1>
+              <p className="text-xs text-black/60 dark:text-white/60">CEO & Founder</p>
             </div>
           </Link>
 

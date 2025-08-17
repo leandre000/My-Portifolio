@@ -14,14 +14,10 @@ import CertificatesSection from "@/components/certificates-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import LoadingAnimation from "@/components/loading-animation";
 import MouseTrailer from "@/components/mouse-trailer";
-import FloatingPaths from "@/components/floating-paths";
 
 export default function Home() {
   return (
     <>
-      {/* Background Animation */}
-      <FloatingPaths />
-      
       {/* Optional: Loading animation and mouse trailer */}
       <LoadingAnimation duration={1500} />
       <MouseTrailer />

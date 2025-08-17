@@ -55,63 +55,110 @@ export default function AboutPreview() {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Text Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="space-y-6"
             >
-              <h3 className="text-2xl font-bold mb-6 text-black dark:text-white">
-                Leading Innovation at Echo
-              </h3>
-              <div className="space-y-4 text-black/70 dark:text-white/70">
-                <p>
-                  As the CEO and Founder of Echo, I lead a dynamic team focused on creating cutting-edge technology solutions that solve real-world problems. My journey combines entrepreneurial vision with hands-on technical expertise.
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-black dark:text-white">
+                  About Me
+                </h3>
+                <p className="text-black/70 dark:text-white/70 leading-relaxed">
+                  With over 2+ years of software development and AI experience, I've dedicated myself to creating innovative solutions that bridge the gap between technology and human needs. As the founder of Echo, formed this month, I'm passionate about building AI-powered applications that solve real-world problems.
                 </p>
-                <p>
-                  With 2 years of experience in software development, AI/ML, and cybersecurity, I bring a unique perspective to both technical challenges and business strategy. Echo, formed this month, specializes in AI-powered applications, secure web solutions, and innovative digital experiences.
-                </p>
-                <p>
-                  My approach combines strategic thinking with technical execution, ensuring that every project not only meets technical requirements but also drives business value and user satisfaction.
+                <p className="text-black/70 dark:text-white/70 leading-relaxed">
+                  My journey in tech has been driven by curiosity and a desire to make technology more accessible and impactful. From full-stack development to AI integration, I believe in the power of combining multiple disciplines to create something truly extraordinary.
                 </p>
               </div>
+
+              {/* Highlights Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {highlights.map((highlight, idx) => (
+                  <motion.div
+                    key={highlight.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-3 p-4 bg-white/50 dark:bg-black/20 rounded-xl border border-black/10 dark:border-white/10 backdrop-blur-sm"
+                  >
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${highlight.color} flex items-center justify-center text-white flex-shrink-0`}>
+                      <highlight.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-black dark:text-white text-sm">
+                        {highlight.title}
+                      </h4>
+                      <p className="text-black/60 dark:text-white/60 text-xs leading-relaxed">
+                        {highlight.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Link href="/about">
+                  <Button className="rounded-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300">
+                    Learn More About Me
+                  </Button>
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Visual Element */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative w-full h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white text-3xl font-bold">
-                    E
-                  </div>
-                  <h4 className="text-xl font-bold text-black dark:text-white mb-2">Echo Tech</h4>
-                  <p className="text-black/60 dark:text-white/60 text-sm">Innovation • Excellence • Impact</p>
+              <div className="relative w-full max-w-md mx-auto">
+                {/* Profile Image */}
+                <div className="relative w-64 h-64 mx-auto mb-6">
+                  <motion.img
+                    src="/myportifolio.png"
+                    alt="Leandre - CEO & Founder of Echo"
+                    className="w-full h-full object-cover rounded-2xl border-4 border-white/20 shadow-2xl"
+                    whileHover={{ scale: 1.05, rotate: 2 }}
+                    transition={{ duration: 0.3 }}
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.png"
+                    }}
+                  />
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse"></div>
                 </div>
-                
-                {/* Floating Elements */}
-                <motion.div
-                  className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full"
-                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-                <motion.div
-                  className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full"
-                  animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
-                  transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
-                />
-                <motion.div
-                  className="absolute top-1/2 right-8 w-2 h-2 bg-cyan-400 rounded-full"
-                  animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                />
+
+                {/* Echo Tech Branding */}
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <img 
+                      src="/echo-logo.png" 
+                      alt="Echo Logo" 
+                      className="w-12 h-12"
+                      onError={(e) => {
+                        e.currentTarget.src = "/placeholder-logo.png"
+                      }}
+                    />
+                    <h4 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      Echo Tech
+                    </h4>
+                  </div>
+                  <p className="text-black/60 dark:text-white/60 text-sm">
+                    AI-Powered Solutions & Innovation
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>

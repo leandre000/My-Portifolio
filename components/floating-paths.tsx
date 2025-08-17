@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 
 interface Path {
@@ -17,8 +17,15 @@ export default function FloatingPaths() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const pathsRef = useRef<Path[]>([])
   const animationRef = useRef<number>()
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -88,10 +95,6 @@ export default function FloatingPaths() {
           if (distance < 100) {
             const opacity = (100 - distance) / 100 * 0.1
             ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`
-            ctx.lineWidth = 0.5
-            ctx.beginPath()
-            ctx.moveTo(x, y)
-            ctx.lineTo(otherPath.x, otherPath.y)
             ctx.stroke()
           }
         })
@@ -108,7 +111,9 @@ export default function FloatingPaths() {
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [])
+  }, [isMounted])
+
+  if (!isMounted) return null
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">

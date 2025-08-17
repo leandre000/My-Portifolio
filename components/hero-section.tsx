@@ -33,61 +33,47 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.8 }}
-            className="mb-8 flex justify-center"
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="relative mb-8"
           >
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-              <img
-                src="/myportifolio.jpg"
+            <div className="relative w-32 h-32 mx-auto">
+              <motion.img
+                src="/myportifolio.png"
                 alt="Leandre - CEO & Founder of Echo"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl"
+                whileHover={{ scale: 1.05, rotate: 2 }}
+                transition={{ duration: 0.3 }}
                 onError={(e) => {
-                  console.log('Image failed to load:', e);
-                  e.currentTarget.src = '/placeholder.png';
+                  e.currentTarget.src = "/placeholder.png"
                 }}
               />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse"></div>
             </div>
           </motion.div>
 
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-4 tracking-tight bg-gradient-to-r from-black via-blue-600 to-purple-600 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
-          >
-            Leandre
-          </motion.h1>
-
-          {/* CEO Title */}
-          <motion.h2
+          {/* Main Content */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-2xl font-bold mb-3 text-blue-600 dark:text-blue-400"
+            className="text-center mb-8"
           >
-            CEO & Founder of Echo
-          </motion.h2>
-
-          {/* Subtitle */}
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg md:text-xl font-medium mb-4 text-black/80 dark:text-white/80"
-          >
-            AI & Web Developer — Crafting intelligent, human-centered digital experiences.
-          </motion.h3>
-
-          {/* Bio */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-base md:text-lg text-black/70 dark:text-white/70 max-w-3xl mx-auto mb-8 leading-relaxed"
-          >
-            Leading Echo, a cutting-edge tech company, while blending code and creativity to build smart, scalable, and story-driven products using AI, ML, and modern web technologies.
-          </motion.p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <span className="text-black dark:text-white">Hi, I'm </span>
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-pulse">
+                Leandre
+              </span>
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              CEO & Founder of Echo
+            </h2>
+            <h3 className="text-lg md:text-xl text-black/70 dark:text-white/70 mb-6">
+              Software Developer & AI Engineer
+            </h3>
+            <p className="text-base md:text-lg text-black/70 dark:text-white/70 max-w-3xl mx-auto leading-relaxed">
+              With over 2+ years of experience in AI/ML, full-stack development, and cybersecurity, I bring a unique perspective to both technical challenges and business strategy. Echo specializes in AI-powered applications, secure web solutions, and innovative digital experiences.
+            </p>
+          </motion.div>
 
           {/* Social Links */}
           <motion.div
@@ -143,6 +129,19 @@ export default function HeroSection() {
                 <Button className="w-full rounded-full px-6 py-4 text-base font-medium bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300" size="lg">
                   View Projects
                   <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </motion.div>
+
+            {/* Resume */}
+            <motion.div 
+              className="flex-1 min-w-[180px]" 
+              whileHover={{ scale: 1.05, y: -2 }} 
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link href="/resume">
+                <Button className="w-full rounded-full px-6 py-4 text-base font-medium bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300" size="lg">
+                  View Resume
                 </Button>
               </Link>
             </motion.div>

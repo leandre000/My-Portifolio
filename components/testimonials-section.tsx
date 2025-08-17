@@ -40,9 +40,9 @@ const achievements = [
     description: "Successfully delivered across various industries"
   },
   {
-    number: "2",
+    number: "2+",
     label: "Years Experience",
-    description: "In software development and AI/ML"
+    description: "Software development and AI integration"
   },
   {
     number: "100%",
@@ -50,9 +50,9 @@ const achievements = [
     description: "Consistent positive feedback and results"
   },
   {
-    number: "Echo",
+    number: "1",
     label: "Company Founded",
-    description: "Leading innovation in tech solutions"
+    description: "Echo Tech - AI-powered solutions"
   }
 ]
 

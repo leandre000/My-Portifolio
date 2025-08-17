@@ -27,7 +27,9 @@ export const metadata: Metadata = {
     description: "Leading innovation in AI/ML, web development, and cybersecurity",
   },
   icons: {
-    icon: "/myportifolio.jpg",
+    icon: '/echo-logo.png',
+    shortcut: '/echo-logo.png',
+    apple: '/echo-logo.png',
   },
 }
 
