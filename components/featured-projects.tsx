@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ArrowRight, CuboidIcon as Cube, ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
@@ -85,191 +84,137 @@ export default function FeaturedProjects() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600 dark:text-blue-400">
               Featured Projects
             </h2>
             <p className="text-black/70 dark:text-white/70 max-w-2xl">
               Explore a selection of my most recent and impactful projects, showcasing cutting-edge technology and innovative solutions.
             </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mt-6 md:mt-0"
-          >
+          </div>
+          <div className="mt-4 md:mt-0">
             <Link href="/projects">
-              <Button variant="ghost" className="w-full sm:w-auto rounded-full px-6 py-4 text-base font-medium group hover:bg-blue-50 dark:hover:bg-blue-900/20">
+              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200">
                 View All Projects
-                <motion.span initial={{ x: 0 }} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </motion.span>
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Carousel */}
-        <div className="max-w-7xl mx-auto relative">
-          <Carousel>
-            <CarouselContent>
-              {orderedProjects.map((project, index) => (
-                <CarouselItem
-                  key={project.id}
-                  className="flex justify-center basis-full md:basis-1/2 lg:basis-1/3"
-                >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group w-full h-auto px-2"
-                    onMouseEnter={() => setHoveredProject(project.id)}
-                    onMouseLeave={() => setHoveredProject(null)}
-                  >
-                    <div className="relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg hover:shadow-2xl transition-all duration-500">
-                      {activeModelIndex === index && project.has3DModel ? (
-                        <>
-                          <ModelViewer
-                            modelUrl={project.modelUrl || ""}
-                            className="w-full h-full"
-                          />
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="absolute top-4 right-4 z-10 bg-white/90 dark:bg-black/90 backdrop-blur-sm"
-                            onClick={() => setActiveModelIndex(null)}
-                          >
-                            Show Image
-                          </Button>
-                        </>
-                      ) : (
-                        <>
-                          <Link href={`/projects/${project.id}`}>
-                            <Image
-                              src={project.image || "/placeholder.svg"}
-                              alt={project.title}
-                              fill
-                              className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
-                            />
-                          </Link>
-                          
-                          {/* Featured Badge */}
-                          {project.featured && (
-                            <motion.div
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ delay: 0.3, duration: 0.5 }}
-                              className="absolute top-4 left-4 z-10"
-                            >
-                              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-lg">
-                                ⭐ Featured
-                              </span>
-                            </motion.div>
-                          )}
-
-                          {project.has3DModel && (
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              className="absolute top-4 right-4 z-10 bg-white/90 dark:bg-black/90 backdrop-blur-sm"
-                              onClick={(e) => {
-                                e.preventDefault()
-                                setActiveModelIndex(index)
-                              }}
-                            >
-                              <Cube className="h-4 w-4 mr-2" />
-                              View 3D Model
-                            </Button>
-                          )}
-
-                          {/* Enhanced Overlay */}
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-500"
-                            initial={{ opacity: 0 }}
-                            whileHover={{ opacity: 1 }}
-                          >
-                            <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                              <div className="flex flex-wrap gap-2 mb-3">
-                                {project.categories.map((category, idx) => (
-                                  <span key={idx} className="text-xs font-medium text-white/90 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full">
-                                    {category}
-                                  </span>
-                                ))}
-                              </div>
-                              <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                              <p className="text-white/90 text-sm mb-4 leading-relaxed">{project.description}</p>
-                              <div className="flex gap-2">
-                                {project.github && (
-                                  <motion.a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold bg-white/90 text-black rounded-lg hover:bg-white hover:scale-105 transition-all duration-200"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                  >
-                                    <Github className="h-3 w-3" />
-                                    GitHub
-                                  </motion.a>
-                                )}
-                                {project.live && (
-                                  <motion.a
-                                    href={project.live}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                  >
-                                    <ExternalLink className="h-3 w-3" />
-                                    Live Site
-                                  </motion.a>
-                                )}
-                              </div>
-                            </div>
-                          </motion.div>
-                        </>
-                      )}
-                    </div>
-                    
-                    {/* Project Info Below */}
-                    <motion.div 
-                      className="mt-4 p-4 bg-white dark:bg-black/20 rounded-lg border border-black/5 dark:border-white/5"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                      viewport={{ once: true }}
+        {/* Featured Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {orderedProjects.map((project, index) => (
+            <div
+              key={project.id}
+              className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              {/* Project Image */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                
+                {/* Categories */}
+                <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                  {project.categories.slice(0, 2).map((category, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 text-xs font-medium bg-blue-600 text-white rounded-full"
                     >
-                      <h3 className="text-lg font-semibold mb-2 text-black dark:text-white">{project.title}</h3>
-                      <div className="flex items-center justify-between">
-                        <div className="flex flex-wrap gap-2">
-                          {project.categories.slice(0, 2).map((category, idx) => (
-                            <span key={idx} className="text-xs text-black/60 dark:text-white/60 bg-black/5 dark:bg-white/5 px-2 py-1 rounded-full">
-                              {category}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="text-sm text-black/40 dark:text-white/40 font-medium">
-                          {project.year}
-                        </span>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="bg-white/80 dark:bg-black/80 hover:bg-white dark:hover:bg-black" />
-            <CarouselNext className="bg-white/80 dark:bg-black/80 hover:bg-white dark:hover:bg-black" />
-          </Carousel>
+                      {category}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Year */}
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 text-sm font-medium bg-white/90 dark:bg-gray-800/90 text-black dark:text-white rounded-full">
+                    {project.year}
+                  </span>
+                </div>
+              </div>
+
+              {/* Project Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                  {project.title}
+                </h3>
+                <p className="text-black/70 dark:text-white/70 mb-4 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Action Buttons */}
+                <div className="flex gap-2">
+                  <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="flex items-center gap-2">
+                      <Github className="h-4 w-4" />
+                      Code
+                    </Button>
+                  </Link>
+                  <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700">
+                      <ExternalLink className="h-4 w-4" />
+                      Live
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* 3D Model Showcase */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold mb-8 text-black dark:text-white">Interactive 3D Showcase</h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[0, 1, 2].map((index) => (
+                <div
+                  key={index}
+                  className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                  onClick={() => setActiveModelIndex(activeModelIndex === index ? null : index)}
+                >
+                  <div className="h-48 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+                    <Cube className="h-16 w-16 text-gray-400" />
+                  </div>
+                  <p className="mt-4 text-sm text-black/70 dark:text-white/70">
+                    Click to view 3D model {index + 1}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* 3D Model Viewer Modal */}
+        {activeModelIndex !== null && (
+          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-hidden">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-bold text-black dark:text-white">
+                  3D Model Showcase {activeModelIndex + 1}
+                </h3>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setActiveModelIndex(null)}
+                >
+                  Close
+                </Button>
+              </div>
+              <div className="h-96 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+                <ModelViewer />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )

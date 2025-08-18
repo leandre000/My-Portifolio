@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Star, Quote, Building2, Users, Award } from "lucide-react"
 
 const testimonials = [
@@ -58,47 +57,35 @@ const achievements = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Recognition & Impact
-            </h2>
-            <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto text-lg">
-              Industry recognition and client testimonials that validate my expertise in software development and AI/ML.
-            </p>
-          </motion.div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
+            Recognition & Impact
+          </h2>
+          <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto text-lg">
+            Industry recognition and client testimonials that validate my expertise in software development and AI/ML.
+          </p>
         </div>
 
         {/* Achievements Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {achievements.map((achievement, idx) => (
-            <motion.div
+            <div
               key={achievement.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+              className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 {achievement.number}
               </div>
-              <div className="text-lg font-semibold text-white mb-1">
+              <div className="text-lg font-semibold text-black dark:text-white mb-1">
                 {achievement.label}
               </div>
-              <div className="text-sm text-white/60">
+              <div className="text-sm text-black/60 dark:text-white/60">
                 {achievement.description}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -108,17 +95,12 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, idx) => {
               const IconComponent = testimonial.icon
               return (
-                <motion.div
+                <div
                   key={testimonial.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="relative p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  className="relative p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* Quote Icon */}
-                  <div className="absolute -top-3 left-6 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                  <div className="absolute -top-3 left-6 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center">
                     <Quote className="h-4 w-4 text-white" />
                   </div>
 
@@ -130,28 +112,28 @@ export default function TestimonialsSection() {
                   </div>
 
                   {/* Content */}
-                  <p className="text-white/80 mb-6 leading-relaxed">
+                  <p className="text-black/80 dark:text-white/80 mb-6 leading-relaxed">
                     "{testimonial.content}"
                   </p>
 
                   {/* Author */}
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center">
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <div className="font-semibold text-white">
+                      <div className="font-semibold text-black dark:text-white">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-white/60">
+                      <div className="text-sm text-black/60 dark:text-white/60">
                         {testimonial.role}
                       </div>
-                      <div className="text-xs text-blue-400 font-medium">
+                      <div className="text-xs text-blue-600 dark:text-blue-400 font-medium">
                         {testimonial.company}
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -159,31 +141,20 @@ export default function TestimonialsSection() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 max-w-4xl mx-auto border border-white/10"
-          >
-            <h3 className="text-2xl font-bold mb-4 text-white">
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 max-w-4xl mx-auto border border-blue-200 dark:border-blue-800">
+            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">
               Ready to Work Together?
             </h3>
-            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+            <p className="text-black/70 dark:text-white/70 mb-6 max-w-2xl mx-auto">
               Let's discuss how my expertise in software development, AI/ML, and leadership can help drive your next project to success.
             </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:from-blue-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Get In Touch
-              </a>
-            </motion.div>
-          </motion.div>
+              Get In Touch
+            </a>
+          </div>
         </div>
       </div>
     </section>

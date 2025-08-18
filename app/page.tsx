@@ -17,7 +17,7 @@ import MouseTrailer from "@/components/mouse-trailer";
 
 export default function Home() {
   return (
-    <>
+    <div>
       {/* Optional: Loading animation and mouse trailer */}
       <LoadingAnimation duration={1500} />
       <MouseTrailer />
@@ -50,6 +50,6 @@ export default function Home() {
       <Suspense fallback={<div className="h-96" />}>
         <TestimonialsSection />
       </Suspense> */}
-    </>
+    </div>
   );
 }

@@ -1,13 +1,11 @@
 "use client"
 
-import { motion } from "framer-motion"
-
 const workExperience = [
   {
     id: 1,
     title: "Software Engineer",
     company: "LOXOTECH TECH",
-    period: "August 2025 - Present",
+    period: "2025 - Present",
     description: "Working on cutting-edge software solutions and contributing to innovative projects in a dynamic tech environment.",
     responsibilities: [
       "Full-stack development using modern technologies",
@@ -18,8 +16,8 @@ const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile Developer",
-    company: "Agura Ticketing App",
+    title: "Software Developer",
+    company: "AGURA TICKETS",
     period: "June 2025 - Present",
     description: "Developing a seamless mobile solution for booking and managing event tickets with real-time availability and secure access.",
     responsibilities: [
@@ -86,18 +84,25 @@ const workExperience = [
 
 const education = [
   {
-    degree: "A2 degree",
+    degree: "A Level",
     institution: "Rwanda Coding Academy",
     period: "2023 - 2026",
     description:
-      "I am currently studying at this school, focusing on Software Programming, Embedded Systems, and Cybersecurity. I expect to graduate in 2026.",
+      "Currently studying Software Programming, Embedded Systems, and Cybersecurity. Expected to graduate in 2026.",
   },
   {
-    degree: "O level completion certificate",
+    degree: "O Level",
     institution: "Groupe Scolaire Officiel de Butare",
     period: "2020 - 2023",
     description:
-      "I completed my junior secondary studies at this school, from Grade 7 to Grade 9.",
+      "Completed junior secondary studies from Grade 7 to Grade 9.",
+  },
+  {
+    degree: "Primary Education",
+    institution: "LEDUCATEUR",
+    period: "2012 - 2019",
+    description:
+      "Completed primary education from Grade 1 to Grade 6.",
   },
   {
     degree: "Modern Web & Cloud Technologies (Self-Taught)",
@@ -135,9 +140,6 @@ const certificates = [
     label: "Python Fundamentals",
     description: "Certificate for foundational Python programming skills."
   },
-  
-  
- 
 ]
 
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
@@ -168,15 +170,11 @@ export default function ExperiencePageClient() {
 
           <div className="max-w-4xl mx-auto">
             {workExperience.map((job, index) => (
-              <motion.div
+              <div
                 key={job.company + job.period}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="mb-16 relative pl-8 border-l-2 border-black/10 dark:border-white/10 last:mb-0"
+                className="mb-16 relative pl-8 border-l-2 border-blue-200 dark:border-blue-800 last:mb-0 hover:border-blue-400 dark:hover:border-blue-600 transition-colors duration-300"
               >
-                <div className="absolute w-4 h-4 bg-black dark:bg-white rounded-full -left-[9px] top-0"></div>
+                <div className="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-[9px] top-0"></div>
                 <span className="text-sm font-medium text-black/60 dark:text-white/60">{job.period}</span>
                 <h3 className="text-2xl font-bold mt-1">{job.title}</h3>
                 <h4 className="text-lg font-medium text-black/80 dark:text-white/80 mb-4">{job.company}</h4>
@@ -189,33 +187,29 @@ export default function ExperiencePageClient() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Education */}
-      <section className="py-16 bg-black/5 dark:bg-white/5">
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
 
           <div className="max-w-4xl mx-auto">
             {education.map((edu, index) => (
-              <motion.div
+              <div
                 key={edu.institution + edu.period}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="mb-12 relative pl-8 border-l-2 border-black/10 dark:border-white/10 last:mb-0"
+                className="mb-12 relative pl-8 border-l-2 border-blue-200 dark:border-blue-800 last:mb-0 hover:border-blue-400 dark:hover:border-blue-600 transition-colors duration-300"
               >
-                <div className="absolute w-4 h-4 bg-black dark:bg-white rounded-full -left-[9px] top-0"></div>
+                <div className="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-[9px] top-0"></div>
                 <span className="text-sm font-medium text-black/60 dark:text-white/60">{edu.period}</span>
                 <h3 className="text-2xl font-bold mt-1">{edu.degree}</h3>
                 <h4 className="text-lg font-medium text-black/80 dark:text-white/80 mb-4">{edu.institution}</h4>
                 <p className="text-black/70 dark:text-white/70">{edu.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -231,8 +225,8 @@ export default function ExperiencePageClient() {
                 {certificates.map((cert, index) => (
                   <CarouselItem key={cert.file} className="flex justify-center">
                     <Dialog>
-                      <div className="bg-white dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col items-center w-full max-w-md">
-                        <div className="text-3xl font-bold mb-2">{index + 1}</div>
+                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 flex flex-col items-center w-full max-w-md hover:shadow-lg transition-shadow duration-300">
+                        <div className="text-3xl font-bold mb-2 text-blue-600 dark:text-blue-400">{index + 1}</div>
                         <h3 className="text-lg font-semibold mb-2 text-center">{cert.label}</h3>
                         <div className="text-black/70 dark:text-white/70 text-sm mb-4 text-center min-h-[48px]">{cert.description}</div>
                         <div className="flex gap-2 w-full">

@@ -3,8 +3,8 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Instagram,
-  Facebook
+  Mail,
+  MapPin
 } from "lucide-react";
 
 export default function Footer() {
@@ -14,32 +14,39 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Branding */}
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Leandre</h3>
-            <p className="text-black/70 dark:text-white/70 max-w-md">
-              Web Developer leveraging AI & ML to build intelligent, problem-solving digital products that drive innovation and real-world impact.
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/myportifolio.jpg" 
+                alt="Leandre Portfolio Logo" 
+                className="w-12 h-12 rounded-full"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder-logo.png"
+                }}
+              />
+              <div>
+                <h3 className="text-xl font-bold">Leandre</h3>
+                <p className="text-sm text-black/60 dark:text-white/60">Software Engineer</p>
+              </div>
+            </div>
+            <p className="text-black/70 dark:text-white/70 max-w-md mb-4">
+              Full-stack developer specializing in modern web technologies, AI/ML integration, and building scalable digital solutions that drive business value.
             </p>
+            <div className="flex items-center gap-2 text-sm text-black/60 dark:text-white/60">
+              <MapPin className="w-4 h-4" />
+              <span>Rwanda</span>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-medium mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-black dark:text-white">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="https://shemaleandre.vercel.app/"
-                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  My Portfolio
-                </Link>
-              </li>
               <li>
                 <Link
                   href="/about"
                   className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
                 >
-                  About
+                  About Me
                 </Link>
               </li>
               <li>
@@ -48,6 +55,22 @@ export default function Footer() {
                   className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
                 >
                   Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/experience"
+                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tech-stack"
+                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  Tech Stack
                 </Link>
               </li>
               <li>
@@ -61,52 +84,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Contact & Social */}
           <div>
-            <h4 className="font-medium mb-4">Connect</h4>
-            <div className="flex space-x-4 mb-2">
+            <h4 className="font-semibold mb-4 text-black dark:text-white">Connect</h4>
+            <div className="space-y-3">
+              <a
+                href="mailto:Iamshemaleandre@gmail.com"
+                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">Iamshemaleandre@gmail.com</span>
+              </a>
               <a
                 href="https://github.com/leandre000"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
               >
-                <Github size={20} />
+                <Github className="w-4 h-4" />
+                <span className="text-sm">github.com/leandre000</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/leandre000"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
               >
-                <Linkedin size={20} />
+                <Linkedin className="w-4 h-4" />
+                <span className="text-sm">linkedin.com/in/leandre000</span>
               </a>
               <a
                 href="https://x.com/shema_Leandre"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
               >
-                <Twitter size={20} />
-              </a>
-            </div>
-            <div>
-              <a
-                href="mailto:Iamshemaleandre@gmail.com"
-                className="inline-block text-sm text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors font-medium mr-4"
-              >
-                Iamshemaleandre@gmail.com
-              </a>
-              <a
-                href="https://github.com/leandre000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-sm text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors font-medium"
-              >
-                github.com/leandre000
+                <Twitter className="w-4 h-4" />
+                <span className="text-sm">@shema_Leandre</span>
               </a>
             </div>
           </div>
@@ -115,6 +129,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10 text-center text-sm text-black/60 dark:text-white/60">
           <p>© {new Date().getFullYear()} Leandre. All rights reserved.</p>
+          <p className="mt-1">Built with Next.js, React, and Tailwind CSS</p>
         </div>
       </div>
     </footer>
