@@ -1,12 +1,9 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import ClientProviders from "./ClientProviders"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navigation from "@/components/navigation"
-
-const inter = Inter({ subsets: ["latin"] })
 
 // ✅ This must remain in a server component (no "use client")
 export const metadata: Metadata = {
@@ -40,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className="font-sans antialiased">
         <ClientProviders>
           <Navigation />
           {children}
