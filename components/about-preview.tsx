@@ -9,7 +9,7 @@ const highlights = [
     icon: Building2,
     title: "CEO & Founder",
     description: "Leading Echo, a cutting-edge tech company focused on AI, ML, and innovative web solutions.",
-    color: "from-blue-500 to-cyan-500"
+    color: "from-emerald-500 to-teal-500"
   },
   {
     icon: Target,
@@ -33,16 +33,16 @@ const highlights = [
 
 export default function AboutPreview() {
   return (
-    <section className="py-16 bg-gradient-to-br from-white via-gray-50 to-white dark:from-black dark:via-gray-900 dark:to-black">
+    <section className="py-16 bytehire-bg">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600 dark:text-blue-400">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
                 About Me
               </h2>
-              <p className="text-black/70 dark:text-white/70 max-w-2xl mx-auto text-lg">
+              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
                 As the CEO and Founder of Echo, I combine entrepreneurial vision with 2+ years of software development and AI experience to deliver innovative solutions.
               </p>
             </div>
@@ -52,13 +52,13 @@ export default function AboutPreview() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-black dark:text-white">
+                <h3 className="text-2xl font-bold text-white">
                   About Me
                 </h3>
-                <p className="text-black/70 dark:text-white/70 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   With over 2+ years of software development and AI experience, I've dedicated myself to creating innovative solutions that bridge the gap between technology and human needs. As the founder of Echo, I'm passionate about building AI-powered applications that solve real-world problems.
                 </p>
-                <p className="text-black/70 dark:text-white/70 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   My journey in tech has been driven by curiosity and a desire to make technology more accessible and impactful. From full-stack development to AI integration, I believe in the power of combining multiple disciplines to create something truly extraordinary.
                 </p>
               </div>
@@ -68,16 +68,16 @@ export default function AboutPreview() {
                 {highlights.map((highlight, idx) => (
                   <div
                     key={highlight.title}
-                    className="flex items-start gap-3 p-4 bg-white/50 dark:bg-black/20 rounded-xl border border-black/10 dark:border-white/10 backdrop-blur-sm hover:shadow-lg transition-shadow duration-300"
+                    className="flex items-start gap-3 p-4 bytehire-card rounded-xl hover:shadow-lg transition-shadow duration-300"
                   >
                     <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${highlight.color} flex items-center justify-center text-white flex-shrink-0`}>
                       <highlight.icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-black dark:text-white text-sm">
+                      <h4 className="font-semibold text-white text-sm">
                         {highlight.title}
                       </h4>
-                      <p className="text-black/60 dark:text-white/60 text-xs leading-relaxed">
+                      <p className="text-gray-400 text-xs leading-relaxed">
                         {highlight.description}
                       </p>
                     </div>
@@ -88,7 +88,7 @@ export default function AboutPreview() {
               {/* CTA Button */}
               <div>
                 <Link href="/about">
-                  <Button className="rounded-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button className="bytehire-button rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
                     Learn More About Me
                   </Button>
                 </Link>
@@ -103,12 +103,12 @@ export default function AboutPreview() {
                   <img
                     src="/myportifolio.jpg"
                     alt="Leandre - CEO & Founder of Echo"
-                    className="w-full h-full object-cover rounded-2xl border-4 border-white/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+                    className="w-full h-full object-cover rounded-2xl border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300 bytehire-glow"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.png"
                     }}
                   />
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-teal-500/10"></div>
                 </div>
 
                 {/* Echo Tech Branding */}
@@ -122,11 +122,11 @@ export default function AboutPreview() {
                         e.currentTarget.src = "/placeholder-logo.png"
                       }}
                     />
-                    <h4 className="text-xl font-bold text-blue-600 dark:text-blue-400">
+                    <h4 className="text-xl font-bold text-emerald-400">
                       Echo Tech
                     </h4>
                   </div>
-                  <p className="text-black/60 dark:text-white/60 text-sm">
+                  <p className="text-gray-400 text-sm">
                     AI-Powered Solutions & Innovation
                   </p>
                 </div>

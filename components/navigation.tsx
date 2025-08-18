@@ -40,8 +40,8 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-black/10 dark:border-white/10 shadow-lg"
-          : "bg-white/90 dark:bg-black/90 backdrop-blur-sm"
+          ? "bytehire-bg backdrop-blur-md border-b border-emerald-500/20 shadow-lg"
+          : "bytehire-bg backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -59,8 +59,8 @@ export default function Navigation() {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-black dark:text-white">Leandre</h1>
-              <p className="text-xs text-black/60 dark:text-white/60">Software Engineer</p>
+              <h1 className="text-xl font-bold text-white">Leandre</h1>
+              <p className="text-xs text-emerald-300">Software Engineer</p>
             </div>
           </Link>
 
@@ -70,10 +70,10 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-black/80 dark:text-white/80 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium relative group"
+                className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 font-medium relative group"
               >
                 {item.name}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300" />
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>
@@ -85,7 +85,7 @@ export default function Navigation() {
             {/* Contact Button */}
             <div className="hidden sm:block">
               <Link href="/contact">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200">
+                <Button className="bytehire-button shadow-md hover:shadow-lg transition-all duration-200">
                   Get In Touch
                 </Button>
               </Link>
@@ -94,35 +94,31 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+              className="md:hidden p-2 rounded-lg hover:bg-emerald-500/20 transition-colors text-white"
               aria-label="Toggle menu"
             >
-              <div className="transition-transform duration-200">
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </div>
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden overflow-hidden border-t border-black/10 dark:border-white/10">
-            <div className="py-4 space-y-2">
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/90 backdrop-blur-md rounded-lg mt-2 border border-emerald-500/20">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
+                  className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-md transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-black/80 dark:text-white/80 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-all duration-200"
                 >
                   {item.name}
                 </Link>
               ))}
-              
-              {/* Mobile Contact Button */}
-              <div className="px-4 pt-2">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+              <div className="pt-2">
+                <Link href="/contact">
+                  <Button className="bytehire-button w-full">
                     Get In Touch
                   </Button>
                 </Link>

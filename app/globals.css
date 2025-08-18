@@ -137,3 +137,56 @@ img {
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Custom ByteHire-inspired styles */
+.bytehire-theme {
+  --bytehire-dark-green: #0f172a;
+  --bytehire-light-green: #1e293b;
+  --bytehire-accent-green: #10b981;
+  --bytehire-text-white: #ffffff;
+  --bytehire-text-gray: #94a3b8;
+}
+
+.bytehire-bg {
+  background: linear-gradient(135deg, var(--bytehire-dark-green) 0%, var(--bytehire-light-green) 100%);
+}
+
+.bytehire-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bytehire-button {
+  background: var(--bytehire-accent-green);
+  color: var(--bytehire-text-white);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.bytehire-button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.bytehire-outline-button {
+  background: transparent;
+  color: var(--bytehire-text-white);
+  border: 2px solid var(--bytehire-text-white);
+  transition: all 0.3s ease;
+}
+
+.bytehire-outline-button:hover {
+  background: var(--bytehire-text-white);
+  color: var(--bytehire-dark-green);
+}
+
+/* Glow effects */
+.bytehire-glow {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.bytehire-text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

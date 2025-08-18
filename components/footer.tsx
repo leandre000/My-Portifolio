@@ -1,19 +1,15 @@
-import Link from "next/link";
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Mail,
-  MapPin
-} from "lucide-react";
+"use client"
+
+import Link from "next/link"
+import { Mail, Github, Linkedin, Twitter, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/10 dark:border-white/10 bg-white dark:bg-black">
+    <footer className="bytehire-bg border-t border-emerald-500/20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Branding */}
-          <div className="md:col-span-2">
+          {/* Brand Section */}
+          <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src="/myportifolio.jpg" 
@@ -24,114 +20,104 @@ export default function Footer() {
                 }}
               />
               <div>
-                <h3 className="text-xl font-bold">Leandre</h3>
-                <p className="text-sm text-black/60 dark:text-white/60">Software Engineer</p>
+                <h3 className="text-xl font-bold text-white">Leandre</h3>
+                <p className="text-emerald-300 text-sm">Software Engineer</p>
               </div>
             </div>
-            <p className="text-black/70 dark:text-white/70 max-w-md mb-4">
-              Full-stack developer specializing in modern web technologies, AI/ML integration, and building scalable digital solutions that drive business value.
+            <p className="text-gray-300 mb-4 max-w-md">
+              Passionate about creating innovative digital solutions that bridge technology and human needs. 
+              Specializing in AI/ML, full-stack development, and cutting-edge technologies.
             </p>
-            <div className="flex items-center gap-2 text-sm text-black/60 dark:text-white/60">
-              <MapPin className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-gray-400">
+              <MapPin className="h-4 w-4" />
               <span>Rwanda</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-black dark:text-white">Quick Links</h4>
+            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/about"
-                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  About Me
+                <Link href="/" className="text-gray-300 hover:text-emerald-400 transition-colors duration-200">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/projects"
-                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
+                <Link href="/about" className="text-gray-300 hover:text-emerald-400 transition-colors duration-200">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects" className="text-gray-300 hover:text-emerald-400 transition-colors duration-200">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/experience"
-                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
+                <Link href="/experience" className="text-gray-300 hover:text-emerald-400 transition-colors duration-200">
                   Experience
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/tech-stack"
-                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
+                <Link href="/tech-stack" className="text-gray-300 hover:text-emerald-400 transition-colors duration-200">
                   Tech Stack
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Connect */}
           <div>
-            <h4 className="font-semibold mb-4 text-black dark:text-white">Connect</h4>
+            <h4 className="font-semibold text-white mb-4">Connect</h4>
             <div className="space-y-3">
               <a
                 href="mailto:Iamshemaleandre@gmail.com"
-                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-gray-300 hover:text-emerald-400 transition-colors duration-200"
               >
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">Iamshemaleandre@gmail.com</span>
+                <Mail className="h-4 w-4" />
+                <span>Email</span>
               </a>
               <a
                 href="https://github.com/leandre000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-gray-300 hover:text-emerald-400 transition-colors duration-200"
               >
-                <Github className="w-4 h-4" />
-                <span className="text-sm">github.com/leandre000</span>
+                <Github className="h-4 w-4" />
+                <span>GitHub</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/leandre000"
+                href="https://linkedin.com/in/leandre000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-gray-300 hover:text-emerald-400 transition-colors duration-200"
               >
-                <Linkedin className="w-4 h-4" />
-                <span className="text-sm">linkedin.com/in/leandre000</span>
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
               </a>
               <a
-                href="https://x.com/shema_Leandre"
+                href="https://twitter.com/leandre000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 text-gray-300 hover:text-emerald-400 transition-colors duration-200"
               >
-                <Twitter className="w-4 h-4" />
-                <span className="text-sm">@shema_Leandre</span>
+                <Twitter className="h-4 w-4" />
+                <span>Twitter</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10 text-center text-sm text-black/60 dark:text-white/60">
-          <p>© {new Date().getFullYear()} Leandre. All rights reserved.</p>
-          <p className="mt-1">Built with Next.js, React, and Tailwind CSS</p>
+        {/* Bottom Section */}
+        <div className="border-t border-emerald-500/20 mt-8 pt-8 text-center">
+          <p className="text-gray-400 text-sm">
+            Built with Next.js, React, and Tailwind CSS
+          </p>
+          <p className="text-gray-400 text-sm mt-2">
+            © 2025 Leandre. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
