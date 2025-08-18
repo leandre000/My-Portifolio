@@ -11,7 +11,7 @@ import AboutPreview from "@/components/about-preview";
 import FeaturedProjects from "@/components/featured-projects";
 import TechStackPreview from "@/components/tech-stack-preview";
 // import CertificatesSection from "@/components/certificates-section";
-// import TestimonialsSection from "@/components/testimonials-section";
+import TestimonialsSection from "@/components/testimonials-section";
 import LoadingAnimation from "@/components/loading-animation";
 import MouseTrailer from "@/components/mouse-trailer";
 
@@ -42,13 +42,14 @@ export default function Home() {
         <TechStackPreview />
       </Suspense>
 
+      {/* 5. Client Testimonials */}
+      <Suspense fallback={<div className="h-96" />}>
+        <TestimonialsSection />
+      </Suspense>
+
       {/* Temporarily disabled for debugging */}
       {/* <Suspense fallback={<div className="h-96" />}>
         <CertificatesSection />
-      </Suspense>
-
-      <Suspense fallback={<div className="h-96" />}>
-        <TestimonialsSection />
       </Suspense> */}
     </div>
   );

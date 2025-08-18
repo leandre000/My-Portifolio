@@ -35,16 +35,16 @@ export default function HeroSection() {
 
           {/* Main Content */}
           <div className="text-center mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white dark:text-white drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-white drop-shadow-lg">
               Hi, I'm <span className="text-emerald-400 dark:text-emerald-400">Leandre</span>
             </h1>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-emerald-400 dark:text-emerald-400 drop-shadow-lg">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-400 dark:text-emerald-400 drop-shadow-lg">
               Software Engineer & AI Developer
             </h2>
-            <h3 className="text-xl md:text-2xl text-gray-200 dark:text-gray-200 mb-8 font-semibold">
+            <h3 className="text-lg md:text-xl text-gray-200 dark:text-gray-200 mb-8 font-semibold">
               Full-Stack Developer & AI Enthusiast
             </h3>
-            <p className="text-lg md:text-xl text-gray-200 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
+            <p className="text-base md:text-lg text-gray-200 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
               With over 2+ years of experience in AI/ML and full-stack development. Currently working at LOXOTECH TECH and building innovative digital solutions.
             </p>
           </div>
@@ -55,61 +55,61 @@ export default function HeroSection() {
               href="https://linkedin.com/in/leandre000"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+              className="p-3 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
             >
-              <Linkedin className="h-7 w-7" />
+              <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="https://github.com/leandre000"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-full bg-gray-800 text-white hover:bg-gray-900 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+              className="p-3 rounded-full bg-gray-800 text-white hover:bg-gray-900 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
             >
-              <Github className="h-7 w-7" />
+              <Github className="h-6 w-6" />
             </a>
             <a
               href="mailto:Iamshemaleandre@gmail.com"
-              className="p-4 rounded-full bg-red-600 text-white hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+              className="p-3 rounded-full bg-red-600 text-white hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
             >
-              <Mail className="h-7 w-7" />
+              <Mail className="h-6 w-6" />
             </a>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link href="/projects">
-              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-5 text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1">
+              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1">
                 View My Work
-                <ArrowRight className="ml-3 h-6 w-6" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/contact">
-              <Button className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-slate-900 px-10 py-5 text-xl font-bold transition-all duration-200 hover:-translate-y-1">
+              <Button className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-1">
                 Get In Touch
               </Button>
             </Link>
             <Button 
               onClick={() => window.open("https://drive.google.com/file/d/1PWKLOKlNxBXP-WZrkKj3Shya0vuFmYWy/view?usp=drive_link", "_blank")}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-5 text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
             >
-              <Download className="mr-3 h-6 w-6" />
+              <Download className="mr-2 h-5 w-5" />
               View Resume
             </Button>
           </div>
 
           {/* Quick Stats */}
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 dark:text-emerald-400">20+</div>
-              <div className="text-base text-gray-300 dark:text-gray-300 font-medium">Projects</div>
+              <div className="text-2xl font-bold text-emerald-400 dark:text-emerald-400">20+</div>
+              <div className="text-sm text-gray-300 dark:text-gray-300 font-medium">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 dark:text-emerald-400">2+</div>
-              <div className="text-base text-gray-300 dark:text-gray-300 font-medium">Years</div>
+              <div className="text-2xl font-bold text-emerald-400 dark:text-emerald-400">2+</div>
+              <div className="text-sm text-gray-300 dark:text-gray-300 font-medium">Years</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 dark:text-emerald-400">100%</div>
-              <div className="text-base text-gray-300 dark:text-gray-300 font-medium">Success</div>
+              <div className="text-2xl font-bold text-emerald-400 dark:text-emerald-400">100%</div>
+              <div className="text-sm text-gray-300 dark:text-gray-300 font-medium">Success</div>
             </div>
           </div>
         </div>
