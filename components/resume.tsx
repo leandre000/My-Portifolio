@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Download, Mail, Github, MapPin, Calendar, Building2, Award, Code, Shield, Database, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -110,12 +109,9 @@ export default function Resume() {
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((skillGroup, idx) => (
-              <motion.div
+              <div
                 key={skillGroup.category}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg"
+                className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg hover:shadow-lg transition-shadow duration-300"
               >
                 <h4 className="font-semibold text-gray-800 dark:text-white mb-2">
                   {skillGroup.category}
@@ -130,7 +126,7 @@ export default function Resume() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -167,21 +163,43 @@ export default function Resume() {
               <div className="flex justify-between items-start mb-2">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
-                    Software Developer - Freelance
+                    Backend Developer - LOXOTECH TECH
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Full-stack development and AI integration
+                    Working on cutting-edge software solutions and backend development
                   </p>
                 </div>
                 <span className="text-sm text-gray-500 dark:text-gray-400 bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">
-                  2023 - Present
+                  2025 - Present
                 </span>
               </div>
               <ul className="text-gray-700 dark:text-gray-300 space-y-1 ml-4">
-                <li>• Developed full-stack web applications using MERN stack</li>
-                <li>• Integrated AI/ML capabilities into web applications</li>
-                <li>• Created responsive and user-friendly interfaces</li>
-                <li>• Implemented secure authentication and data protection</li>
+                <li>• Full-stack development using modern technologies</li>
+                <li>• Collaborating with cross-functional teams</li>
+                <li>• Implementing best practices and coding standards</li>
+                <li>• Contributing to product architecture and design decisions</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                    Mobile Developer - AGURA TICKETS
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Developing mobile solutions for event ticket booking and management
+                  </p>
+                </div>
+                <span className="text-sm text-gray-500 dark:text-gray-400 bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">
+                  June 2025 - Present
+                </span>
+              </div>
+              <ul className="text-gray-700 dark:text-gray-300 space-y-1 ml-4">
+                <li>• Mobile application development for iOS and Android</li>
+                <li>• Integration and testing of mobile applications</li>
+                <li>• Mentoring junior developers and providing technical guidance</li>
+                <li>• Real-time availability and secure access implementation</li>
               </ul>
             </div>
           </div>
@@ -195,12 +213,9 @@ export default function Resume() {
           </h3>
           <div className="grid gap-6">
             {projects.map((project, idx) => (
-              <motion.div
+              <div
                 key={project.name}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg"
+                className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
@@ -233,7 +248,7 @@ export default function Resume() {
                     GitHub
                   </a>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -246,16 +261,13 @@ export default function Resume() {
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {certifications.map((cert, idx) => (
-              <motion.div
+              <div
                 key={cert}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg"
+                className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg hover:shadow-md transition-shadow duration-300"
               >
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                 <span className="text-gray-700 dark:text-gray-300">{cert}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -271,26 +283,34 @@ export default function Resume() {
               <div className="space-y-3">
                 <div>
                   <h4 className="font-semibold text-gray-800 dark:text-white">
-                    Software Development
+                    A Level - Software Programming, Embedded Systems, Cybersecurity
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Self-taught with focus on modern web technologies
+                    Rwanda Coding Academy (2023 - 2026)
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 dark:text-white">
-                    AI/ML Specialization
+                    O Level
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Practical experience with machine learning frameworks
+                    Groupe Scolaire Officiel de Butare (2020 - 2023)
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 dark:text-white">
-                    Cybersecurity Training
+                    Primary Education
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Professional certifications in penetration testing
+                    LEDUCATEUR (2012 - 2019)
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 dark:text-white">
+                    Modern Web & Cloud Technologies
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Self-taught with focus on React, Next.js, AI/ML, and cloud deployment
                   </p>
                 </div>
               </div>
@@ -321,18 +341,15 @@ export default function Resume() {
 
         {/* Download Button */}
         <div className="p-8 bg-gray-50 dark:bg-gray-900 text-center">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <div>
             <Button 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 px-8 py-3 text-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => window.print()}
             >
               <Download className="h-5 w-5 mr-2" />
               Download/Print Resume
             </Button>
-          </motion.div>
+          </div>
           <p className="text-gray-600 dark:text-gray-400 mt-3 text-sm">
             Use browser print function to save as PDF
           </p>
