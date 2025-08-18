@@ -33,7 +33,7 @@ export default function LoadingAnimation({ duration = 1500 }: LoadingAnimationPr
         <div className="mb-8">
           <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-2xl">
             <img 
-              src="/echo.png" 
+              src="/echo.jpg" 
               alt="Echo Tech Logo" 
               className="w-full h-full object-cover"
               onError={(e) => {
