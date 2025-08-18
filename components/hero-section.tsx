@@ -47,8 +47,8 @@ export default function HeroSection() {
             <h3 className="text-lg md:text-xl text-black/70 dark:text-white/70 mb-6">
               Full-Stack Developer & AI Enthusiast
             </h3>
-            <p className="text-base md:text-lg text-black/70 dark:text-white/70 max-w-3xl mx-auto leading-relaxed">
-              With over 2+ years of experience in AI/ML, full-stack development, and cybersecurity, I bring a unique perspective to both technical challenges and business strategy. Currently working at LOXOTECH TECH and building innovative digital solutions.
+            <p className="text-base md:text-lg text-black/70 dark:text-white/70 max-w-2xl mx-auto leading-relaxed">
+              With over 2+ years of experience in AI/ML and full-stack development. Currently working at LOXOTECH TECH and building innovative digital solutions.
             </p>
           </div>
 

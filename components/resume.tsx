@@ -59,6 +59,11 @@ export default function Resume() {
     "Cybersecurity Introduction - Security Principles"
   ]
 
+  const handleGoogleDriveRedirect = () => {
+    // Replace with your actual Google Drive resume link
+    window.open("https://drive.google.com/file/d/YOUR_RESUME_ID/view", "_blank")
+  }
+
   return (
     <div className="min-h-screen bg-white py-8 print:py-0">
       <div className="max-w-4xl mx-auto bg-white shadow-2xl print:shadow-none">
@@ -351,19 +356,19 @@ export default function Resume() {
           </div>
         </div>
 
-        {/* Download Button */}
-        <div className="p-8 bg-gray-50 text-center print:hidden">
+        {/* Google Drive Button */}
+        <div className="p-8 bg-gray-50 text-center">
           <div>
             <Button 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.print()}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={handleGoogleDriveRedirect}
             >
               <Download className="h-5 w-5 mr-2" />
-              Download/Print Resume
+              View Resume on Google Drive
             </Button>
           </div>
           <p className="text-gray-600 mt-3 text-sm">
-            Use browser print function to save as PDF for Google Drive
+            Click to view the full resume on Google Drive
           </p>
         </div>
       </div>

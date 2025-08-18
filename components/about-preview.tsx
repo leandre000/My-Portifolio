@@ -33,17 +33,17 @@ const highlights = [
 
 export default function AboutPreview() {
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white dark:from-black dark:via-gray-900 dark:to-black">
+    <section className="py-16 bg-gradient-to-br from-white via-gray-50 to-white dark:from-black dark:via-gray-900 dark:to-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600 dark:text-blue-400">
                 About Me
               </h2>
-              <p className="text-black/70 dark:text-white/70 max-w-3xl mx-auto text-lg">
-                As the CEO and Founder of Echo, I combine entrepreneurial vision with 2 years of software development and AI experience to deliver innovative solutions.
+              <p className="text-black/70 dark:text-white/70 max-w-2xl mx-auto text-lg">
+                As the CEO and Founder of Echo, I combine entrepreneurial vision with 2+ years of software development and AI experience to deliver innovative solutions.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function AboutPreview() {
                   About Me
                 </h3>
                 <p className="text-black/70 dark:text-white/70 leading-relaxed">
-                  With over 2+ years of software development and AI experience, I've dedicated myself to creating innovative solutions that bridge the gap between technology and human needs. As the founder of Echo, formed this month, I'm passionate about building AI-powered applications that solve real-world problems.
+                  With over 2+ years of software development and AI experience, I've dedicated myself to creating innovative solutions that bridge the gap between technology and human needs. As the founder of Echo, I'm passionate about building AI-powered applications that solve real-world problems.
                 </p>
                 <p className="text-black/70 dark:text-white/70 leading-relaxed">
                   My journey in tech has been driven by curiosity and a desire to make technology more accessible and impactful. From full-stack development to AI integration, I believe in the power of combining multiple disciplines to create something truly extraordinary.
@@ -135,7 +135,7 @@ export default function AboutPreview() {
           </div>
 
           {/* Highlights Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {highlights.map((highlight, idx) => {
               const IconComponent = highlight.icon
               return (

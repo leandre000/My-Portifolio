@@ -50,10 +50,10 @@ export default function AboutPage() {
                     <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Availability</h4>
                     <p>Freelance</p>
                   </div>
-                  <div>
-                    <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Experience</h4>
-                    <p>2 Years</p>
-                  </div>
+                                       <div>
+                       <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Experience</h4>
+                       <p>2+ Years</p>
+                     </div>
                 </div>
               </div>
             </div>
