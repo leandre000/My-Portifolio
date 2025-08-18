@@ -40,27 +40,27 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bytehire-bg backdrop-blur-md border-b border-emerald-500/20 shadow-lg"
-          : "bytehire-bg backdrop-blur-sm"
+          ? "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 backdrop-blur-md border-b border-emerald-500/20 shadow-lg"
+          : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-4">
             <div className="relative">
               <img 
                 src="/myportifolio.jpg" 
                 alt="Leandre Portfolio Logo" 
-                className="w-10 h-10 rounded-full"
+                className="w-12 h-12 rounded-full"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder-logo.png"
                 }}
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white">Leandre</h1>
-              <p className="text-xs text-emerald-300">Software Engineer</p>
+              <h1 className="text-2xl font-bold text-white dark:text-white">Leandre</h1>
+              <p className="text-sm text-emerald-300 dark:text-emerald-300 font-medium">Software Engineer</p>
             </div>
           </Link>
 
@@ -70,10 +70,10 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 font-medium relative group"
+                className="text-gray-200 dark:text-gray-200 hover:text-emerald-400 dark:hover:text-emerald-400 transition-colors duration-200 font-semibold text-lg relative group"
               >
                 {item.name}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 group-hover:w-full transition-all duration-300" />
+                <div className="absolute -bottom-1 left-0 w-0 h-1 bg-emerald-400 dark:bg-emerald-400 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>
@@ -85,7 +85,7 @@ export default function Navigation() {
             {/* Contact Button */}
             <div className="hidden sm:block">
               <Link href="/contact">
-                <Button className="bytehire-button shadow-md hover:shadow-lg transition-all duration-200">
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 text-lg font-bold shadow-md hover:shadow-lg transition-all duration-200">
                   Get In Touch
                 </Button>
               </Link>
@@ -94,10 +94,10 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-emerald-500/20 transition-colors text-white"
+              className="md:hidden p-3 rounded-lg hover:bg-emerald-500/20 transition-colors text-white"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
           </div>
         </div>
@@ -105,20 +105,20 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/90 backdrop-blur-md rounded-lg mt-2 border border-emerald-500/20">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-emerald-500/20">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-md transition-colors duration-200"
+                  className="block px-4 py-3 text-gray-200 dark:text-gray-200 hover:text-emerald-400 dark:hover:text-emerald-400 hover:bg-emerald-500/10 rounded-md transition-colors duration-200 text-lg font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-2">
+              <div className="pt-4">
                 <Link href="/contact">
-                  <Button className="bytehire-button w-full">
+                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white w-full text-lg font-bold py-3">
                     Get In Touch
                   </Button>
                 </Link>
