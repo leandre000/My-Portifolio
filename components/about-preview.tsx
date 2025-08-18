@@ -133,43 +133,6 @@ export default function AboutPreview() {
               </div>
             </div>
           </div>
-
-          {/* Highlights Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {highlights.map((highlight, idx) => {
-              const IconComponent = highlight.icon
-              return (
-                <div
-                  key={highlight.title}
-                  className="text-center p-6 bg-white dark:bg-black/20 rounded-xl border border-black/10 dark:border-white/10 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                >
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${highlight.color} flex items-center justify-center text-white shadow-lg`}>
-                    <IconComponent className="h-8 w-8" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2 text-black dark:text-white">
-                    {highlight.title}
-                  </h4>
-                  <p className="text-sm text-black/70 dark:text-white/70 leading-relaxed">
-                    {highlight.description}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
-
-          {/* CTA */}
-          <div className="text-center">
-            <div>
-              <Link href="/about">
-                <Button 
-                  className="rounded-full px-8 py-4 text-base font-medium bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  Learn More About Echo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </section>

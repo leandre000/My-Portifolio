@@ -9,7 +9,7 @@ import { TechIcon } from "@/components/tech-icons"
 const techGroups = [
   {
     group: "AI & Machine Learning",
-    items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Computer Vision", "NLP", "Deep Learning", "MLOps"],
+    items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning"],
     icon: "🤖",
     color: "from-purple-500 to-pink-500"
   },
@@ -21,7 +21,7 @@ const techGroups = [
   },
   {
     group: "Project Management",
-    items: ["Agile", "Scrum", "Kanban", "JIRA", "Confluence", "Git", "CI/CD", "DevOps"],
+    items: ["Agile", "Scrum", "Kanban", "JIRA", "Git", "CI/CD", "DevOps"],
     icon: "📊",
     color: "from-green-500 to-emerald-500"
   },

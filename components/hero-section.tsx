@@ -91,6 +91,12 @@ export default function HeroSection() {
                 Get In Touch
               </Button>
             </Link>
+            <Button 
+              onClick={() => window.open("https://drive.google.com/file/d/1PWKLOKlNxBXP-WZrkKj3Shya0vuFmYWy/view?usp=drive_link", "_blank")}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+            >
+              View Resume
+            </Button>
           </div>
 
           {/* Quick Stats */}

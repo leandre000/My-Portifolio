@@ -9,7 +9,7 @@ export default function Resume() {
     { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Responsive Design"] },
     { category: "Backend", items: ["Node.js", "Express", "NestJS", "Spring Boot"] },
     { category: "Databases", items: ["MongoDB", "MySQL", "PostgreSQL"] },
-    { category: "AI/ML", items: ["TensorFlow", "PyTorch", "Scikit-learn", "Computer Vision"] },
+    { category: "AI/ML", items: ["TensorFlow", "PyTorch", "Scikit-learn"] },
     { category: "Tools", items: ["Git", "Docker", "Vercel", "Figma"] }
   ]
 
@@ -60,8 +60,11 @@ export default function Resume() {
   ]
 
   const handleGoogleDriveRedirect = () => {
-    // Replace with your actual Google Drive resume link
-    window.open("https://drive.google.com/file/d/YOUR_RESUME_ID/view", "_blank")
+    // Actual Google Drive resume link
+    const resumeUrl = "https://drive.google.com/file/d/1PWKLOKlNxBXP-WZrkKj3Shya0vuFmYWy/view?usp=drive_link"
+    if (typeof window !== 'undefined') {
+      window.open(resumeUrl, "_blank")
+    }
   }
 
   return (
