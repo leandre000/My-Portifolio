@@ -3,17 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CuboidIcon as Cube, ExternalLink, Github } from "lucide-react"
+import { ArrowRight, ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import dynamic from "next/dynamic"
-const ModelViewer = dynamic(() => import("@/components/model-viewer"), { ssr: false })
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel"
 
 const projects = [
   {
@@ -72,7 +63,6 @@ const projects = [
 
 export default function FeaturedProjects() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
-  const [activeModelIndex, setActiveModelIndex] = useState<number | null>(null)
 
   const orderedProjects = [
     ...projects.filter((p) => p.featured),
@@ -169,52 +159,6 @@ export default function FeaturedProjects() {
             </div>
           ))}
         </div>
-
-        {/* 3D Model Showcase */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold mb-8 text-black dark:text-white">Interactive 3D Showcase</h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[0, 1, 2].map((index) => (
-                <div
-                  key={index}
-                  className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                  onClick={() => setActiveModelIndex(activeModelIndex === index ? null : index)}
-                >
-                  <div className="h-48 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                    <Cube className="h-16 w-16 text-gray-400" />
-                  </div>
-                  <p className="mt-4 text-sm text-black/70 dark:text-white/70">
-                    Click to view 3D model {index + 1}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* 3D Model Viewer Modal */}
-        {activeModelIndex !== null && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-hidden">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-bold text-black dark:text-white">
-                  3D Model Showcase {activeModelIndex + 1}
-                </h3>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setActiveModelIndex(null)}
-                >
-                  Close
-                </Button>
-              </div>
-              <div className="h-96 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                <ModelViewer />
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   )
