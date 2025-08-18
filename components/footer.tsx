@@ -96,7 +96,7 @@ export default function Footer() {
                 <span>LinkedIn</span>
               </a>
               <a
-                href="https://twitter.com/leandre000"
+                href="https://x.com/shema_Leandre"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-emerald-400 transition-colors duration-200"

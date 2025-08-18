@@ -2,13 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Define CSS variables for theme colors
-  These are used by Tailwind and can be accessed via the utility classes
-*/
 @layer base {
   :root {
-    /* Light mode colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -17,26 +12,21 @@
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
-
-    /* Custom accent colors for the portfolio */
-    --accent-blue-light: 203 94% 94%; /* #e3f2fd */
-    --accent-blue-dark: 210 100% 97%; /* #dbeeff */
   }
 
   .dark {
-    /* Dark mode colors */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -59,7 +49,6 @@
   }
 }
 
-/* Apply base styles */
 @layer base {
   * {
     @apply border-border;
@@ -69,124 +58,37 @@
   }
 }
 
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Smooth transition for theme switching */
-.dark body,
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Image optimization */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Smooth transitions for all elements */
-* {
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Animation utilities */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@layer components {
+  .bytehire-bg {
+    @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
   }
-  to {
-    opacity: 1;
+
+  .bytehire-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
   }
-}
 
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
+  .bytehire-button {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white border-none transition-all duration-300;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  .bytehire-button:hover {
+    @apply bg-emerald-700 -translate-y-0.5 shadow-lg;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
   }
-}
 
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
+  .bytehire-outline-button {
+    @apply bg-transparent text-white border-2 border-white transition-all duration-300;
   }
-  50% {
-    opacity: 0.5;
+
+  .bytehire-outline-button:hover {
+    @apply bg-white text-slate-900;
   }
-}
 
-/* Custom animation classes */
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
-}
+  .bytehire-glow {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
 
-.animate-slide-up {
-  animation: slideUp 0.5s ease-out forwards;
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Custom ByteHire-inspired styles */
-.bytehire-theme {
-  --bytehire-dark-green: #0f172a;
-  --bytehire-light-green: #1e293b;
-  --bytehire-accent-green: #10b981;
-  --bytehire-text-white: #ffffff;
-  --bytehire-text-gray: #94a3b8;
-}
-
-.bytehire-bg {
-  background: linear-gradient(135deg, var(--bytehire-dark-green) 0%, var(--bytehire-light-green) 100%);
-}
-
-.bytehire-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.bytehire-button {
-  background: var(--bytehire-accent-green);
-  color: var(--bytehire-text-white);
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.bytehire-button:hover {
-  background: #059669;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
-}
-
-.bytehire-outline-button {
-  background: transparent;
-  color: var(--bytehire-text-white);
-  border: 2px solid var(--bytehire-text-white);
-  transition: all 0.3s ease;
-}
-
-.bytehire-outline-button:hover {
-  background: var(--bytehire-text-white);
-  color: var(--bytehire-dark-green);
-}
-
-/* Glow effects */
-.bytehire-glow {
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
-}
-
-.bytehire-text-glow {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  .bytehire-text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
 }
