@@ -225,7 +225,7 @@ export default function Resume() {
                 </span>
               </div>
               <ul className="text-gray-700 space-y-1 ml-4">
-                <li>• Full-stack development using modern technologies</li>
+                <li>• Backend development using modern technologies</li>
                 <li>• Collaborating with cross-functional teams</li>
                 <li>• Implementing best practices and coding standards</li>
                 <li>• Contributing to product architecture and design decisions</li>

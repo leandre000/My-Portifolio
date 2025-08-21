@@ -16,7 +16,7 @@ const workExperience = [
   },
   {
     id: 2,
-    title: "Software Engineer",
+    title: "Backend Developer",
     company: "LOXOTECH TECH",
     period: "2025 - Present",
     description: "Working on cutting-edge software solutions and contributing to innovative projects in a dynamic tech environment.",

@@ -43,7 +43,7 @@ export default function AboutPreview() {
                 About Me
               </h2>
               <p className="text-lg text-gray-200 dark:text-gray-200 max-w-2xl mx-auto font-medium leading-relaxed">
-                A young software developer passionate about building web applications and learning new technologies.
+                A software developer passionate about building web applications and learning new technologies.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function AboutPreview() {
                   About Me
                 </h3>
                 <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
-                  I'm a young developer who loves building web applications and learning new technologies. I work at Echo Solutions Ltd where I get to work on interesting projects and grow my skills.
+                  I'm a developer who loves building web applications and learning new technologies. I work at Echo Solutions Ltd where I get to work on interesting projects and grow my skills.
                 </p>
                 <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
                   I believe in writing clean, maintainable code and always trying to learn something new. Whether it's frontend, backend, or new frameworks, I'm excited to explore and build with them.
@@ -90,15 +90,6 @@ export default function AboutPreview() {
                   </div>
                 ))}
               </div>
-
-              {/* CTA Button */}
-              <div>
-                <Link href="/about">
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-6 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                    Learn More About Me
-                  </Button>
-                </Link>
-              </div>
             </div>
 
             {/* Visual Element */}
@@ -108,7 +99,7 @@ export default function AboutPreview() {
                 <div className="relative w-64 h-64 mx-auto mb-6">
                   <img
                     src="/myportifolio.jpg"
-                    alt="Leandre - CEO & Founder of Echo"
+                    alt="Leandre - Software Developer"
                     className="w-full h-full object-cover rounded-2xl border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.png"

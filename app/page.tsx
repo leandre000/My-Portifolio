@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <SEOOptimizer
         title="Leandre - Software Developer at Echo Tech"
-        description="Portfolio of Leandre, a young software developer passionate about building web applications and learning new technologies."
+        description="Portfolio of Leandre, a software developer passionate about building web applications and learning new technologies."
         keywords={[
           "Software Developer", "Web Development", "React", "Next.js", 
           "Full Stack Developer", "Portfolio", "Developer", "Echo Tech"
