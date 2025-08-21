@@ -3,10 +3,10 @@
 const workExperience = [
   {
     id: 1,
-    title: "Software Engineer",
-    company: "LOXOTECH TECH",
+    title: "Software Developer",
+    company: "Echo Solutions Ltd",
     period: "2025 - Present",
-    description: "Working on cutting-edge software solutions and contributing to innovative projects in a dynamic tech environment.",
+    description: "Working as a fullstack developer building web applications and digital solutions.",
     responsibilities: [
       "Full-stack development using modern technologies",
       "Collaborating with cross-functional teams",
@@ -16,6 +16,19 @@ const workExperience = [
   },
   {
     id: 2,
+    title: "Software Engineer",
+    company: "LOXOTECH TECH",
+    period: "2025 - Present",
+    description: "Working on cutting-edge software solutions and contributing to innovative projects in a dynamic tech environment.",
+    responsibilities: [
+      "Backend development using modern technologies",
+      "Collaborating with cross-functional teams",
+      "Implementing best practices and coding standards",
+      "Contributing to product architecture and design decisions",
+    ],
+  },
+  {
+    id: 3,
     title: "Software Developer",
     company: "AGURA TICKETS",
     period: "June 2025 - Present",
@@ -27,31 +40,31 @@ const workExperience = [
     ],
   },
   {
-    id: 3,
-    title: "AI Enthusiast",
+    id: 4,
+    title: "Software Developer",
     company: "T-HealthSync",
     period: "January 2025 - July",
-    description: "Developing a health system that tracks patient behavior and health status, and predicts diseases using AI.",
+    description: "Developing a health system that tracks patient behavior and health status.",
     responsibilities: [
-      "AI model integration",
+      "System integration and development",
       "Data tracking and analysis",
       "Ensuring system reliability and performance",
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Fullstack Developer",
     company: "Aguuka",
     period: "2025",
-    description: "Built a fullstack MERN app with AI integration for smarter content creation and task automation.",
+    description: "Built a fullstack MERN app for content creation and task automation.",
     responsibilities: [
       "Frontend and backend development",
-      "AI integration for content automation",
+      "Content automation features",
       "Task automation implementation",
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Community Services Volunteer (Excel & Linux)",
     company: "Various Community Projects",
     period: "2020 - Present",
@@ -64,7 +77,7 @@ const workExperience = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Fullstack & Cloud Developer (Modern Stacks)",
     company: "Freelance & Open Source Projects",
     period: "2022 - Present",

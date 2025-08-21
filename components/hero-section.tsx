@@ -45,7 +45,7 @@ export default function HeroSection() {
               Full-Stack Developer
             </h3>
             <p className="text-base md:text-lg text-gray-200 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-              A young developer passionate about building web applications and learning new technologies. Currently working at Echo Tech and building digital solutions.
+              With over 2+ years of experience in full-stack development. Currently working at LOXOTECH as backend and ECHO SOLUTIONS as fullstack, building innovative digital solutions.
             </p>
           </div>
 

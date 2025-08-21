@@ -9,7 +9,6 @@ export default function Resume() {
     { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Responsive Design"] },
     { category: "Backend", items: ["Node.js", "Express", "NestJS", "Spring Boot"] },
     { category: "Databases", items: ["MongoDB", "MySQL", "PostgreSQL"] },
-    { category: "AI/ML", items: ["TensorFlow", "PyTorch", "Scikit-learn"] },
     { category: "Tools", items: ["Git", "Docker", "Vercel", "Figma"] }
   ]
 
@@ -25,8 +24,15 @@ export default function Resume() {
       name: "ClinixPro",
       description: "Hospital Management System",
       tech: "React, Node.js, MongoDB",
-      live: "https://clinix-b1b335gka-leandre000s-projects.vercel.app/",
+      live: "https://clinix-pro-iota.vercel.app/",
       github: "https://github.com/leandre000/clinixpro"
+    },
+    {
+      name: "Tale-Connect",
+      description: "Talent Management Platform",
+      tech: "Next.js, TypeScript, Tailwind CSS",
+      live: "https://talent-connect-app.vercel.app/",
+      github: "https://github.com/leandre000/talent-connect"
     },
     {
       name: "Geenzura",
@@ -37,8 +43,8 @@ export default function Resume() {
     },
     {
       name: "Aguuka",
-      description: "AI-Powered MERN App",
-      tech: "MERN Stack, AI Integration",
+      description: "MERN Stack Application",
+      tech: "MERN Stack, Full-stack Development",
       live: "https://hrms-frontend-ashen.vercel.app/",
       github: "https://github.com/leandre000/Aguuka"
     },
@@ -55,7 +61,7 @@ export default function Resume() {
     "Penetration Testing - Advanced",
     "Network Research - Security Methodologies",
     "Linux Fundamentals - System Administration",
-    "Python Fundamentals - AI/ML Applications",
+    "Python Fundamentals - Programming",
     "Cybersecurity Introduction - Security Principles"
   ]
 
@@ -75,7 +81,7 @@ export default function Resume() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-4xl font-bold mb-2">Leandre</h1>
-              <h2 className="text-xl font-semibold mb-4">Software Developer & AI Engineer</h2>
+              <h2 className="text-xl font-semibold mb-4">Software Developer</h2>
               <div className="space-y-2 text-blue-100">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
@@ -110,8 +116,8 @@ export default function Resume() {
             Professional Summary
           </h3>
           <p className="text-gray-700 leading-relaxed">
-            Software developer with over 2+ years of experience specializing in AI/ML integration, full-stack web development, and cybersecurity. 
-            Recently founded Echo Tech to focus on innovative AI-powered solutions and secure web applications. 
+            Software developer with over 2+ years of experience specializing in full-stack web development and cybersecurity. 
+            Currently working at Echo Solutions Ltd to focus on innovative web solutions and secure applications. 
             Passionate about creating user-friendly, scalable solutions that solve real-world problems.
           </p>
         </div>
@@ -187,10 +193,10 @@ export default function Resume() {
               <div className="flex justify-between items-start mb-2">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">
-                    CEO & Founder - Echo Tech
+                    Software Developer - Echo Solutions Ltd
                   </h4>
                   <p className="text-gray-600">
-                    Founded technology company focused on AI-powered solutions
+                    Working as a fullstack developer building web applications
                   </p>
                 </div>
                 <span className="text-sm text-gray-500 bg-blue-100 px-3 py-1 rounded-full">
@@ -200,7 +206,7 @@ export default function Resume() {
               <ul className="text-gray-700 space-y-1 ml-4">
                 <li>• Lead development team in creating innovative web applications</li>
                 <li>• Strategic planning and business development for tech solutions</li>
-                <li>• Focus on AI/ML integration and cybersecurity solutions</li>
+                <li>• Focus on full-stack development and cybersecurity solutions</li>
               </ul>
             </div>
             
@@ -353,7 +359,7 @@ export default function Resume() {
                 Modern Web & Cloud Technologies
               </h4>
               <p className="text-gray-600 text-sm">
-                Self-taught with focus on React, Next.js, AI/ML, and cloud deployment
+                Self-taught with focus on React, Next.js, and cloud deployment
               </p>
             </div>
           </div>

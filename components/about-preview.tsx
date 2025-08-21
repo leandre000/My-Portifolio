@@ -8,7 +8,7 @@ const highlights = [
   {
     icon: Building2,
     title: "Software Developer",
-    description: "Building web applications and learning new technologies at Echo Tech.",
+    description: "Building web applications and learning new technologies at Echo Solutions Ltd.",
     color: "from-emerald-500 to-teal-500"
   },
   {
@@ -56,10 +56,16 @@ export default function AboutPreview() {
                   About Me
                 </h3>
                 <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
-                  I'm a young developer who loves building web applications and learning new technologies. I work at Echo Tech where I get to work on interesting projects and grow my skills.
+                  I'm a young developer who loves building web applications and learning new technologies. I work at Echo Solutions Ltd where I get to work on interesting projects and grow my skills.
                 </p>
                 <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
                   I believe in writing clean, maintainable code and always trying to learn something new. Whether it's frontend, backend, or new frameworks, I'm excited to explore and build with them.
+                </p>
+                <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
+                  My journey in tech has been driven by curiosity and a desire to make technology more accessible and impactful. I enjoy working with teams to create solutions that help people.
+                </p>
+                <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
+                  I'm passionate about continuous learning and improving my development skills. Every project is an opportunity to grow and become a better developer.
                 </p>
               </div>
 
@@ -123,11 +129,11 @@ export default function AboutPreview() {
                       }}
                     />
                     <h4 className="text-xl font-bold text-emerald-400 dark:text-emerald-400">
-                      Echo Tech
+                      Echo Solutions Ltd
                     </h4>
                   </div>
                   <p className="text-gray-300 dark:text-gray-300 text-sm font-medium">
-                    AI-Powered Solutions & Innovation
+                    Web Development & Digital Solutions
                   </p>
                 </div>
               </div>
