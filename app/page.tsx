@@ -14,10 +14,21 @@ import TechStackPreview from "@/components/tech-stack-preview";
 import TestimonialsSection from "@/components/testimonials-section";
 import LoadingAnimation from "@/components/loading-animation";
 import MouseTrailer from "@/components/mouse-trailer";
+import SEOOptimizer from "@/components/seo-optimizer";
 
 export default function Home() {
   return (
     <div>
+      <SEOOptimizer
+        title="Leandre - CEO & Founder of Echo | AI/ML Developer & Tech Leader"
+        description="Portfolio of Leandre, CEO & Founder of Echo Tech. Leading innovation in AI/ML, web development, and cybersecurity. Expert in penetration testing and cutting-edge technology solutions."
+        keywords={[
+          "CEO", "Founder", "Echo Tech", "AI/ML", "Web Development", "Cybersecurity",
+          "Penetration Testing", "Tech Leader", "Portfolio", "Software Engineer"
+        ]}
+        image="/myportifolio.jpg"
+      />
+      
       {/* Optional: Loading animation and mouse trailer */}
       <LoadingAnimation duration={1500} />
       <MouseTrailer />

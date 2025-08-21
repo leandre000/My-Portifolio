@@ -15,11 +15,22 @@ const projects = [
     categories: ["Web Development", "Fullstack", "Healthcare"],
     year: 2025,
     github: "https://github.com/leandre000/clinixpro",
-    live: "https://clinix-b1b335gka-leandre000s-projects.vercel.app/",
+    live: "https://clinix-pro-iota.vercel.app/",
     featured: true
   },
   {
     id: 2,
+    title: "Talent-Connect",
+    description: "A modern talent management platform connecting skilled professionals with opportunities, featuring advanced matching algorithms and seamless user experience.",
+    image: "/tale.png",
+    categories: ["Web Development", "Fullstack", "Talent Management"],
+    year: 2025,
+    github: "https://github.com/leandre000/talent-connect",
+    live: "https://talent-connect-app.vercel.app/",
+    featured: true
+  },
+  {
+    id: 3,
     title: "Geenzura",
     description: "Advanced inventory management system with real-time tracking, analytics dashboard, and seamless integrations.",
     image: "/genzura.png",
@@ -30,7 +41,7 @@ const projects = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Aguuka",
     description: "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
     image: "/aguka.jpg",
@@ -40,7 +51,7 @@ const projects = [
     live: "https://hrms-frontend-ashen.vercel.app/"
   },
   {
-    id: 4,
+    id: 5,
     title: "Stoka",
     description: "Stoka is an online inventory management system designed to help businesses track stock, sales, and analytics in real time. Features include product management, reporting, and seamless integrations.",
     image: "/blog/stoka-inventory.jpg",
@@ -50,7 +61,7 @@ const projects = [
     live: "https://stoka-green.vercel.app/"
   },
   {
-    id: 5,
+    id: 6,
     title: "EduPlatform",
     description: "A cutting-edge frontend for an online learning platform with modern UI/UX and responsive design.",
     image: "/edu.jpg",
