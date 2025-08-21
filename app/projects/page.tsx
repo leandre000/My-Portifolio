@@ -13,11 +13,11 @@ export default function ProjectsPage() {
   return (
     <>
       <SEOOptimizer
-        title="Projects - Leandre Portfolio | AI/ML Developer & Tech Leader"
-        description="Explore my portfolio of impactful projects including ClinixPro hospital management, Talent-Connect platform, and cutting-edge AI/ML solutions."
+        title="Projects - Leandre Portfolio | Software Developer"
+        description="Explore my portfolio of impactful projects including ClinixPro hospital management, Talent-Connect platform, and web development solutions."
         keywords={[
           "Projects", "Portfolio", "Hospital Management", "Talent Management", 
-          "AI/ML", "Web Development", "Full Stack", "React", "Next.js"
+          "Web Development", "Full Stack", "React", "Next.js"
         ]}
         image="/myportifolio.jpg"
       />

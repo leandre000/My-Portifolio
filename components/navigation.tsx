@@ -7,12 +7,14 @@ import { Menu, X } from "lucide-react"
 import { useTheme } from "next-themes"
 import { ModeToggle } from "./mode-toggle"
 
-const navigationItems = [
+const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
-  { name: "Tech Stack", href: "/tech-stack" },
+  { name: "Experience", href: "/experience" },
   { name: "Contact", href: "/contact" },
+  { name: "Blog", href: "/blog" },
+  { name: "Resume", href: "/resume" },
 ]
 
 export default function Navigation() {
@@ -66,7 +68,7 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -106,7 +108,7 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-3 pt-3 pb-4 space-y-2 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-emerald-500/20">
-              {navigationItems.map((item) => (
+              {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}

@@ -39,13 +39,13 @@ export default function HeroSection() {
               Hi, I'm <span className="text-emerald-400 dark:text-emerald-400">Leandre</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-400 dark:text-emerald-400 drop-shadow-lg">
-              Software Engineer & AI Developer
+              Software Developer
             </h2>
             <h3 className="text-lg md:text-xl text-gray-200 dark:text-gray-200 mb-8 font-semibold">
-              Full-Stack Developer & AI Enthusiast
+              Full-Stack Developer
             </h3>
             <p className="text-base md:text-lg text-gray-200 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-              With over 2+ years of experience in AI/ML and full-stack development. Currently working at LOXOTECH TECH and building innovative digital solutions.
+              A young developer passionate about building web applications and learning new technologies. Currently working at Echo Tech and building digital solutions.
             </p>
           </div>
 

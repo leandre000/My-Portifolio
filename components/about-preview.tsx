@@ -7,26 +7,26 @@ import { ArrowRight, Building2, Users, Target, Zap } from "lucide-react"
 const highlights = [
   {
     icon: Building2,
-    title: "CEO & Founder",
-    description: "Leading Echo, a cutting-edge tech company focused on AI, ML, and innovative web solutions.",
+    title: "Software Developer",
+    description: "Building web applications and learning new technologies at Echo Tech.",
     color: "from-emerald-500 to-teal-500"
   },
   {
     icon: Target,
-    title: "Strategic Vision",
-    description: "Driving technological innovation and business growth through strategic planning and execution.",
+    title: "Learning & Growth",
+    description: "Passionate about continuous learning and improving development skills.",
     color: "from-purple-500 to-pink-500"
   },
   {
     icon: Users,
-    title: "Team Leadership",
-    description: "Building and managing high-performing teams to deliver exceptional results and client satisfaction.",
+    title: "Team Collaboration",
+    description: "Working with teams to build and deliver quality software solutions.",
     color: "from-green-500 to-emerald-500"
   },
   {
     icon: Zap,
-    title: "Technical Excellence",
-    description: "Hands-on expertise in AI/ML, full-stack development, and cutting-edge technologies.",
+    title: "Web Development",
+    description: "Full-stack development with modern technologies like React and Node.js.",
     color: "from-orange-500 to-red-500"
   }
 ]
@@ -43,7 +43,7 @@ export default function AboutPreview() {
                 About Me
               </h2>
               <p className="text-lg text-gray-200 dark:text-gray-200 max-w-2xl mx-auto font-medium leading-relaxed">
-                As the CEO and Founder of Echo, I combine entrepreneurial vision with 2+ years of software development and AI experience to deliver innovative solutions.
+                A young software developer passionate about building web applications and learning new technologies.
               </p>
             </div>
           </div>
@@ -56,10 +56,10 @@ export default function AboutPreview() {
                   About Me
                 </h3>
                 <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
-                  With over 2+ years of software development and AI experience, I've dedicated myself to creating innovative solutions that bridge the gap between technology and human needs. As the founder of Echo, I'm passionate about building AI-powered applications that solve real-world problems.
+                  I'm a young developer who loves building web applications and learning new technologies. I work at Echo Tech where I get to work on interesting projects and grow my skills.
                 </p>
                 <p className="text-base text-gray-200 dark:text-gray-200 leading-relaxed font-medium">
-                  My journey in tech has been driven by curiosity and a desire to make technology more accessible and impactful. From full-stack development to AI integration, I believe in the power of combining multiple disciplines to create something truly extraordinary.
+                  I believe in writing clean, maintainable code and always trying to learn something new. Whether it's frontend, backend, or new frameworks, I'm excited to explore and build with them.
                 </p>
               </div>
 

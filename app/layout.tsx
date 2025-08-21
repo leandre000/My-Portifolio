@@ -8,13 +8,11 @@ import StructuredData from "./structured-data"
 
 // ✅ This must remain in a server component (no "use client")
 export const metadata: Metadata = {
-  title: "Leandre - CEO & Founder of Echo | AI/ML Developer & Tech Leader",
-  description: "Portfolio of Leandre, CEO & Founder of Echo Tech. Leading innovation in AI/ML, web development, and cybersecurity. Expert in penetration testing and cutting-edge technology solutions.",
+  title: "Leandre - Software Developer at Echo Tech",
+  description: "Portfolio of Leandre, a young software developer passionate about building web applications and learning new technologies.",
   keywords: [
-    "CEO", "Founder", "Echo Tech", "AI/ML", "Web Development", "Cybersecurity", 
-    "Penetration Testing", "Tech Leader", "Full Stack Developer", "React", "Next.js", 
-    "Node.js", "Python", "Machine Learning", "Artificial Intelligence", "Hospital Management", 
-    "Inventory Management", "Talent Management", "Portfolio", "Software Engineer", "Tech Entrepreneur"
+    "Software Developer", "Web Development", "React", "Next.js", "Node.js", 
+    "Full Stack Developer", "Portfolio", "Developer", "Echo Tech"
   ],
   authors: [{ name: "Leandre", url: "https://leandre-portfolio.vercel.app" }],
   creator: "Leandre",
@@ -29,8 +27,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Leandre - CEO & Founder of Echo Tech | AI/ML Developer & Tech Leader",
-    description: "Leading innovation in AI/ML, web development, and cybersecurity. Expert in penetration testing and cutting-edge technology solutions.",
+    title: "Leandre - Software Developer at Echo Tech",
+    description: "A young software developer passionate about building web applications and learning new technologies.",
     type: "website",
     locale: "en_US",
     url: "https://leandre-portfolio.vercel.app",
@@ -40,14 +38,14 @@ export const metadata: Metadata = {
         url: "/myportifolio.jpg",
         width: 1200,
         height: 630,
-        alt: "Leandre - Tech Leader & Developer",
+        alt: "Leandre - Software Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leandre - CEO & Founder of Echo Tech",
-    description: "Leading innovation in AI/ML, web development, and cybersecurity",
+    title: "Leandre - Software Developer at Echo Tech",
+    description: "A young software developer passionate about building web applications",
     images: ["/myportifolio.jpg"],
     creator: "@leandre",
   },

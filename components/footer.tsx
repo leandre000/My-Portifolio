@@ -24,9 +24,8 @@ export default function Footer() {
                 <p className="text-sm text-emerald-300 dark:text-emerald-300 font-medium">Software Engineer</p>
               </div>
             </div>
-            <p className="text-sm text-gray-200 dark:text-gray-200 mb-4 max-w-md leading-relaxed font-medium">
-              Passionate about creating innovative digital solutions that bridge technology and human needs. 
-              Specializing in AI/ML, full-stack development, and cutting-edge technologies.
+            <p className="text-gray-300 dark:text-gray-300 text-sm leading-relaxed max-w-md">
+              Specializing in full-stack development and modern web technologies.
             </p>
             <div className="flex items-center gap-2 text-gray-300 dark:text-gray-300 text-sm font-medium">
               <MapPin className="h-4 w-4" />
@@ -59,8 +58,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/tech-stack" className="text-gray-200 dark:text-gray-200 hover:text-emerald-400 dark:hover:text-emerald-400 transition-colors duration-200 text-sm font-medium">
-                  Tech Stack
+                <Link href="/contact" className="text-gray-200 dark:text-gray-200 hover:text-emerald-400 dark:hover:text-emerald-400 transition-colors duration-200 text-sm font-medium">
+                  Contact
                 </Link>
               </li>
             </ul>

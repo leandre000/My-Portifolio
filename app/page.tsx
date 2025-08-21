@@ -2,14 +2,11 @@
 // 1. Hero
 // 2. About Preview
 // 3. Featured Projects
-// 4. Tech Expertise
-// 5. Professional Certifications
-// 6. Client Testimonials (last)
+// 4. Client Testimonials (last)
 import { Suspense } from "react";
 import HeroSection from "@/components/hero-section";
 import AboutPreview from "@/components/about-preview";
 import FeaturedProjects from "@/components/featured-projects";
-import TechStackPreview from "@/components/tech-stack-preview";
 // import CertificatesSection from "@/components/certificates-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import LoadingAnimation from "@/components/loading-animation";
@@ -20,11 +17,11 @@ export default function Home() {
   return (
     <div>
       <SEOOptimizer
-        title="Leandre - CEO & Founder of Echo | AI/ML Developer & Tech Leader"
-        description="Portfolio of Leandre, CEO & Founder of Echo Tech. Leading innovation in AI/ML, web development, and cybersecurity. Expert in penetration testing and cutting-edge technology solutions."
+        title="Leandre - Software Developer at Echo Tech"
+        description="Portfolio of Leandre, a young software developer passionate about building web applications and learning new technologies."
         keywords={[
-          "CEO", "Founder", "Echo Tech", "AI/ML", "Web Development", "Cybersecurity",
-          "Penetration Testing", "Tech Leader", "Portfolio", "Software Engineer"
+          "Software Developer", "Web Development", "React", "Next.js", 
+          "Full Stack Developer", "Portfolio", "Developer", "Echo Tech"
         ]}
         image="/myportifolio.jpg"
       />
@@ -48,12 +45,7 @@ export default function Home() {
         <FeaturedProjects />
       </Suspense>
 
-      {/* 4. Tech Expertise */}
-      <Suspense fallback={<div className="h-96" />}>
-        <TechStackPreview />
-      </Suspense>
-
-      {/* 5. Client Testimonials */}
+      {/* 4. Client Testimonials */}
       <Suspense fallback={<div className="h-96" />}>
         <TestimonialsSection />
       </Suspense>

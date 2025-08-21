@@ -18,7 +18,6 @@ Allow: /
 Allow: /about/
 Allow: /projects/
 Allow: /experience/
-Allow: /tech-stack/
 Allow: /contact/
 Allow: /blog/
 Allow: /resume/

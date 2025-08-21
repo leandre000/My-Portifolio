@@ -3,8 +3,8 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Leandre",
-    "jobTitle": "CEO & Founder of Echo Tech",
-    "description": "Leading innovation in AI/ML, web development, and cybersecurity. Expert in penetration testing and cutting-edge technology solutions.",
+    "jobTitle": "Software Developer at Echo Tech",
+    "description": "A young software developer passionate about building web applications and learning new technologies.",
     "url": "https://leandre-portfolio.vercel.app",
     "image": "https://leandre-portfolio.vercel.app/myportifolio.jpg",
     "sameAs": [
@@ -18,20 +18,16 @@ export default function StructuredData() {
       "url": "https://echo-tech.com"
     },
     "knowsAbout": [
-      "Artificial Intelligence",
-      "Machine Learning",
       "Web Development",
-      "Cybersecurity",
-      "Penetration Testing",
       "React",
       "Next.js",
       "Node.js",
-      "Python",
-      "Full Stack Development"
+      "Full Stack Development",
+      "Software Development"
     ],
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "Software Engineer",
+      "name": "Software Developer",
       "occupationCategory": "Computer and Information Technology"
     },
     "alumniOf": {
