@@ -15,7 +15,7 @@ import SEOOptimizer from "@/components/seo-optimizer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="page-container">
       <SEOOptimizer
         title="Leandre - Software Developer at Echo Tech"
         description="Portfolio of Leandre, a software developer passionate about building web applications and learning new technologies."

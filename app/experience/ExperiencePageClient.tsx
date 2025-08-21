@@ -1,5 +1,10 @@
 "use client"
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import PdfPreviewer from "@/components/ui/PdfPreviewer.client"
+
 const workExperience = [
   {
     id: 1,
@@ -98,173 +103,168 @@ const workExperience = [
 const education = [
   {
     degree: "A Level",
-    institution: "Rwanda Coding Academy",
-    period: "2023 - 2026",
-    description:
-      "Currently studying Software Programming, Embedded Systems, and Cybersecurity. Expected to graduate in 2026.",
+    institution: "High School",
+    period: "2020 - 2022",
+    description: "Completed A Level education with focus on Mathematics, Physics, and Computer Science."
   },
   {
     degree: "O Level",
-    institution: "Groupe Scolaire Officiel de Butare",
-    period: "2020 - 2023",
-    description:
-      "Completed junior secondary studies from Grade 7 to Grade 9.",
-  },
-  {
-    degree: "Primary Education",
-    institution: "LEDUCATEUR",
-    period: "2012 - 2019",
-    description:
-      "Completed primary education from Grade 1 to Grade 6.",
-  },
-  {
-    degree: "Modern Web & Cloud Technologies (Self-Taught)",
-    institution: "Online & Community Learning",
-    period: "2021 - Present",
-    description:
-      "Completed advanced courses and hands-on projects in fullstack development, cloud deployment, DevOps, and embedded systems. Specialized in React, Vue.js, Next.js, NestJS, Docker, Vercel, Render, and modern backend technologies.",
-  },
+    institution: "Secondary School",
+    period: "2018 - 2020",
+    description: "Completed O Level education with strong foundation in core subjects."
+  }
 ]
 
-// List of certificate files in public/certificates
 const certificates = [
+  {
+    file: "certificate of network research.pdf",
+    label: "Network Research Certificate",
+    description: "Advanced networking and research methodologies certification."
+  },
+  {
+    file: "CYBERIUM.pdf",
+    label: "Cybersecurity Fundamentals",
+    description: "Comprehensive cybersecurity and ethical hacking certification."
+  },
   {
     file: "Intro_to_cyber.pdf",
     label: "Introduction to Cybersecurity",
-    description: "Covers the basics of cybersecurity principles and practices."
-  },
-  {
-    file: "Penetration_testing.pdf",
-    label: "Penetration Testing",
-    description: "Certificate for hands-on penetration testing skills."
-  },
-  {
-    file: "Network Research.pdf",
-    label: "Network Research",
-    description: "Awarded for research and analysis in computer networks."
+    description: "Foundation course in cybersecurity principles and practices."
   },
   {
     file: "Linux_fundamentals.pdf",
     label: "Linux Fundamentals",
-    description: "Demonstrates proficiency in Linux operating systems."
+    description: "Essential Linux system administration and command line skills."
+  },
+  {
+    file: "Network Research.pdf",
+    label: "Advanced Network Research",
+    description: "Specialized network analysis and research techniques."
+  },
+  {
+    file: "pt.pdf",
+    label: "Penetration Testing",
+    description: "Professional penetration testing and security assessment."
   },
   {
     file: "Python_fundamentals.pdf",
-    label: "Python Fundamentals",
-    description: "Certificate for foundational Python programming skills."
-  },
+    label: "Python Programming",
+    description: "Core Python programming and development fundamentals."
+  }
 ]
-
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
-import dynamic from "next/dynamic"
-const PdfPreviewer = dynamic(() => import("@/components/ui/PdfPreviewer.client"), { ssr: false })
 
 export default function ExperiencePageClient() {
   return (
     <div className="pt-20">
-      {/* Hero section */}
-      <section className="py-20 bg-white dark:bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Experience & Education</h1>
-            <p className="text-xl text-black/70 dark:text-white/70">
-              My professional journey and educational background in Web Development 
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+          My Experience
+        </h1>
+        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          A comprehensive overview of my professional journey, educational background, and technical certifications.
+        </p>
+      </div>
 
       {/* Work Experience */}
-      <section className="py-16 bg-white dark:bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Work Experience</h2>
+      <section className="section-padding">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Work Experience</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            My professional journey in software development and technology.
+          </p>
+        </div>
 
-          <div className="max-w-4xl mx-auto">
-            {workExperience.map((job, index) => (
-              <div
-                key={job.company + job.period}
-                className="mb-16 relative pl-8 border-l-2 border-blue-200 dark:border-blue-800 last:mb-0 hover:border-blue-400 dark:hover:border-blue-600 transition-colors duration-300"
-              >
-                <div className="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-[9px] top-0"></div>
-                <span className="text-sm font-medium text-black/60 dark:text-white/60">{job.period}</span>
-                <h3 className="text-2xl font-bold mt-1">{job.title}</h3>
-                <h4 className="text-lg font-medium text-black/80 dark:text-white/80 mb-4">{job.company}</h4>
-                <p className="text-black/70 dark:text-white/70 mb-4">{job.description}</p>
-                <div className="mt-4">
-                  <h5 className="font-medium mb-2">Key Responsibilities:</h5>
-                  <ul className="list-disc pl-5 space-y-1 text-black/70 dark:text-white/70">
-                    {job.responsibilities.map((responsibility, i) => (
-                      <li key={i}>{responsibility}</li>
-                    ))}
-                  </ul>
-                </div>
+        <div className="max-w-5xl mx-auto">
+          {workExperience.map((job, index) => (
+            <div
+              key={job.company + job.period}
+              className="mb-16 relative pl-10 border-l-4 border-emerald-200 dark:border-emerald-800 last:mb-0 hover:border-emerald-400 dark:hover:border-emerald-600 transition-colors duration-300"
+            >
+              <div className="absolute w-5 h-5 bg-emerald-600 dark:bg-emerald-400 rounded-full -left-[10px] top-0"></div>
+              <span className="text-lg font-medium text-slate-500 dark:text-slate-400">{job.period}</span>
+              <h3 className="text-3xl font-bold mt-2 text-slate-900 dark:text-white">{job.title}</h3>
+              <h4 className="text-xl font-semibold text-slate-700 dark:text-slate-300 mb-4">{job.company}</h4>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{job.description}</p>
+              <div className="mt-6">
+                <h5 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Key Responsibilities:</h5>
+                <ul className="list-disc pl-6 space-y-2 text-lg text-slate-600 dark:text-slate-400">
+                  {job.responsibilities.map((responsibility, i) => (
+                    <li key={i} className="leading-relaxed">{responsibility}</li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Education */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
+      <section className="section-padding bg-slate-50 dark:bg-slate-900/30">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Education</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            My academic background and educational achievements.
+          </p>
+        </div>
 
-          <div className="max-w-4xl mx-auto">
-            {education.map((edu, index) => (
-              <div
-                key={edu.institution + edu.period}
-                className="mb-12 relative pl-8 border-l-2 border-blue-200 dark:border-blue-800 last:mb-0 hover:border-blue-400 dark:hover:border-blue-600 transition-colors duration-300"
-              >
-                <div className="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-[9px] top-0"></div>
-                <span className="text-sm font-medium text-black/60 dark:text-white/60">{edu.period}</span>
-                <h3 className="text-2xl font-bold mt-1">{edu.degree}</h3>
-                <h4 className="text-lg font-medium text-black/80 dark:text-white/80 mb-4">{edu.institution}</h4>
-                <p className="text-black/70 dark:text-white/70">{edu.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto">
+          {education.map((edu, index) => (
+            <div
+              key={edu.institution + edu.period}
+              className="mb-12 relative pl-10 border-l-4 border-emerald-200 dark:border-emerald-800 last:mb-0 hover:border-emerald-400 dark:hover:border-emerald-600 transition-colors duration-300"
+            >
+              <div className="absolute w-5 h-5 bg-emerald-600 dark:bg-emerald-400 rounded-full -left-[10px] top-0"></div>
+              <span className="text-lg font-medium text-slate-500 dark:text-slate-400">{edu.period}</span>
+              <h3 className="text-3xl font-bold mt-2 text-slate-900 dark:text-white">{edu.degree}</h3>
+              <h4 className="text-xl font-semibold text-slate-700 dark:text-slate-300 mb-4">{edu.institution}</h4>
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">{edu.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Certifications */}
-      <section className="py-16 bg-white dark:bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Certifications</h2>
-          <div className="max-w-3xl mx-auto relative">
-            <Carousel>
-              <CarouselContent>
-                {certificates.map((cert, index) => (
-                  <CarouselItem key={cert.file} className="flex justify-center">
-                    <Dialog>
-                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 flex flex-col items-center w-full max-w-md hover:shadow-lg transition-shadow duration-300">
-                        <div className="text-3xl font-bold mb-2 text-blue-600 dark:text-blue-400">{index + 1}</div>
-                        <h3 className="text-lg font-semibold mb-2 text-center">{cert.label}</h3>
-                        <div className="text-black/70 dark:text-white/70 text-sm mb-4 text-center min-h-[48px]">{cert.description}</div>
-                        <div className="flex gap-2 w-full">
-                          <DialogTrigger asChild>
-                            <Button variant="outline" className="w-1/2">Preview</Button>
-                          </DialogTrigger>
-                          <a href={`/certificates/${encodeURIComponent(cert.file)}`} download target="_blank" rel="noopener noreferrer" className="w-1/2">
-                            <Button variant="default" className="w-full">Download</Button>
-                          </a>
-                        </div>
-                        <DialogContent className="max-w-3xl w-full h-[80vh] flex flex-col">
-                          <DialogHeader>
-                            <DialogTitle>{cert.label}</DialogTitle>
-                          </DialogHeader>
-                          <PdfPreviewer url={`/certificates/${encodeURIComponent(cert.file)}`} className="flex-1 w-full rounded-lg border" />
-                        </DialogContent>
+      <section className="section-padding">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Certifications</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            Professional certifications that validate my technical skills and expertise.
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto relative">
+          <Carousel>
+            <CarouselContent>
+              {certificates.map((cert, index) => (
+                <CarouselItem key={cert.file} className="flex justify-center">
+                  <Dialog>
+                    <div className="card p-8 flex flex-col items-center w-full max-w-md hover:scale-105 transition-all duration-300">
+                      <div className="text-4xl font-bold mb-4 text-emerald-600 dark:text-emerald-400">{index + 1}</div>
+                      <h3 className="text-xl font-semibold mb-3 text-center text-slate-900 dark:text-white">{cert.label}</h3>
+                      <div className="text-slate-600 dark:text-slate-400 text-lg mb-6 text-center min-h-[60px] leading-relaxed">{cert.description}</div>
+                      <div className="flex gap-3 w-full">
+                        <DialogTrigger asChild>
+                          <Button variant="outline" className="w-1/2 text-lg py-3">Preview</Button>
+                        </DialogTrigger>
+                        <a href={`/certificates/${encodeURIComponent(cert.file)}`} download target="_blank" rel="noopener noreferrer" className="w-1/2">
+                          <Button variant="default" className="w-full text-lg py-3">Download</Button>
+                        </a>
                       </div>
-                    </Dialog>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
+                      <DialogContent className="max-w-4xl w-full h-[80vh] flex flex-col">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl">{cert.label}</DialogTitle>
+                        </DialogHeader>
+                        <PdfPreviewer url={`/certificates/${encodeURIComponent(cert.file)}`} className="flex-1 w-full rounded-lg border" />
+                      </DialogContent>
+                    </div>
+                  </Dialog>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
     </div>

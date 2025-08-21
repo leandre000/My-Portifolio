@@ -54,116 +54,125 @@ export default function ContactPageClient() {
 
   return (
     <div className="pt-20">
-      {/* Hero */}
-      <section className="py-20 bg-white dark:bg-black">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Me</h1>
-          <p className="text-xl text-black/70 dark:text-white/70">
-            Let's discuss your next project or collaboration.
-          </p>
-        </div>
-      </section>
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+          Contact Me
+        </h1>
+        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          Let's discuss your next project or collaboration. I'm always excited to hear about new opportunities.
+        </p>
+      </div>
 
       {/* Contact Section */}
-      <section className="py-16 bg-white dark:bg-black">
-        <div className="container mx-auto px-4 grid gap-16 lg:grid-cols-2">
+      <section className="section-padding">
+        <div className="grid gap-16 lg:grid-cols-2">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
+            <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Send a Message</h2>
             {isSubmitted ? (
-              <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-800/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Send className="h-8 w-8 text-green-600 dark:text-green-400" />
+              <div className="card p-8 text-center">
+                <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-800/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Send className="h-10 w-10 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
-                <p className="text-black/70 dark:text-white/70">
-                  Thank you for reaching out. I’ll get back to you shortly.
+                <h3 className="text-2xl font-semibold mb-3 text-slate-900 dark:text-white">Message Sent!</h3>
+                <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                  Thank you for reaching out. I'll get back to you within 24-32 hours.
                 </p>
-                <Button className="mt-6" onClick={() => setIsSubmitted(false)}>
+                <Button className="text-lg px-6 py-3" onClick={() => setIsSubmitted(false)}>
                   Send Another Message
                 </Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {error && (
-                  <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 text-red-600 dark:text-red-400">
+                  <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 text-red-600 dark:text-red-400 text-lg">
                     {error}
                   </div>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
+                  <div className="space-y-3">
+                    <label htmlFor="name" className="text-lg font-semibold text-slate-700 dark:text-slate-300">
                       Name
                     </label>
                     <Input
                       id="name"
                       name="name"
+                      type="text"
+                      required
                       value={formState.name}
                       onChange={handleChange}
-                      placeholder="Your name"
-                      required
+                      className="text-lg py-3"
+                      placeholder="Your full name"
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
+                  <div className="space-y-3">
+                    <label htmlFor="email" className="text-lg font-semibold text-slate-700 dark:text-slate-300">
                       Email
                     </label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
+                      required
                       value={formState.email}
                       onChange={handleChange}
-                      placeholder="Your email"
-                      required
+                      className="text-lg py-3"
+                      placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
+                <div className="space-y-3">
+                  <label htmlFor="subject" className="text-lg font-semibold text-slate-700 dark:text-slate-300">
                     Subject
                   </label>
                   <Input
                     id="subject"
                     name="subject"
+                    type="text"
+                    required
                     value={formState.subject}
                     onChange={handleChange}
-                    placeholder="What is this about?"
-                    required
+                    className="text-lg py-3"
+                    placeholder="What's this about?"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
+                <div className="space-y-3">
+                  <label htmlFor="message" className="text-lg font-semibold text-slate-700 dark:text-slate-300">
                     Message
                   </label>
                   <Textarea
                     id="message"
                     name="message"
+                    required
                     value={formState.message}
                     onChange={handleChange}
-                    placeholder="Your message"
-                    rows={6}
-                    required
+                    className="text-lg py-3 min-h-[120px]"
+                    placeholder="Tell me about your project or inquiry..."
                   />
                 </div>
-                <Button type="submit" disabled={isSubmitting} className="w-full">
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full text-lg py-3 bg-emerald-600 hover:bg-emerald-700"
+                >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             )}
           </motion.div>
 
-          {/* Info Section */}
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+            <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Contact Information</h2>
             <div className="space-y-8">
               <ContactInfo
                 icon={<Mail />}
@@ -177,21 +186,21 @@ export default function ContactPageClient() {
                 display="Kigali, Rwanda"
               />
               <div>
-                <h3 className="font-medium mb-4">Connect with me</h3>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Connect with me</h3>
                 <div className="flex space-x-4">
                   <SocialLink href="https://github.com/leandre000" ariaLabel="GitHub">
                     <Github />
                   </SocialLink>
                 </div>
               </div>
-              <div className="bg-black/5 dark:bg-white/5 p-6 rounded-lg">
-                <h3 className="font-medium mb-2">Availability</h3>
-                <p className="text-black/70 dark:text-white/70 mb-4">
-                  Available for freelance work. Response within 24–32 hours.
+              <div className="card p-6">
+                <h3 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Availability</h3>
+                <p className="text-lg text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                  Available for freelance work and new opportunities. I typically respond within 24–32 hours.
                 </p>
                 <div className="flex items-center">
-                  <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                  <span className="text-sm">Open to new projects</span>
+                  <span className="w-4 h-4 bg-emerald-500 rounded-full mr-3"></span>
+                  <span className="text-lg text-slate-700 dark:text-slate-300">Open to new projects</span>
                 </div>
               </div>
             </div>
@@ -216,22 +225,22 @@ function ContactInfo({
 }) {
   return (
     <div className="flex items-start">
-      <div className="bg-black/5 dark:bg-white/5 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+      <div className="bg-slate-100 dark:bg-slate-800 w-14 h-14 rounded-lg flex items-center justify-center mr-4">
         {React.cloneElement(icon as React.ReactElement, {
-          className: "w-5 h-5 text-black dark:text-white"
+          className: "w-6 h-6 text-slate-600 dark:text-slate-400"
         })}
       </div>
       <div>
-        <h3 className="font-medium mb-1">{label}</h3>
+        <h3 className="text-lg font-semibold mb-2 text-slate-800 dark:text-slate-200">{label}</h3>
         {link ? (
           <a
             href={link}
-            className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white"
+            className="text-lg text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
           >
             {display}
           </a>
         ) : (
-          <p className="text-black/70 dark:text-white/70">{display}</p>
+          <p className="text-lg text-slate-600 dark:text-slate-400">{display}</p>
         )}
       </div>
     </div>
@@ -254,10 +263,10 @@ function SocialLink({
       aria-label={ariaLabel}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-black/5 dark:bg-white/5 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+      className="bg-slate-100 dark:bg-slate-800 w-14 h-14 rounded-lg flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
     >
       {React.cloneElement(children as React.ReactElement, {
-        className: "w-6 h-6 text-black dark:text-white"
+        className: "w-7 h-7 text-slate-600 dark:text-slate-400"
       })}
     </a>
   );

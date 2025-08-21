@@ -99,46 +99,24 @@ const others = [
     title: "T-HealthSync",
     description: "Tracks patient behavior and health status, predicts diseases using AI.",
     github: "https://github.com/leandre000/T-HealthSync"
-  },
-  {
-    id: 4,
-    title: "NextVibe",
-    description: "A next-gen social app for sharing moments and connecting with communities.",
-    github: "https://github.com/leandre000/NexVibe"
-  },
-  {
-    id: 5,
-    title: "Company_Visitor_Management",
-    description: "A secure platform to manage company visitors, logins, and check-outs.",
-    github: "https://github.com/leandre000/company_visitor_management"
   }
 ];
 
 const futureUse = [
   {
     id: 1,
-    title: "DevHelper AI",
-    description: "A browser-based developer companion that explains, refactors, and debugs code snippets in real-time. To be worked on in the future."
+    title: "AI-Powered Analytics Platform",
+    description: "Advanced analytics platform with machine learning capabilities for business intelligence and predictive modeling."
   },
   {
     id: 2,
-    title: "SpeakWise",
-    description: "AI voice assistant for hands-free task execution. To be worked on in the future."
+    title: "Blockchain Supply Chain Solution",
+    description: "Transparent and secure supply chain management system using blockchain technology for traceability and authenticity."
   },
   {
     id: 3,
-    title: "SobanukirwaBot",
-    description: "Intelligent chatbot mentor for learners and professionals. To be worked on in the future."
-  },
-  {
-    id: 4,
-    title: "GiraSmart Farm",
-    description: "AI-powered crop insights and precision agriculture. To be worked on in the future."
-  },
-  {
-    id: 5,
-    title: "IntelliCV",
-    description: "AI Resume Builder for optimized CVs. To be worked on in the future."
+    title: "IoT Smart Home Hub",
+    description: "Centralized smart home management system with IoT device integration and AI-powered automation."
   }
 ];
 
@@ -149,194 +127,219 @@ export default function ProjectsClientPage() {
   const othersRef = useRef<HTMLDivElement>(null)
   const futureRef = useRef<HTMLDivElement>(null)
 
-  const handleTabClick = (tab: string, ref: React.RefObject<HTMLDivElement>) => {
-    setActiveTab(tab)
-    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
     <div className="pt-20">
-      {/* Hero */}
-      <section className="py-20 bg-white dark:bg-black">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Projects</h1>
-          <p className="text-xl text-black/70 dark:text-white/70">
-            Explore my portfolio of impactful, real-world projects.
-          </p>
-        </div>
-      </section>
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+          My Projects
+        </h1>
+        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          Explore my portfolio of impactful projects that showcase my skills in full-stack development, 
+          AI integration, and modern web technologies.
+        </p>
+      </div>
 
-      {/* Tab Bar */}
-      <div className="sticky top-0 z-40 bg-white dark:bg-black/90 shadow flex justify-center gap-4 py-3 mb-8">
-        <Button
-          variant={activeTab === "completed" ? "default" : "ghost"}
-          onClick={() => handleTabClick("completed", completedRef)}
-          className={activeTab === "completed" ? "font-bold" : ""}
+      {/* Navigation Tabs */}
+      <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <button
+          onClick={() => scrollToSection(completedRef)}
+          className="px-6 py-3 text-lg font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl"
         >
-          Completed Projects
-        </Button>
-        <Button
-          variant={activeTab === "case" ? "default" : "ghost"}
-          onClick={() => handleTabClick("case", caseStudiesRef)}
-          className={activeTab === "case" ? "font-bold" : ""}
+          Featured Projects
+        </button>
+        <button
+          onClick={() => scrollToSection(caseStudiesRef)}
+          className="px-6 py-3 text-lg font-semibold rounded-lg bg-slate-600 text-white hover:bg-slate-700 transition-all duration-200 shadow-lg hover:shadow-xl"
         >
           Case Studies
-        </Button>
-        <Button
-          variant={activeTab === "others" ? "default" : "ghost"}
-          onClick={() => handleTabClick("others", othersRef)}
-          className={activeTab === "others" ? "font-bold" : ""}
+        </button>
+        <button
+          onClick={() => scrollToSection(othersRef)}
+          className="px-6 py-3 text-lg font-semibold rounded-lg bg-slate-600 text-white hover:bg-slate-700 transition-all duration-200 shadow-lg hover:shadow-xl"
         >
-          Others
-        </Button>
-            <Button
-          variant={activeTab === "future" ? "default" : "ghost"}
-          onClick={() => handleTabClick("future", futureRef)}
-          className={activeTab === "future" ? "font-bold" : ""}
+          Other Projects
+        </button>
+        <button
+          onClick={() => scrollToSection(futureRef)}
+          className="px-6 py-3 text-lg font-semibold rounded-lg bg-slate-600 text-white hover:bg-slate-700 transition-all duration-200 shadow-lg hover:shadow-xl"
         >
-          Future Use
-            </Button>
-        </div>
+          Future Projects
+        </button>
+      </div>
 
-      {/* Completed Projects */}
-      <section ref={completedRef} id="completed-projects" className="py-12 bg-white dark:bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-            Completed Projects
+      {/* Featured Projects */}
+      <section ref={completedRef} id="completed-projects" className="section-padding">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
+            Featured Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {completedProjects.map((project, index) => (
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            These are my most impactful and technically advanced projects that demonstrate my full-stack capabilities.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {completedProjects.map((project, index) => (
             <motion.div
               key={project.id}
-                className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-black border border-black/10 dark:border-white/10"
-                whileHover={{ scale: 1.03, y: -5 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                {/* Featured Badge */}
-                {project.featured && (
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-lg">
-                      ⭐ Featured
-                    </span>
-                  </div>
-                )}
-
+              className="card p-8"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative mb-6">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={600}
                   height={400}
-                  className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover w-full h-48 rounded-lg"
                   loading={index === 0 ? undefined : "lazy"}
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">{project.title}</h3>
-                  <p className="text-black/70 dark:text-white/70 mb-4 text-sm leading-relaxed">{project.description}</p>
-                  <div className="flex gap-2 flex-wrap">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold bg-black text-white rounded-lg hover:bg-gray-800 transition-all duration-200 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-                    >
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                      </svg>
-                      GitHub
-                    </a>
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200"
-                      >
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                        Live Site
-                      </a>
-                    )}
+                {project.featured && (
+                  <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Featured
                   </div>
-                </div>
-              </motion.div>
-                  ))}
-                </div>
+                )}
               </div>
+              
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{project.title}</h3>
+                  <span className="text-lg text-slate-500 dark:text-slate-400 font-medium">{project.year}</span>
+                </div>
+                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">{project.description}</p>
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-base font-semibold bg-slate-800 text-white rounded-lg hover:bg-slate-900 transition-all duration-200"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  GitHub
+                </a>
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 text-base font-semibold bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Live Site
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* Case Studies */}
-      <section ref={caseStudiesRef} id="case-studies" className="py-12 bg-gray-50 dark:bg-black/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Case Studies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={study.id}
-                className="rounded-lg overflow-hidden shadow bg-white dark:bg-black border border-black/10 dark:border-white/10 p-6 flex flex-col"
-                whileHover={{ scale: 1.02 }}
-              >
-                <Image
-                  src={study.image}
-                  alt={study.title}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-40 mb-4"
-                  loading={index === 0 ? undefined : "lazy"}
-                />
-                <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
-                <p className="text-black/70 dark:text-white/70 mb-2">{study.description}</p>
+      <section ref={caseStudiesRef} id="case-studies" className="section-padding bg-slate-50 dark:bg-slate-900/30">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Case Studies</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            In-depth analysis of complex problems and innovative solutions I've developed.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {caseStudies.map((study, index) => (
+            <motion.div
+              key={study.id}
+              className="card p-8"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src={study.image}
+                alt={study.title}
+                width={600}
+                height={400}
+                className="object-cover w-full h-48 rounded-lg mb-6"
+                loading={index === 0 ? undefined : "lazy"}
+              />
+              <h3 className="text-2xl font-semibold mb-4 text-slate-900 dark:text-white">{study.title}</h3>
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">{study.description}</p>
             </motion.div>
           ))}
-          </div>
         </div>
       </section>
 
       {/* Others */}
-      <section ref={othersRef} id="others" className="py-12 bg-white dark:bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Others</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {others.map((project, index) => (
-              <a
-                key={project.id}
-                href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                className="block rounded-lg overflow-hidden shadow bg-white dark:bg-black border border-black/10 dark:border-white/10 p-6 hover:shadow-lg transition-shadow"
-                  >
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-black/70 dark:text-white/70 mb-2">{project.description}</p>
-                <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 dark:bg-black/80 text-black dark:text-white rounded hover:bg-white hover:text-black hover:underline transition">
-                    GitHub
-                </span>
-              </a>
-            ))}
-          </div>
+      <section ref={othersRef} id="others" className="section-padding">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Other Projects</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            Additional projects that showcase my diverse technical skills and interests.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {others.map((project, index) => (
+            <motion.a
+              key={project.id}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card p-6 hover:scale-105 transition-all duration-300 block"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-3 text-slate-900 dark:text-white">{project.title}</h3>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">{project.description}</p>
+              <span className="inline-block px-4 py-2 text-base font-semibold bg-slate-800 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-900 dark:hover:bg-slate-600 transition-all duration-200">
+                View on GitHub
+              </span>
+            </motion.a>
+          ))}
         </div>
       </section>
 
       {/* Future Use */}
-      <section ref={futureRef} id="future-use" className="py-12 bg-gray-50 dark:bg-black/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Future Use</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {futureUse.map((project, index) => (
-              <div
-                key={project.id}
-                className="rounded-lg overflow-hidden shadow bg-white dark:bg-black border border-black/10 dark:border-white/10 p-6"
-              >
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-black/70 dark:text-white/70 mb-2">{project.description}</p>
-                <span className="inline-block px-3 py-1 text-xs font-semibold bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded">
-                  To be worked on in the future
-                </span>
-              </div>
-            ))}
-          </div>
+      <section ref={futureRef} id="future-use" className="section-padding bg-slate-50 dark:bg-slate-900/30">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Future Projects</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            Exciting projects I'm planning to work on in the future.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {futureUse.map((project, index) => (
+            <motion.div
+              key={project.id}
+              className="card p-6"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-3 text-slate-900 dark:text-white">{project.title}</h3>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">{project.description}</p>
+              <span className="inline-block px-4 py-2 text-base font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 rounded-lg">
+                Coming Soon
+              </span>
+            </motion.div>
+          ))}
         </div>
       </section>
     </div>

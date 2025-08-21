@@ -1,13 +1,27 @@
 import type { Metadata } from "next"
 import ExperiencePageClient from "./ExperiencePageClient"
+import SEOOptimizer from "@/components/seo-optimizer"
 
-// This would normally be in the page.tsx file, but since we're using client component
-// we'll need to handle metadata differently in a production app
 export const metadata: Metadata = {
-  title: "Tech Stack | Leandre - Designer & Developer Portfolio",
-  description: "Explore Leandre's Web development,AI,ML projects..",
+  title: "Experience | Leandre - Software Developer Portfolio",
+  description: "Explore Leandre's professional experience in software development, AI, and machine learning.",
 }
 
 export default function ExperiencePage() {
-  return <ExperiencePageClient />
+  return (
+    <div className="page-container">
+      <SEOOptimizer
+        title="Experience - Leandre Portfolio | Software Developer"
+        description="View my professional journey in software development, including roles at Echo Solutions, LOXOTECH TECH, and various innovative projects."
+        keywords={[
+          "Experience", "Software Developer", "Full Stack", "AI", "Machine Learning",
+          "Web Development", "Career", "Portfolio"
+        ]}
+        image="/myportifolio.jpg"
+      />
+      <div className="content-wrapper">
+        <ExperiencePageClient />
+      </div>
+    </div>
+  )
 }

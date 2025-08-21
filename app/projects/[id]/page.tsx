@@ -454,7 +454,7 @@ export default function ProjectDetailPage() {
                 <p className="text-lg mb-4">{project.description}</p>
                 <p>{project.fullDescription}</p>
               </div>
-              {project.tools && project.tools.length > 0 && (
+              {project.tools && Array.isArray(project.tools) && project.tools.length > 0 && (
                 <div className="mb-4">
                   <h3 className="text-sm uppercase tracking-wider text-black/50 dark:text-white/50 mb-2">Tools Used</h3>
                   <div className="flex flex-wrap gap-2">

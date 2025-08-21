@@ -16,13 +16,17 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User>(null)
 
   useEffect(() => {
-    const stored = localStorage.getItem("user")
-    if (stored) setUser(JSON.parse(stored))
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem("user")
+      if (stored) setUser(JSON.parse(stored))
+    }
   }, [])
 
   const logout = () => {
     setUser(null)
-    localStorage.removeItem("user")
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem("user")
+    }
   }
 
   return (

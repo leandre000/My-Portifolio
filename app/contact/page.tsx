@@ -1,11 +1,27 @@
 import type { Metadata } from "next"
 import ContactPageClient from "./ContactPageClient"
+import SEOOptimizer from "@/components/seo-optimizer"
 
 export const metadata: Metadata = {
-  title: "Tech Stack | Leandre - Designer & Developer Portfolio",
-  description: "Explore Leandre's Web development,AI,ML projects.",
+  title: "Contact | Leandre - Software Developer Portfolio",
+  description: "Get in touch with Leandre for collaboration opportunities, project inquiries, or professional networking.",
 }
 
 export default function ContactPage() {
-  return <ContactPageClient />
+  return (
+    <div className="page-container">
+      <SEOOptimizer
+        title="Contact - Leandre Portfolio | Software Developer"
+        description="Connect with me for collaboration opportunities, project inquiries, or professional networking. Let's build something amazing together."
+        keywords={[
+          "Contact", "Software Developer", "Collaboration", "Project Inquiry",
+          "Professional Networking", "Portfolio", "Get In Touch"
+        ]}
+        image="/myportifolio.jpg"
+      />
+      <div className="content-wrapper">
+        <ContactPageClient />
+      </div>
+    </div>
+  )
 }
