@@ -71,7 +71,7 @@ const caseStudies = [
     id: 1,
     title: "Agura Ticketing App",
     description: "Problem: Event organizers and attendees struggled with manual ticketing and real-time seat management. Solution: A seamless mobile app for booking and managing event tickets, with real-time availability, secure QR access, and analytics. For mockups or collaboration, contact: Iamshemaleandre@gmail.com.",
-    image: "/agura.avif"
+    image: "/agura.png"
   },
   {
     id: 2,
