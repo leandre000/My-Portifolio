@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 pt-20">
       
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
