@@ -30,7 +30,7 @@ export default function AboutPage() {
               <div className="sticky top-32">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/myportifolio.jpg"
+                    src="/myportfolio.jpeg"
                     alt="Leandre - Designer & Developer"
                     fill
                     className="object-cover"
@@ -52,7 +52,7 @@ export default function AboutPage() {
                   </div>
                                        <div>
                        <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Experience</h4>
-                       <p>2+ Years</p>
+                       <p>3+ Years</p>
                      </div>
                 </div>
               </div>

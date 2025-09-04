@@ -45,7 +45,7 @@ export default function Resume() {
       name: "Aguuka",
       description: "MERN Stack Application",
       tech: "MERN Stack, Full-stack Development",
-      live: "https://hrms-frontend-ashen.vercel.app/",
+      live: "https://aguka-one.vercel.app/",
       github: "https://github.com/leandre000/Aguuka"
     },
     {
@@ -116,7 +116,7 @@ export default function Resume() {
             Professional Summary
           </h3>
           <p className="text-gray-700 leading-relaxed">
-            Software developer with over 2+ years of experience specializing in full-stack web development and cybersecurity. 
+            Software developer with over 3+ years of experience specializing in full-stack web development and cybersecurity. 
             Currently working at Echo Solutions Ltd to focus on innovative web solutions and secure applications. 
             Passionate about creating user-friendly, scalable solutions that solve real-world problems.
           </p>

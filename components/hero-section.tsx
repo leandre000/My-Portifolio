@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -22,7 +24,7 @@ export default function HeroSection() {
           <div className="relative mb-8">
             <div className="relative w-32 h-32 mx-auto">
               <img
-                src="/myportifolio.jpg"
+                src="/myportfolio.jpeg"
                 alt="Leandre - Software Engineer"
                 className="w-full h-full object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                 onError={(e) => {
@@ -45,7 +47,7 @@ export default function HeroSection() {
               Full-Stack Developer
             </h3>
             <p className="text-base md:text-lg text-gray-200 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-              With over 2+ years of experience in full-stack development. Currently working at LOXOTECH as backend and ECHO SOLUTIONS as fullstack, building innovative digital solutions.
+              With over 3+ years of experience in full-stack development. Currently working at LOXOTECH as backend and ECHO SOLUTIONS as fullstack, building innovative digital solutions.
             </p>
           </div>
 
@@ -104,7 +106,7 @@ export default function HeroSection() {
               <div className="text-sm text-gray-300 dark:text-gray-300 font-medium">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-emerald-400 dark:text-emerald-400">2+</div>
+              <div className="text-2xl font-bold text-emerald-400 dark:text-emerald-400">3+</div>
               <div className="text-sm text-gray-300 dark:text-gray-300 font-medium">Years</div>
             </div>
             <div className="text-center">

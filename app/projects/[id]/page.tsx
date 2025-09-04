@@ -275,7 +275,7 @@ const completedProjects = [
     client: "",
     tools: ["Node.js", "React", "MongoDB"],
     github: "https://github.com/leandre000/Aguuka",
-    live: "https://hrms-frontend-ashen.vercel.app/"
+    live: "https://aguka-one.vercel.app/"
   },
   {
     id: "18",

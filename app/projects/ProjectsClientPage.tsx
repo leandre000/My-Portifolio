@@ -44,7 +44,7 @@ const completedProjects = [
     image: "/aguka.jpg",
     year: 2023,
     github: "https://github.com/leandre000/Aguuka",
-    live: "https://hrms-frontend-ashen.vercel.app/"
+    live: "https://aguka-one.vercel.app/"
   },
   {
     id: 5,
