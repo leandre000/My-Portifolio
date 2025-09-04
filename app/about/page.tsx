@@ -33,7 +33,7 @@ export default function AboutPage() {
                     src="/me.jpg"
                     alt="Leandre - Designer & Developer"
                     fill
-                    className="object-contain"
+                    className="object-cover"
                   />
                 </div>
 
