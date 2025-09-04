@@ -98,7 +98,7 @@ export default function AboutPreview() {
                 {/* Profile Image */}
                 <div className="relative w-64 h-64 mx-auto mb-6">
                   <img
-                    src="/myportifolio.jpg"
+                    src="/me.jpg"
                     alt="Leandre - Software Developer"
                     className="w-full h-full object-cover rounded-2xl border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                     onError={(e) => {

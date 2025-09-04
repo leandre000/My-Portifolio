@@ -30,7 +30,7 @@ export default function AboutPage() {
               <div className="sticky top-32">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/me.jpg"
+                    src="/passport.jpg"
                     alt="Leandre - Designer & Developer"
                     fill
                     className="object-cover"
