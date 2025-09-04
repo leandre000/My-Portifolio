@@ -24,7 +24,7 @@ export default function HeroSection() {
           <div className="relative mb-8">
             <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto">
               <img
-                src="/me.jpg"
+                src="/passport.jpg"
                 alt="Leandre - Software Engineer"
                 className="w-full h-full object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                 onError={(e) => {

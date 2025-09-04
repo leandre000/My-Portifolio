@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Leandre Portfolio",
     images: [
       {
-        url: "/me.jpg",
+        url: "/passport.jpg",
         width: 1200,
         height: 630,
         alt: "Leandre - Software Developer",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leandre - Software Developer at Echo Tech",
     description: "A young software developer passionate about building web applications",
-    images: ["/me.jpg"],
+    images: ["/passport.jpg"],
     creator: "@leandre",
   },
   robots: {

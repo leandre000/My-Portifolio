@@ -17,7 +17,7 @@ export default function ProjectsPage() {
           "Projects", "Portfolio", "Hospital Management", "Talent Management", 
           "Web Development", "Full Stack", "React", "Next.js"
         ]}
-        image="/me.jpg"
+        image="/passport.jpg"
       />
       <div className="content-wrapper">
         <ProjectsClientPage />

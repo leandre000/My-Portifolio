@@ -17,7 +17,7 @@ export default function ExperiencePage() {
           "Experience", "Software Developer", "Full Stack", "AI", "Machine Learning",
           "Web Development", "Career", "Portfolio"
         ]}
-        image="/me.jpg"
+        image="/passport.jpg"
       />
       <div className="content-wrapper">
         <ExperiencePageClient />

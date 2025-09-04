@@ -6,7 +6,7 @@ export default function StructuredData() {
     "jobTitle": "Software Developer at Echo Tech",
     "description": "A young software developer passionate about building web applications and learning new technologies.",
     "url": "https://shemaleandre.vercel.app",
-    "image": "https://shemaleandre.vercel.app/me.jpg",
+    "image": "https://shemaleandre.vercel.app/passport.jpg",
     "sameAs": [
       "https://github.com/leandre000",
       "https://linkedin.com/in/leandre",

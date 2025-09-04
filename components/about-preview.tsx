@@ -112,7 +112,7 @@ export default function AboutPreview() {
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-4">
                     <img 
-                      src="/echo-logo.png" 
+                      src="/echo.png" 
                       alt="Echo Logo" 
                       className="w-12 h-12"
                       onError={(e) => {
