@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useTheme } from "next-themes"
+import { usePathname } from "next/navigation"
 import { ModeToggle } from "./mode-toggle"
 
 const navigation = [
@@ -19,6 +20,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
@@ -65,16 +67,26 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-200 dark:text-gray-200 hover:text-emerald-400 dark:hover:text-emerald-400 transition-colors duration-200 font-medium text-lg relative group"
-              >
-                {item.name}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 dark:bg-emerald-400 group-hover:w-full transition-all duration-300" />
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href || pathname.startsWith(item.href + "/")
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`transition-colors duration-200 font-medium text-lg relative group ${
+                    isActive ? "text-emerald-400" : "text-gray-200 hover:text-emerald-400"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.name}
+                  <div
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-400 transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              )
+            })}
           </div>
 
           {/* Right Side Actions */}
@@ -105,16 +117,24 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-4 pt-4 pb-6 space-y-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-emerald-500/20">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-gray-200 dark:text-gray-200 hover:text-emerald-400 dark:hover:text-emerald-400 hover:bg-emerald-500/10 rounded-md transition-colors duration-200 text-lg font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const isActive = pathname === item.href || pathname.startsWith(item.href + "/")
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`block px-4 py-3 rounded-md transition-colors duration-200 text-lg font-medium ${
+                      isActive
+                        ? "text-emerald-400 bg-emerald-500/10"
+                        : "text-gray-200 hover:text-emerald-400 hover:bg-emerald-500/10"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
               <div className="pt-4">
                 <Link href="/contact">
                   <Button className="bg-emerald-600 hover:bg-emerald-700 text-white w-full text-lg font-semibold py-3">
