@@ -29,12 +29,12 @@ export default function AboutPage() {
             <div>
               <div className="sticky top-32">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-8">
-                                      <Image
-                      src="/passport.jpg"
-                      alt="Leandre - Designer & Developer"
-                      fill
-                      className="object-cover"
-                    />
+                  <Image
+                    src="/passport.jpg"
+                    alt="Leandre - Designer & Developer"
+                    fill
+                    className="object-cover grayscale"
+                  />
                 </div>
 
                 <div className="grid grid-cols-2 gap-6 mt-8 text-black dark:text-white">

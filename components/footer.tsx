@@ -14,7 +14,7 @@ export default function Footer() {
               <img 
                 src="/passport.jpg" 
                 alt="Leandre Portfolio Logo" 
-                className="w-12 h-12 rounded-full"
+                className="w-12 h-12 rounded-full filter grayscale"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder-logo.png"
                 }}

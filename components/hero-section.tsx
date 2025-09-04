@@ -26,7 +26,7 @@ export default function HeroSection() {
               <img
                 src="/passport.jpg"
                 alt="Leandre - Software Engineer"
-                className="w-full h-full object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+                className="w-full h-full object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300 filter grayscale"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder.png"
                 }}

@@ -102,16 +102,22 @@ const workExperience = [
 
 const education = [
   {
-    degree: "A Level",
-    institution: "Groupe Scolaire Officielle de Butare",
+    degree: "A Level (SPE)",
+    institution: "Rwanda Coding Academy",
     period: "2023 - Present",
-    description: "Currently pursuing A Level education with focus on Mathematics, Physics, and Computer Science."
+    description: "Currently studying Software Programming and Embedded Systems (SPE)."
   },
   {
     degree: "O Level",
     institution: "Groupe Scolaire Officielle de Butare",
-    period: "2020 - 2023",
-    description: "Completed O Level education with strong foundation in core subjects including Mathematics, Sciences, and Languages."
+    period: "Until 2023",
+    description: "Completed O Level at GS Officielle de Butare."
+  },
+  {
+    degree: "Primary",
+    institution: "L'EDUCATEUR",
+    period: "—",
+    description: "Completed primary education at L'EDUCATEUR."
   }
 ]
 

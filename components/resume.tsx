@@ -332,10 +332,10 @@ export default function Resume() {
           <div className="space-y-3">
             <div>
               <h4 className="font-semibold text-gray-800">
-                A Level - Mathematics, Physics, Computer Science
+                A Level (SPE) - Software Programming & Embedded Systems
               </h4>
               <p className="text-gray-600 text-sm">
-                Groupe Scolaire Officielle de Butare (2023 - Present)
+                Rwanda Coding Academy (2023 - Present)
               </p>
             </div>
             <div>
@@ -343,7 +343,7 @@ export default function Resume() {
                 O Level
               </h4>
               <p className="text-gray-600 text-sm">
-                Groupe Scolaire Officielle de Butare (2020 - 2023)
+                Groupe Scolaire Officielle de Butare (Until 2023)
               </p>
             </div>
             <div>
@@ -351,7 +351,7 @@ export default function Resume() {
                 Primary Education
               </h4>
               <p className="text-gray-600 text-sm">
-                LEDUCATEUR (2012 - 2019)
+                L'EDUCATEUR
               </p>
             </div>
             <div>
