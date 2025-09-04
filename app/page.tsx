@@ -23,7 +23,7 @@ export default function Home() {
           "Software Developer", "Web Development", "React", "Next.js", 
           "Full Stack Developer", "Portfolio", "Developer", "Echo Tech"
         ]}
-        image="/myportifolio.jpg"
+        image="/me.jpg"
       />
       
       {/* Optional: Loading animation and mouse trailer */}

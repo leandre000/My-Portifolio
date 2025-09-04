@@ -17,7 +17,7 @@ export default function ContactPage() {
           "Contact", "Software Developer", "Collaboration", "Project Inquiry",
           "Professional Networking", "Portfolio", "Get In Touch"
         ]}
-        image="/myportifolio.jpg"
+        image="/me.jpg"
       />
       <div className="content-wrapper">
         <ContactPageClient />

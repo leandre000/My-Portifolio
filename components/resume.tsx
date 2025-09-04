@@ -67,7 +67,7 @@ export default function Resume() {
 
   const handleGoogleDriveRedirect = () => {
     // Actual Google Drive resume link
-    const resumeUrl = "https://drive.google.com/file/d/1PWKLOKlNxBXP-WZrkKj3Shya0vuFmYWy/view?usp=drive_link"
+    const resumeUrl = "https://drive.google.com/file/d/1892EVxhOVnGOAufcVB6M9tzhUqiseaEj/view?usp=drive_link"
     if (typeof window !== 'undefined') {
       window.open(resumeUrl, "_blank")
     }
@@ -332,10 +332,10 @@ export default function Resume() {
           <div className="space-y-3">
             <div>
               <h4 className="font-semibold text-gray-800">
-                A Level - Software Programming, Embedded Systems, Cybersecurity
+                A Level - Mathematics, Physics, Computer Science
               </h4>
               <p className="text-gray-600 text-sm">
-                Rwanda Coding Academy (2023 - 2026)
+                Groupe Scolaire Officielle de Butare (2023 - Present)
               </p>
             </div>
             <div>
@@ -343,7 +343,7 @@ export default function Resume() {
                 O Level
               </h4>
               <p className="text-gray-600 text-sm">
-                Groupe Scolaire Officiel de Butare (2020 - 2023)
+                Groupe Scolaire Officielle de Butare (2020 - 2023)
               </p>
             </div>
             <div>

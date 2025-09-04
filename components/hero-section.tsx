@@ -22,9 +22,9 @@ export default function HeroSection() {
         <div className="w-full">
           {/* Profile Image */}
           <div className="relative mb-8">
-            <div className="relative w-32 h-32 mx-auto">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto">
               <img
-                src="/myportfolio.jpeg"
+                src="/me.jpg"
                 alt="Leandre - Software Engineer"
                 className="w-full h-full object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                 onError={(e) => {
@@ -47,7 +47,7 @@ export default function HeroSection() {
               Full-Stack Developer
             </h3>
             <p className="text-base md:text-lg text-gray-200 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-              With over 3+ years of experience in full-stack development. Currently working at LOXOTECH as backend and ECHO SOLUTIONS as fullstack, building innovative digital solutions.
+              Building innovative digital solutions.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function HeroSection() {
               </Button>
             </Link>
             <Button 
-              onClick={() => window.open("https://drive.google.com/file/d/1PWKLOKlNxBXP-WZrkKj3Shya0vuFmYWy/view?usp=drive_link", "_blank")}
+              onClick={() => window.open("https://drive.google.com/file/d/1892EVxhOVnGOAufcVB6M9tzhUqiseaEj/view?usp=drive_link", "_blank")}
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
             >
               <Download className="mr-2 h-5 w-5" />

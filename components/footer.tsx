@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/myportifolio.jpg" 
+                src="/me.jpg" 
                 alt="Leandre Portfolio Logo" 
                 className="w-12 h-12 rounded-full"
                 onError={(e) => {

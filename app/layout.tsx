@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     description: "A young software developer passionate about building web applications and learning new technologies.",
     type: "website",
     locale: "en_US",
-    url: "https://leandre-portfolio.vercel.app",
+    url: "https://shemaleandre.vercel.app",
     siteName: "Leandre Portfolio",
     images: [
       {
-        url: "/myportifolio.jpg",
+        url: "/me.jpg",
         width: 1200,
         height: 630,
         alt: "Leandre - Software Developer",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leandre - Software Developer at Echo Tech",
     description: "A young software developer passionate about building web applications",
-    images: ["/myportifolio.jpg"],
+    images: ["/me.jpg"],
     creator: "@leandre",
   },
   robots: {
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     yahoo: "your-yahoo-verification-code",
   },
   icons: {
-    icon: '/echo-logo.png',
-    shortcut: '/echo-logo.png',
-    apple: '/echo-logo.png',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
   category: "technology",
 }

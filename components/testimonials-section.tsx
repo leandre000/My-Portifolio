@@ -42,6 +42,14 @@ const testimonials = [
     content: "Leandre is an excellent team player and communicator. His project management skills and ability to deliver on time make him a valuable asset to any team.",
     rating: 5,
     image: "/placeholder.png"
+  },
+  {
+    name: "Ihirwe Patrick",
+    role: "Senior UI/UX Designer",
+    company: "Design Studio",
+    content: "Leandre's collaboration skills and technical expertise are outstanding. His ability to translate complex design requirements into functional, beautiful applications is remarkable. Working with him has been a pleasure.",
+    rating: 5,
+    image: "/placeholder.png"
   }
 ]
 

@@ -103,15 +103,15 @@ const workExperience = [
 const education = [
   {
     degree: "A Level",
-    institution: "High School",
-    period: "2020 - 2022",
-    description: "Completed A Level education with focus on Mathematics, Physics, and Computer Science."
+    institution: "Groupe Scolaire Officielle de Butare",
+    period: "2023 - Present",
+    description: "Currently pursuing A Level education with focus on Mathematics, Physics, and Computer Science."
   },
   {
     degree: "O Level",
-    institution: "Secondary School",
-    period: "2018 - 2020",
-    description: "Completed O Level education with strong foundation in core subjects."
+    institution: "Groupe Scolaire Officielle de Butare",
+    period: "2020 - 2023",
+    description: "Completed O Level education with strong foundation in core subjects including Mathematics, Sciences, and Languages."
   }
 ]
 
