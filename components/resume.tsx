@@ -2,6 +2,7 @@
 
 import { Download, Mail, Github, MapPin, Calendar, Building2, Award, Code, Shield, Database, Globe, Users, MessageCircle, Lightbulb, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function Resume() {
   const skills = [
@@ -73,37 +74,58 @@ export default function Resume() {
     }
   }
 
+  const handleDirectDownload = () => {
+    // Direct PDF download
+    const pdfUrl = "/cv.pdf"
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('a')
+      link.href = pdfUrl
+      link.download = 'Leandre_Shema_Resume.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white py-8 print:py-0">
-      <div className="max-w-4xl mx-auto bg-white shadow-2xl print:shadow-none">
+      <div className="max-w-4xl mx-auto bg-white shadow-2xl print:shadow-none" role="main" aria-label="Leandre Shema's Resume">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 print:p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-4xl font-bold mb-2">Leandre</h1>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex-1">
+              <h1 className="text-4xl font-bold mb-2">Leandre Shema</h1>
               <h2 className="text-xl font-semibold mb-4">Software Developer</h2>
               <div className="space-y-2 text-blue-100">
                 <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <span>Iamshemaleandre@gmail.com</span>
+                  <Mail className="h-4 w-4 flex-shrink-0" />
+                  <span className="break-all">Iamshemaleandre@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
+                  <Github className="h-4 w-4 flex-shrink-0" />
                   <span>github.com/leandre000</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Globe className="h-4 w-4" />
+                  <Globe className="h-4 w-4 flex-shrink-0" />
                   <span>shemaleandre.vercel.app</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
+                  <MapPin className="h-4 w-4 flex-shrink-0" />
                   <span>Kigali, Rwanda</span>
                 </div>
               </div>
             </div>
-            <div className="text-right">
-              <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center text-3xl font-bold">
-                L
+            <div className="flex-shrink-0">
+              <div className="w-32 h-32 relative">
+                <Image
+                  src="/me.jpg"
+                  alt="Leandre Shema - Software Developer"
+                  fill
+                  className="rounded-full object-cover border-4 border-white/30 shadow-lg"
+                  priority
+                  quality={95}
+                  sizes="(max-width: 768px) 96px, 128px"
+                />
               </div>
             </div>
           </div>
@@ -365,19 +387,30 @@ export default function Resume() {
           </div>
         </div>
 
-        {/* Google Drive Button */}
+        {/* Download Section */}
         <div className="p-8 bg-gray-50 text-center">
-          <div>
+          <h3 className="text-xl font-bold mb-6 text-gray-800 flex items-center justify-center gap-2">
+            <Download className="h-5 w-5 text-blue-600" />
+            Download Resume
+          </h3>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={handleDirectDownload}
+            >
+              <Download className="h-5 w-5 mr-2" />
+              Download PDF
+            </Button>
             <Button 
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={handleGoogleDriveRedirect}
             >
-              <Download className="h-5 w-5 mr-2" />
-              View Resume on Google Drive
+              <Globe className="h-5 w-5 mr-2" />
+              View on Google Drive
             </Button>
           </div>
-          <p className="text-gray-600 mt-3 text-sm">
-            Click to view the full resume on Google Drive
+          <p className="text-gray-600 mt-4 text-sm">
+            Choose your preferred method to access the full resume
           </p>
         </div>
       </div>
