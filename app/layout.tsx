@@ -1,10 +1,14 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import { Inter, Poppins } from "next/font/google"
 import ClientProviders from "./ClientProviders"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navigation from "@/components/navigation"
 import StructuredData from "./structured-data"
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const poppins = Poppins({ subsets: ["latin"], weight: ["400","500","600","700"], variable: "--font-poppins" })
 
 // ✅ This must remain in a server component (no "use client")
 export const metadata: Metadata = {
@@ -79,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <StructuredData />
         <link rel="manifest" href="/manifest.json" />
