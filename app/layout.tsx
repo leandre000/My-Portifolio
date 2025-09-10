@@ -8,15 +8,15 @@ import StructuredData from "./structured-data"
 
 // ✅ This must remain in a server component (no "use client")
 export const metadata: Metadata = {
-  title: "Leandre - Software Developer at Echo Tech",
-  description: "Portfolio of Leandre, a young software developer passionate about building web applications and learning new technologies.",
+  title: "Shema Leandre - Software Developer",
+  description: "Portfolio of Shema Leandre, a young software developer passionate about building web applications and learning new technologies.",
   keywords: [
     "Software Developer", "Web Development", "React", "Next.js", "Node.js", 
-    "Full Stack Developer", "Portfolio", "Developer", "Echo Tech"
+    "Full Stack Developer", "Portfolio", "Developer", "Shema Leandre"
   ],
-  authors: [{ name: "Leandre", url: "https://leandre-portfolio.vercel.app" }],
-  creator: "Leandre",
-  publisher: "Echo Tech",
+  authors: [{ name: "Shema Leandre", url: "https://leandre-portfolio.vercel.app" }],
+  creator: "Shema Leandre",
+  publisher: "Shema Leandre",
   formatDetection: {
     email: false,
     address: false,
@@ -27,27 +27,27 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Leandre - Software Developer at Echo Tech",
+    title: "Shema Leandre - Software Developer",
     description: "A young software developer passionate about building web applications and learning new technologies.",
     type: "website",
     locale: "en_US",
     url: "https://shemaleandre.vercel.app",
-    siteName: "Leandre Portfolio",
+    siteName: "Shema Leandre Portfolio",
     images: [
       {
-        url: "/passport.jpg",
+        url: "/me.jpg",
         width: 1200,
         height: 630,
-        alt: "Leandre - Software Developer",
+        alt: "Shema Leandre - Software Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leandre - Software Developer at Echo Tech",
+    title: "Shema Leandre - Software Developer",
     description: "A young software developer passionate about building web applications",
-    images: ["/passport.jpg"],
-    creator: "@leandre",
+    images: ["/me.jpg"],
+    creator: "@shema_leandre",
   },
   robots: {
     index: true,
@@ -86,7 +86,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Leandre Portfolio" />
+        <meta name="apple-mobile-web-app-title" content="Shema Leandre Portfolio" />
         <meta name="msapplication-TileColor" content="#2563eb" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>

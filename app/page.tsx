@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <div className="page-container">
       <SEOOptimizer
-        title="Leandre - Software Developer at Echo Tech"
-        description="Portfolio of Leandre, a software developer passionate about building web applications and learning new technologies."
+        title="Shema Leandre - Software Developer"
+        description="Portfolio of Shema Leandre, a software developer passionate about building web applications and learning new technologies."
         keywords={[
           "Software Developer", "Web Development", "React", "Next.js", 
-          "Full Stack Developer", "Portfolio", "Developer", "Echo Tech"
+          "Full Stack Developer", "Portfolio", "Developer", "Shema Leandre"
         ]}
-        image="/passport.jpg"
+        image="/me.jpg"
       />
       
       {/* Optional: Loading animation and mouse trailer */}

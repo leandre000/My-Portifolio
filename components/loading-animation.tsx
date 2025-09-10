@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 interface LoadingAnimationProps {
   duration?: number
@@ -31,19 +32,25 @@ export default function LoadingAnimation({ duration = 1500 }: LoadingAnimationPr
       <div className="relative z-10 text-center">
         {/* Logo/Initial */}
         <div className="mb-8">
-          <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-2xl">
-            <img 
-              src="/echo.png" 
-              alt="Echo Tech Logo" 
+          <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-2xl border-4 border-blue-600/20">
+            <Image 
+              src="/me.jpg" 
+              alt="Shema Leandre - Software Developer" 
+              width={96}
+              height={96}
               className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.src = "/placeholder-logo.png"
-              }}
+              priority
+              quality={95}
             />
           </div>
           <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-            Echo Tech
+            Shema Leandre
           </h1>
+          <div className="flex items-center justify-center mt-2">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">
+              L
+            </div>
+          </div>
         </div>
 
         {/* Loading Bar */}
@@ -57,7 +64,7 @@ export default function LoadingAnimation({ duration = 1500 }: LoadingAnimationPr
         {/* Loading Text */}
         <div>
           <p className="text-lg text-black/70 dark:text-white/70 mb-2">
-            Loading Innovation
+            Loading Portfolio
           </p>
           <p className="text-sm text-black/50 dark:text-white/50">
             Preparing your digital experience...

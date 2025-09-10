@@ -2,21 +2,16 @@ export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Leandre",
-    "jobTitle": "Software Developer at Echo Tech",
+    "name": "Shema Leandre",
+    "jobTitle": "Software Developer",
     "description": "A young software developer passionate about building web applications and learning new technologies.",
     "url": "https://shemaleandre.vercel.app",
-    "image": "https://shemaleandre.vercel.app/passport.jpg",
+    "image": "https://shemaleandre.vercel.app/me.jpg",
     "sameAs": [
       "https://github.com/leandre000",
-      "https://linkedin.com/in/leandre",
-      "https://twitter.com/leandre"
+      "https://linkedin.com/in/shema-leandre",
+      "https://twitter.com/shema_leandre"
     ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Echo Tech",
-      "url": "https://echo-tech.com"
-    },
     "knowsAbout": [
       "Web Development",
       "React",
@@ -29,10 +24,6 @@ export default function StructuredData() {
       "@type": "Occupation",
       "name": "Software Developer",
       "occupationCategory": "Computer and Information Technology"
-    },
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "Echo Tech"
     }
   };
 
