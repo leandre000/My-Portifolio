@@ -1,6 +1,7 @@
 "use client"
 
-import { Download, Mail, Github, MapPin, Calendar, Building2, Award, Code, Shield, Database, Globe, Users, MessageCircle, Lightbulb, Target } from "lucide-react"
+import { Download, Building2, Award, Code, Shield, Globe, Users } from "lucide-react"
+import { Icon } from "@iconify/react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -98,11 +99,11 @@ export default function Resume() {
               <h2 className="text-xl font-semibold mb-4">Software Developer</h2>
               <div className="space-y-2 text-blue-100">
                 <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 flex-shrink-0" />
+                  <Icon icon="mdi:email" className="h-4 w-4 flex-shrink-0" />
                   <span className="break-all">Iamshemaleandre@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Github className="h-4 w-4 flex-shrink-0" />
+                  <Icon icon="mdi:github" className="h-4 w-4 flex-shrink-0" />
                   <span>github.com/leandre000</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -110,7 +111,7 @@ export default function Resume() {
                   <span>shemaleandre.vercel.app</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 flex-shrink-0" />
+                  <Icon icon="mdi:map-marker" className="h-4 w-4 flex-shrink-0" />
                   <span>Kigali, Rwanda</span>
                 </div>
               </div>

@@ -94,7 +94,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#2563eb" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased bg-white text-gray-900">
         <ClientProviders>
           <Navigation />
           {children}

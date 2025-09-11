@@ -78,7 +78,7 @@ const TestimonialsSection = dynamic(() => import("@/components/testimonials-sect
 
 export default function Home() {
   return (
-    <div className="page-container">
+    <div className="min-h-screen bg-white">
       <SEOOptimizer
         title="Shema Leandre - Software Developer"
         description="Portfolio of Shema Leandre, a software developer passionate about building web applications and learning new technologies."
@@ -89,8 +89,6 @@ export default function Home() {
         image="/me.jpg"
       />
       
-      {/* Pointer effect removed to avoid client-side SSR constraint; can re-add in a client component wrapper */}
-
       {/* 1. Hero Section */}
       <Suspense>
         <HeroSection />

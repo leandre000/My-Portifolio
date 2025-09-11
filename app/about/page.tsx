@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-white dark:bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
@@ -22,7 +22,7 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white dark:bg-black">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Panel */}
@@ -30,28 +30,28 @@ export default function AboutPage() {
               <div className="sticky top-32">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/passport.jpg"
+                    src="/me.jpg"
                     alt="Leandre - Designer & Developer"
                     fill
-                    className="object-cover grayscale"
+                    className="object-cover"
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-6 mt-8 text-black dark:text-white">
+                <div className="grid grid-cols-2 gap-6 mt-8 text-black">
                   <div>
-                    <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Email</h4>
+                    <h4 className="text-sm text-black/50 mb-1">Email</h4>
                     <p>Iamshemaleandre@gmail.com</p>
                   </div>
                   <div>
-                    <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Location</h4>
+                    <h4 className="text-sm text-black/50 mb-1">Location</h4>
                     <p>Kigali, Rwanda</p>
                   </div>
                   <div>
-                    <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Availability</h4>
+                    <h4 className="text-sm text-black/50 mb-1">Availability</h4>
                     <p>Freelance</p>
                   </div>
                                        <div>
-                       <h4 className="text-sm text-black/50 dark:text-white/50 mb-1">Experience</h4>
+                       <h4 className="text-sm text-black/50 mb-1">Experience</h4>
                        <p>3+ Years</p>
                      </div>
                 </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             {/* Right Panel */}
             <div>
               <h2 className="text-3xl font-bold mb-6">Description</h2>
-              <p className="text-black/70 dark:text-white/70 mb-6">
+              <p className="text-black/70 mb-6">
                 I’m Leandre, a full-stack developer with a focus on intelligent systems and modern UI. 
                 I blend backend logic with elegant frontend experiences.
                 From AI to scalable applications, I build tech that’s clean, fast, and human-centered.
@@ -69,30 +69,30 @@ export default function AboutPage() {
 
               <h2 className="text-3xl font-bold mb-6">Core Practices</h2>
               <div className="space-y-6 mb-10">
-                <div className="bg-black/5 dark:bg-white/5 p-6 rounded-xl">
+                <div className="bg-black/5 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Crafted Precision</h3>
-                  <p className="text-black/70 dark:text-white/70">
+                  <p className="text-black/70">
                     Every interaction and line of code is deliberate—refined for clarity, speed, and maintainability.
                   </p>
                 </div>
 
-                <div className="bg-black/5 dark:bg-white/5 p-6 rounded-xl">
+                <div className="bg-black/5 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Purposeful Design</h3>
-                  <p className="text-black/70 dark:text-white/70">
+                  <p className="text-black/70">
                     UI and logic are shaped together—form follows function across every platform and system.
                   </p>
                 </div>
 
-                <div className="bg-black/5 dark:bg-white/5 p-6 rounded-xl">
+                <div className="bg-black/5 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Problem-First Thinking</h3>
-                  <p className="text-black/70 dark:text-white/70">
+                  <p className="text-black/70">
                     Every solution begins with a real-world need—delivering elegant outcomes through deep analysis.
                   </p>
                 </div>
               </div>
 
               <h2 className="text-3xl font-bold mb-6">Vision</h2>
-              <p className="text-black/70 dark:text-white/70">
+              <p className="text-black/70">
                 To craft meaningful digital products where design meets intelligent engineering.
               </p>
             </div>
