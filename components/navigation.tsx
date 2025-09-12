@@ -70,15 +70,6 @@ export default function Navigation() {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            {/* Contact Button */}
-            <div className="hidden sm:block">
-              <Link href="/contact">
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 text-base font-semibold">
-                  Get In Touch
-                </Button>
-              </Link>
-            </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
