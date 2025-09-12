@@ -104,7 +104,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
           {orderedProjects.map((project, index) => (
             <div
               key={project.id}
@@ -143,16 +143,16 @@ export default function FeaturedProjects() {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+              <div className="p-8">
+                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                   {project.title}
                 </h3>
-                <p className="text-black/70 dark:text-white/70 mb-4 line-clamp-3">
+                <p className="text-black/70 dark:text-white/70 mb-6 line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Action Buttons */}
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <Link href={project.github} target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="flex items-center gap-2">
                       <Github className="h-4 w-4" />

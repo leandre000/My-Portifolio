@@ -9,7 +9,7 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white pt-16">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white pt-20">
       
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
@@ -22,8 +22,8 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-8 text-center flex flex-col items-center justify-center">
         <div className="w-full">
           {/* Profile Image */}
-          <div className="relative mb-4">
-            <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto">
+          <div className="relative mb-8">
+            <div className="relative w-52 h-52 md:w-64 md:h-64 mx-auto">
               <Image
                 src="/me.jpg"
                 alt="Leandre - Software Engineer"
@@ -31,7 +31,7 @@ export default function HeroSection() {
                 className="object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl"
                 priority
                 quality={95}
-                sizes="(max-width: 768px) 192px, 224px"
+                sizes="(max-width: 768px) 208px, 256px"
               />
               <div className="absolute inset-0 rounded-full"></div>
             </div>

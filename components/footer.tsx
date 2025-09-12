@@ -10,19 +10,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-3">
-              <img 
-                src="/me.jpg" 
-                alt="Leandre Portfolio Logo" 
-                className="w-10 h-10 rounded-full"
-                onError={(e) => {
-                  e.currentTarget.src = "/placeholder-logo.png"
-                }}
-              />
-              <div>
-                <h3 className="text-xl font-bold text-gray-900">Leandre</h3>
-                <p className="text-sm text-emerald-700 font-medium">Software Engineer</p>
-              </div>
+            <div className="mb-3">
+              <h3 className="text-xl font-bold text-gray-900">Leandre</h3>
+              <p className="text-sm text-emerald-700 font-medium">Software Engineer</p>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed max-w-md">
               Specializing in full-stack development and modern web technologies.

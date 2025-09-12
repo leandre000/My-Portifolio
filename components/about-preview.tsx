@@ -65,11 +65,11 @@ export default function AboutPreview() {
               </div>
 
               {/* Highlights Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {highlights.map((highlight, idx) => (
                   <div
                     key={highlight.title}
-                    className="flex items-start gap-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up"
+                    className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up"
                     style={{ animationDelay: `${0.4 + idx * 0.1}s` }}
                   >
                     <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${highlight.color} flex items-center justify-center text-white flex-shrink-0`}>

@@ -69,11 +69,11 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
               <div
                 key={testimonial.name}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Quote Icon */}
                 <div className="flex justify-end mb-4">
@@ -81,12 +81,12 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Content */}
-                <p className="text-gray-200 dark:text-gray-200 mb-6 leading-relaxed font-medium">
+                <p className="text-gray-200 dark:text-gray-200 mb-8 leading-relaxed font-medium">
                   "{testimonial.content}"
                 </p>
 
                 {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
