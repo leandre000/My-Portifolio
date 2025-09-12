@@ -13,7 +13,6 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
             <p className="text-xl text-black/70 dark:text-white/70">
               Full-stack developer passionate about AI, ML, and digital experiences.
             </p>
@@ -34,6 +33,8 @@ export default function AboutPage() {
                     alt="Leandre - Designer & Developer"
                     fill
                     className="object-cover"
+                    quality={95}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
 
