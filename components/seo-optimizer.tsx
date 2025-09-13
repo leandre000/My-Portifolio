@@ -15,7 +15,7 @@ export default function SEOOptimizer({
   title,
   description,
   keywords = [],
-  image = '/myportifolio.jpg',
+  image = '/myportfolio.png',
   type = 'website'
 }: SEOOptimizerProps) {
   const pathname = usePathname()

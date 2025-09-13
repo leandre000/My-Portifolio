@@ -34,7 +34,7 @@ export default function LoadingAnimation({ duration = 1500 }: LoadingAnimationPr
         <div className="mb-8">
           <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-2xl border-4 border-blue-600/20">
             <Image 
-              src="/me.jpg" 
+              src="/me.png" 
               alt="Shema Leandre - Software Developer" 
               width={96}
               height={96}

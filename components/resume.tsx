@@ -119,7 +119,7 @@ export default function Resume() {
             <div className="flex-shrink-0">
               <div className="w-32 h-32 relative">
                 <Image
-                  src="/me.jpg"
+                  src="/me.png"
                   alt="Leandre Shema - Software Developer"
                   fill
                   className="rounded-full object-cover border-4 border-white/30 shadow-lg"

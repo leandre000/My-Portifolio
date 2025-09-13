@@ -94,7 +94,7 @@ export default function AboutPreview() {
                 {/* Profile Image */}
                 <div className="relative w-64 h-64 mx-auto mb-6 group">
                   <Image
-                    src="/me.jpg"
+                    src="/me.png"
                     alt="Leandre - Software Developer"
                     fill
                     className="object-cover rounded-2xl border-4 border-emerald-500/20 shadow-2xl hover:shadow-3xl transition-all duration-300 group-hover:scale-105"

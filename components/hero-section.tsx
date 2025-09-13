@@ -25,7 +25,7 @@ export default function HeroSection() {
           <div className="relative mb-8">
             <div className="relative w-52 h-52 md:w-64 md:h-64 mx-auto">
               <Image
-                src="/me.jpg"
+                src="/me.png"
                 alt="Leandre - Software Engineer"
                 fill
                 className="object-cover rounded-full border-4 border-emerald-500/20 shadow-2xl"

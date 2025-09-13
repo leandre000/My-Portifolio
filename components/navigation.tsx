@@ -41,7 +41,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <div className="relative">
-              <img src="/myportfolio.jpg" alt="Leandre Portfolio Logo" className="w-10 h-10 rounded-full" onError={(e) => { e.currentTarget.src = "/placeholder-logo.png" }} />
+              <img src="/myportfolio.png" alt="Leandre Portfolio Logo" className="w-10 h-10 rounded-full" onError={(e) => { e.currentTarget.src = "/placeholder-logo.png" }} />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-2xl font-bold text-gray-900">Leandre</h1>

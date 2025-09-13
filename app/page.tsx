@@ -86,7 +86,7 @@ export default function Home() {
           "Software Developer", "Web Development", "React", "Next.js", 
           "Full Stack Developer", "Portfolio", "Developer", "Shema Leandre"
         ]}
-        image="/me.jpg"
+        image="/me.png"
       />
       
       {/* 1. Hero Section */}
