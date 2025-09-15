@@ -40,11 +40,8 @@ export default function HeroSection() {
           {/* Main Content */}
           <div className="text-center mb-8 animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 leading-tight">
-              Hi, I'm <span className="text-emerald-700 bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent">Leandre</span>
+              Hi, I'm <span className="text-emerald-700 bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent">Software Developer</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-emerald-700">
-              Software Developer
-            </h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
               Building innovative digital solutions with passion and precision.
             </p>
