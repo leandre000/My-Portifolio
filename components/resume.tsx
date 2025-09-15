@@ -219,7 +219,7 @@ export default function Resume() {
                     Software Developer - Echo Solutions Ltd
                   </h4>
                   <p className="text-gray-600">
-                    Working as a fullstack developer building web applications
+                    Working as a fullstack developer on multiple projects including Umuhinzilink, Healthlink, and land management systems
                   </p>
                 </div>
                 <span className="text-sm text-gray-500 bg-blue-100 px-3 py-1 rounded-full">
@@ -227,9 +227,12 @@ export default function Resume() {
                 </span>
               </div>
               <ul className="text-gray-700 space-y-1 ml-4">
-                <li>• Lead development team in creating innovative web applications</li>
-                <li>• Strategic planning and business development for tech solutions</li>
-                <li>• Focus on full-stack development and cybersecurity solutions</li>
+                <li>• Developed and maintained Umuhinzilink project - a comprehensive digital platform</li>
+                <li>• Worked on Healthlink project - healthcare management and patient tracking system</li>
+                <li>• Built and updated land management system with modern web technologies</li>
+                <li>• Implemented CI/CD pipelines: build, push to main branch, and automated redeployment</li>
+                <li>• Collaborated with cross-functional teams on system architecture and design decisions</li>
+                <li>• Ensured code quality through best practices and comprehensive testing</li>
               </ul>
             </div>
             
