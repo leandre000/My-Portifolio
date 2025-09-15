@@ -243,7 +243,7 @@ export default function Resume() {
                     Backend Developer - LOXOTECH TECH
                   </h4>
                   <p className="text-gray-600">
-                    Working on cutting-edge software solutions and backend development
+                    Working on cutting-edge software solutions including the National Land Authority system
                   </p>
                 </div>
                 <span className="text-sm text-gray-500 bg-blue-100 px-3 py-1 rounded-full">
@@ -251,10 +251,12 @@ export default function Resume() {
                 </span>
               </div>
               <ul className="text-gray-700 space-y-1 ml-4">
-                <li>• Backend development using modern technologies</li>
-                <li>• Collaborating with cross-functional teams</li>
+                <li>• Developing backend systems for National Land Authority project - comprehensive land management platform</li>
+                <li>• Backend development using modern technologies and frameworks</li>
+                <li>• Collaborating with cross-functional teams on system architecture</li>
                 <li>• Implementing best practices and coding standards</li>
                 <li>• Contributing to product architecture and design decisions</li>
+                <li>• Ensuring system reliability and performance for government-level applications</li>
               </ul>
             </div>
 

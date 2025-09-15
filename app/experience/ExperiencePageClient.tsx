@@ -26,12 +26,14 @@ const workExperience = [
     title: "Backend Developer",
     company: "LOXOTECH TECH",
     period: "2025 - Present",
-    description: "Working on cutting-edge software solutions and contributing to innovative projects in a dynamic tech environment.",
+    description: "Working on cutting-edge software solutions and contributing to innovative projects including the National Land Authority system.",
     responsibilities: [
-      "Backend development using modern technologies",
-      "Collaborating with cross-functional teams",
+      "Developing backend systems for National Land Authority project - comprehensive land management platform",
+      "Backend development using modern technologies and frameworks",
+      "Collaborating with cross-functional teams on system architecture",
       "Implementing best practices and coding standards",
       "Contributing to product architecture and design decisions",
+      "Ensuring system reliability and performance for government-level applications",
     ],
   },
   {
