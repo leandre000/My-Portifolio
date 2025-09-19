@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Software Developer", "Web Development", "React", "Next.js", "Node.js", 
     "Full Stack Developer", "Portfolio", "Developer", "Shema Leandre"
   ],
-  authors: [{ name: "Shema Leandre", url: "https://leandre-portfolio.vercel.app" }],
+  authors: [{ name: "Shema Leandre", url: "https://shemaleandre.vercel.app" }],
   creator: "Shema Leandre",
   publisher: "Shema Leandre",
   formatDetection: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://leandre-portfolio.vercel.app'),
+  metadataBase: new URL('https://shemaleandre.vercel.app'),
   alternates: {
     canonical: '/',
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Shema Leandre Portfolio",
     images: [
       {
-        url: "/me.jpg",
+        url: "/me.png",
         width: 1200,
         height: 630,
         alt: "Shema Leandre - Software Developer",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shema Leandre - Software Developer",
     description: "A young software developer passionate about building web applications",
-    images: ["/me.jpg"],
+    images: ["/me.png"],
     creator: "@shema_leandre",
   },
   robots: {

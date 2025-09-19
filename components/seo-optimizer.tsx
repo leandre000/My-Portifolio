@@ -15,7 +15,7 @@ export default function SEOOptimizer({
   title,
   description,
   keywords = [],
-  image = '/myportfolio.png',
+  image = '/me.png',
   type = 'website'
 }: SEOOptimizerProps) {
   const pathname = usePathname()
@@ -51,12 +51,12 @@ export default function SEOOptimizer({
 
     const ogImage = document.querySelector('meta[property="og:image"]')
     if (ogImage && image) {
-      ogImage.setAttribute('content', `https://leandre-portfolio.vercel.app${image}`)
+      ogImage.setAttribute('content', `https://shemaleandre.vercel.app${image}`)
     }
 
     const ogUrl = document.querySelector('meta[property="og:url"]')
     if (ogUrl) {
-      ogUrl.setAttribute('content', `https://leandre-portfolio.vercel.app${pathname}`)
+      ogUrl.setAttribute('content', `https://shemaleandre.vercel.app${pathname}`)
     }
 
     // Update Twitter tags
@@ -72,13 +72,13 @@ export default function SEOOptimizer({
 
     const twitterImage = document.querySelector('meta[name="twitter:image"]')
     if (twitterImage && image) {
-      twitterImage.setAttribute('content', `https://leandre-portfolio.vercel.app${image}`)
+      twitterImage.setAttribute('content', `https://shemaleandre.vercel.app${image}`)
     }
 
     // Update canonical URL
     const canonical = document.querySelector('link[rel="canonical"]')
     if (canonical) {
-      canonical.setAttribute('href', `https://leandre-portfolio.vercel.app${pathname}`)
+      canonical.setAttribute('href', `https://shemaleandre.vercel.app${pathname}`)
     }
 
     // Add structured data for breadcrumbs

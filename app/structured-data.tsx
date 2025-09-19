@@ -5,12 +5,14 @@ export default function StructuredData() {
     "name": "Shema Leandre",
     "jobTitle": "Software Developer",
     "description": "A young software developer passionate about building web applications and learning new technologies.",
-    "url": "https://leandre-portfolio.vercel.app",
-    "image": "https://leandre-portfolio.vercel.app/me.jpg",
+    "url": "https://shemaleandre.vercel.app",
+    "image": "https://shemaleandre.vercel.app/me.png",
     "sameAs": [
       "https://github.com/leandre000",
-      "https://linkedin.com/in/shema-leandre",
-      "https://twitter.com/shema_leandre"
+      "https://www.thecn.com/il314?event=eyJ0eXBlIjoic2hvd192aXNpdG9yX2xpc3QiLCJwYXJhbXMiOnsidG1zIjoxNzU3NTQ4ODAwfX0%3D",
+      "https://x.com/shema_Leandre",
+      "https://www.instagram.com/_fliicky_/",
+      "https://linkedin.com/in/shema-leandre"
     ],
     "knowsAbout": [
       "Web Development",

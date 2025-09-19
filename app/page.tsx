@@ -84,7 +84,8 @@ export default function Home() {
         description="Portfolio of Shema Leandre, a software developer passionate about building web applications and learning new technologies."
         keywords={[
           "Software Developer", "Web Development", "React", "Next.js", 
-          "Full Stack Developer", "Portfolio", "Developer", "Shema Leandre"
+          "Full Stack Developer", "Portfolio", "Developer", "Shema Leandre",
+          "SaaS", "Inventory Management", "Stoka"
         ]}
         image="/me.png"
       />
