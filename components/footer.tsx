@@ -59,6 +59,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-gray-900 mb-3 text-lg">Connect</h4>
             <div className="space-y-3">
+              {/* Email */}
               <a
                 href="mailto:Iamshemaleandre@gmail.com"
                 className="flex items-center gap-2 text-gray-700 hover:text-emerald-700 transition-colors duration-150 text-sm font-medium"
@@ -66,6 +67,7 @@ export default function Footer() {
                 <Icon icon="mdi:email" className="h-4 w-4" />
                 <span>Email</span>
               </a>
+              {/* GitHub */}
               <a
                 href="https://github.com/leandre000"
                 target="_blank"
@@ -75,6 +77,37 @@ export default function Footer() {
                 <Icon icon="mdi:github" className="h-4 w-4" />
                 <span>GitHub</span>
               </a>
+              {/* TheCN */}
+              <a
+                href="https://www.thecn.com/il314?event=eyJ0eXBlIjoic2hvd192aXNpdG9yX2xpc3QiLCJwYXJhbXMiOnsidG1zIjoxNzU3NTQ4ODAwfX0%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-700 hover:text-emerald-700 transition-colors duration-150 text-sm font-medium"
+              >
+                <Icon icon="mdi:earth" className="h-4 w-4" />
+                <span>TheCN</span>
+              </a>
+              {/* X (Twitter) */}
+              <a
+                href="https://x.com/shema_Leandre"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-700 hover:text-emerald-700 transition-colors duration-150 text-sm font-medium"
+              >
+                <Icon icon="mdi:twitter" className="h-4 w-4" />
+                <span>X (Twitter)</span>
+              </a>
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/_fliicky_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-700 hover:text-emerald-700 transition-colors duration-150 text-sm font-medium"
+              >
+                <Icon icon="mdi:instagram" className="h-4 w-4" />
+                <span>Instagram</span>
+              </a>
+              {/* LinkedIn last */}
               <a
                 href="https://linkedin.com/in/leandre000"
                 target="_blank"
@@ -83,15 +116,6 @@ export default function Footer() {
               >
                 <Icon icon="mdi:linkedin" className="h-4 w-4" />
                 <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://x.com/shema_Leandre"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 hover:text-emerald-700 transition-colors duration-150 text-sm font-medium"
-              >
-                <Icon icon="mdi:twitter" className="h-4 w-4" />
-                <span>Twitter</span>
               </a>
             </div>
           </div>
