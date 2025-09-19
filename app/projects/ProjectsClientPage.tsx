@@ -7,6 +7,17 @@ import { useRef, useState } from "react"
 
 // 1. Define new arrays for each section
 const completedProjects = [
+  // Stoka first, SaaS-focused description
+  {
+    id: 0,
+    title: "Stoka (SaaS)",
+    description: "SaaS platform enabling product- and service-based businesses to manage inventory, suppliers, purchases, and reports with real‑time analytics. Multi-tenant ready, role-based access, beautiful dashboards, and exports.",
+    image: "/blog/stoka-inventory.jpg",
+    year: 2025,
+    github: "https://github.com/leandre000/stoka",
+    live: "https://stoka-green.vercel.app/",
+    featured: true
+  },
   {
     id: 1,
     title: "ClinixPro",
@@ -45,15 +56,6 @@ const completedProjects = [
     year: 2023,
     github: "https://github.com/leandre000/Aguuka",
     live: "https://aguka-one.vercel.app/"
-  },
-  {
-    id: 5,
-    title: "Stoka",
-    description: "Stoka is an online inventory management system designed to help businesses track stock, sales, and analytics in real time. Features include product management, reporting, and seamless integrations.",
-    image: "/blog/stoka-inventory.jpg",
-    year: 2025,
-    github: "https://github.com/leandre000/stoka",
-    live: "https://stoka-green.vercel.app/"
   },
   {
     id: 6,
@@ -144,8 +146,8 @@ export default function ProjectsClientPage() {
         </p>
       </div>
 
-      {/* Navigation Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-16">
+      {/* Navigation Tabs (Sticky) */}
+      <div className="sticky top-20 z-30 bg-white/80 dark:bg-slate-900/60 backdrop-blur supports-[backdrop-filter]:backdrop-blur flex flex-wrap justify-center gap-4 mb-16 py-4 border-b border-slate-200/70 dark:border-slate-800/70">
         <button
           onClick={() => scrollToSection(completedRef)}
           className="px-6 py-3 text-lg font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -197,10 +199,12 @@ export default function ProjectsClientPage() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-48 rounded-lg"
-                  loading={index === 0 ? undefined : "lazy"}
+                  width={1200}
+                  height={800}
+                  className="object-cover w-full h-56 md:h-64 rounded-lg"
+                  quality={95}
+                  priority={index === 0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
