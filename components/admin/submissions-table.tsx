@@ -28,39 +28,47 @@ export function SubmissionsTable({ submissions }: SubmissionsTableProps) {
   );
 
   return (
-    <div className="rounded-md border">
+    <div className="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead>Time</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Email</TableHead>
-            <TableHead className="w-[400px]">Message</TableHead>
+          <TableRow className="hover:bg-slate-100/50 dark:hover:bg-slate-800/50">
+            <TableHead className="text-slate-600 dark:text-slate-400">Time</TableHead>
+            <TableHead className="text-slate-600 dark:text-slate-400">Name</TableHead>
+            <TableHead className="text-slate-600 dark:text-slate-400">Email</TableHead>
+            <TableHead className="text-slate-600 dark:text-slate-400 w-[400px]">Message</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {sortedSubmissions.map((submission, index) => (
-            <TableRow key={submission.timestamp + index}>
-              <TableCell className="font-mono text-sm">
+            <TableRow 
+              key={submission.timestamp + index}
+              className="hover:bg-slate-100/50 dark:hover:bg-slate-800/50"
+            >
+              <TableCell className="font-mono text-sm text-slate-500 dark:text-slate-400">
                 {formatDistanceToNow(new Date(submission.timestamp), { addSuffix: true })}
               </TableCell>
-              <TableCell>{submission.name}</TableCell>
+              <TableCell className="text-slate-700 dark:text-slate-300">
+                {submission.name}
+              </TableCell>
               <TableCell>
                 <a 
                   href={`mailto:${submission.email}`}
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                  className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
                 >
                   {submission.email}
                 </a>
               </TableCell>
-              <TableCell className="max-w-[400px] truncate">
+              <TableCell className="max-w-[400px] truncate text-slate-600 dark:text-slate-400">
                 {submission.message}
               </TableCell>
             </TableRow>
           ))}
           {sortedSubmissions.length === 0 && (
             <TableRow>
-              <TableCell colSpan={4} className="text-center text-muted-foreground h-24">
+              <TableCell 
+                colSpan={4} 
+                className="h-32 text-center text-slate-500 dark:text-slate-400"
+              >
                 No submissions found in data/contact-submissions.json
               </TableCell>
             </TableRow>
