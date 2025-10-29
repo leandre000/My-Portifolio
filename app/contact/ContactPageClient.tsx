@@ -33,10 +33,40 @@ export default function ContactPageClient() {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateForm = () => {
+    if (!formState.name.trim()) {
+      setError("Please enter your name.");
+      return false;
+    }
+    if (!formState.email.trim()) {
+      setError("Please enter your email address.");
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formState.email)) {
+      setError("Please enter a valid email address.");
+      return false;
+    }
+    if (!formState.subject.trim()) {
+      setError("Please enter a subject.");
+      return false;
+    }
+    if (!formState.message.trim()) {
+      setError("Please enter your message.");
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setError(null);
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -53,8 +83,8 @@ export default function ContactPageClient() {
       }
       setIsSubmitted(true);
       setFormState({ name: "", email: "", subject: "", message: "" });
-    } catch {
-      setError("Failed to send message. Please try again later.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
