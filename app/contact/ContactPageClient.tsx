@@ -24,6 +24,7 @@ export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [devMessage, setDevMessage] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -42,7 +43,14 @@ export default function ContactPageClient() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState)
       });
-      if (!res.ok) throw new Error("Failed to send message");
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data?.error || "Failed to send message");
+      // If server indicates dev fallback, surface a clearer message in the UI
+      if (data?.dev) {
+        setDevMessage(data.message || "Message saved locally (development fallback).");
+      } else {
+        setDevMessage(null);
+      }
       setIsSubmitted(true);
       setFormState({ name: "", email: "", subject: "", message: "" });
     } catch {
@@ -83,6 +91,11 @@ export default function ContactPageClient() {
                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
                   Thank you for reaching out. I'll get back to you within 24-32 hours.
                 </p>
+                {devMessage && (
+                  <div className="mt-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3 text-yellow-800 dark:text-yellow-300">
+                    <strong>Note:</strong> {devMessage}
+                  </div>
+                )}
                 <Button className="text-lg px-6 py-3" onClick={() => setIsSubmitted(false)}>
                   Send Another Message
                 </Button>

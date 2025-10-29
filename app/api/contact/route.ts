@@ -1,5 +1,7 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import fs from "fs/promises";
+import path from "path";
 
 export async function POST(request: Request) {
   try {
@@ -7,28 +9,56 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY;
 
-    // If there's no API key, don't fail hard in development — log the submission and return success.
+    // If there's no API key, don't fail hard in development — persist the submission and return success.
     if (!apiKey) {
-      // In environments where writing files isn't desirable (serverless), we simply log the submission.
-      // This makes the contact form usable during local development and prevents a 503 response.
-      // The message will still appear as 'sent' to the user in non-production setups.
-      // IMPORTANT: In production you should set RESEND_API_KEY to enable real email sending.
-      // Log the payload for debugging/recording.
-      // eslint-disable-next-line no-console
-      console.warn("[contact] RESEND_API_KEY not set — logging message instead of sending email:", {
-        name,
-        email,
-        message
-      });
+      try {
+        const dataDir = path.join(process.cwd(), "data");
+        const filePath = path.join(dataDir, "contact-submissions.json");
 
-      return NextResponse.json(
-        {
-          success: true,
-          dev: true,
-          message: "Email service not configured; submission logged on server (development fallback)."
-        },
-        { status: 200 }
-      );
+        // Ensure data directory exists
+        await fs.mkdir(dataDir, { recursive: true });
+
+        // Read existing submissions (if any)
+        let submissions: any[] = [];
+        try {
+          const existing = await fs.readFile(filePath, "utf-8");
+          submissions = JSON.parse(existing);
+          if (!Array.isArray(submissions)) submissions = [];
+        } catch (err) {
+          // File might not exist yet — ignore
+        }
+
+        const entry = {
+          name,
+          email,
+          message,
+          timestamp: new Date().toISOString()
+        };
+
+        submissions.push(entry);
+
+        await fs.writeFile(filePath, JSON.stringify(submissions, null, 2), "utf-8");
+
+        // eslint-disable-next-line no-console
+        console.warn("[contact] RESEND_API_KEY not set — saved submission to data/contact-submissions.json:", entry);
+
+        return NextResponse.json(
+          {
+            success: true,
+            dev: true,
+            message: "Email service not configured; submission saved to data/contact-submissions.json (development fallback).",
+            savedTo: "/data/contact-submissions.json"
+          },
+          { status: 200 }
+        );
+      } catch (fsErr) {
+        // eslint-disable-next-line no-console
+        console.error("[contact] failed to persist submission:", fsErr);
+        return NextResponse.json(
+          { error: "Email service not configured and failed to persist submission." },
+          { status: 500 }
+        );
+      }
     }
 
     // If we have an API key, initialize Resend and send the email.
