@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Scripted Test User",
+    "email": "script-test@example.com",
+    "message": "This is a test entry created by test-save-contact.js",
+    "timestamp": "2025-10-29T05:03:12.019Z"
+  }
+]

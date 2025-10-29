@@ -32,22 +32,30 @@ export async function POST(request: Request) {
           name,
           email,
           message,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         };
 
         submissions.push(entry);
 
-        await fs.writeFile(filePath, JSON.stringify(submissions, null, 2), "utf-8");
+        await fs.writeFile(
+          filePath,
+          JSON.stringify(submissions, null, 2),
+          "utf-8"
+        );
 
         // eslint-disable-next-line no-console
-        console.warn("[contact] RESEND_API_KEY not set — saved submission to data/contact-submissions.json:", entry);
+        console.warn(
+          "[contact] RESEND_API_KEY not set — saved submission to data/contact-submissions.json:",
+          entry
+        );
 
         return NextResponse.json(
           {
             success: true,
             dev: true,
-            message: "Email service not configured; submission saved to data/contact-submissions.json (development fallback).",
-            savedTo: "/data/contact-submissions.json"
+            message:
+              "Email service not configured; submission saved to data/contact-submissions.json (development fallback).",
+            savedTo: "/data/contact-submissions.json",
           },
           { status: 200 }
         );
@@ -55,7 +63,10 @@ export async function POST(request: Request) {
         // eslint-disable-next-line no-console
         console.error("[contact] failed to persist submission:", fsErr);
         return NextResponse.json(
-          { error: "Email service not configured and failed to persist submission." },
+          {
+            error:
+              "Email service not configured and failed to persist submission.",
+          },
           { status: 500 }
         );
       }
@@ -74,7 +85,7 @@ export async function POST(request: Request) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
-      `
+      `,
     });
 
     if (error) {
@@ -85,6 +96,9 @@ export async function POST(request: Request) {
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[contact] error sending email:", err);
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }
