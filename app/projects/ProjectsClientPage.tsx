@@ -7,36 +7,73 @@ import { useRef, useState } from "react"
 
 // 1. Define new arrays for each section
 const completedProjects = [
-  // Stoka first, SaaS-focused description
+  // Flagship Enterprise Projects
   {
-    id: 0,
+    id: 1,
+    title: "Urukundo - Echo Solution Charity Platform",
+    description: "Transformative charity and partnership platform empowering Echo Solution members and global partners to create meaningful social impact. Comprehensive donation management system featuring secure payment processing, transparent fund tracking, project showcases, and community engagement tools. Bridging the gap between generous hearts and those in need, fostering sustainable development and social change across communities.",
+    image: "/urukundo.png",
+    year: 2025,
+    github: "https://github.com/leandre000/urukundo-charity",
+    live: "https://urukundo.echo-solution.com/",
+    featured: true,
+    category: "Social Impact"
+  },
+  {
+    id: 2,
+    title: "Car Connect Rwanda",
+    description: "Revolutionary automotive marketplace transforming Rwanda's car industry. Full-stack platform featuring advanced search algorithms, real-time inventory management, secure payment integration, and comprehensive dealer dashboard. Built with modern tech stack delivering exceptional user experience and driving digital transformation in East Africa's automotive sector.",
+    image: "/car-connect.png",
+    year: 2025,
+    github: "https://github.com/leandre000/car-connect",
+    live: "https://www.car-connect.rw/",
+    featured: true,
+    category: "Enterprise Marketplace"
+  },
+  {
+    id: 3,
+    title: "Android APK Builder",
+    description: "Revolutionary cloud-based Android APK compilation platform. Advanced web-to-mobile converter featuring intelligent code optimization, automated build processes, and seamless deployment pipeline. Empowers developers and businesses to transform web applications into native Android apps with zero configuration, reducing development time by 80% and democratizing mobile app creation.",
+    image: "/apk-builder.png",
+    year: 2025,
+    github: "https://github.com/leandre000/android-apk-builder",
+    live: "https://android-apk-builder.vercel.app/",
+    featured: true,
+    category: "Mobile Development Platform"
+  },
+  // Additional Featured Projects
+  {
+    id: 4,
     title: "Stoka (SaaS)",
     description: "SaaS platform enabling product- and service-based businesses to manage inventory, suppliers, purchases, and reports with real‑time analytics. Multi-tenant ready, role-based access, beautiful dashboards, and exports.",
     image: "/blog/stoka-inventory.jpg",
     year: 2025,
     github: "https://github.com/leandre000/stoka",
     live: "https://stoka-green.vercel.app/",
-    featured: true
+    featured: true,
+    category: "SaaS Platform"
   },
   {
-    id: 1,
+    id: 5,
     title: "ClinixPro",
     description: "A comprehensive hospital management system with patient records, appointment scheduling, medical inventory management, and advanced analytics dashboard.",
     image: "/hospi.png",
     year: 2025,
     github: "https://github.com/leandre000/clinixpro",
     live: "https://clinix-pro-iota.vercel.app/",
-    featured: true
+    featured: true,
+    category: "Healthcare Technology"
   },
   {
-    id: 2,
+    id: 6,
     title: "Talent-Connect",
     description: "A modern talent management platform connecting skilled professionals with opportunities, featuring advanced matching algorithms and seamless user experience.",
     image: "/tale.png",
     year: 2025,
     github: "https://github.com/leandre000/talent-connect",
     live: "https://talent-connect-app.vercel.app/",
-    featured: true
+    featured: true,
+    category: "HR Technology"
   },
   {
     id: 3,
@@ -49,7 +86,7 @@ const completedProjects = [
     featured: true
   },
   {
-    id: 4,
+    id: 7,
     title: "Aguuka",
     description: "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
     image: "/aguka.jpg",
