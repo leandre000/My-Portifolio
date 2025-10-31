@@ -9,7 +9,7 @@ const projects = [
   {
     id: 1,
     title: "Urukundo - Echo Solution Charity Platform",
-    description: "🤝 Transformative charity and partnership platform empowering Echo Solution members and global partners to create meaningful social impact. Comprehensive donation management system featuring secure payment processing, transparent fund tracking, project showcases, and community engagement tools. Bridging the gap between generous hearts and those in need, fostering sustainable development and social change across communities.",
+    description:"Transformative charity and partnership platform empowering Echo Solution members and global partners to create meaningful social impact. Comprehensive donation management system featuring secure payment processing, transparent fund tracking, project showcases, and community engagement tools. Bridging the gap between generous hearts and those in need, fostering sustainable development and social change across communities.",
     image: "/urukundo.png",
     categories: ["Social Impact", "Charity Platform", "Community", "Partnerships"],
     year: 2025,
@@ -27,7 +27,7 @@ const projects = [
   {
     id: 2,
     title: "Car Connect Rwanda",
-    description: "🚗 Revolutionary automotive marketplace transforming Rwanda's car industry. Full-stack platform featuring advanced search algorithms, real-time inventory management, secure payment integration, and comprehensive dealer dashboard. Built with modern tech stack delivering exceptional user experience and driving digital transformation in East Africa's automotive sector.",
+    description:"Revolutionary automotive marketplace transforming Rwanda's car industry. Full-stack platform featuring advanced search algorithms, real-time inventory management, secure payment integration, and comprehensive dealer dashboard. Built with modern tech stack delivering exceptional user experience and driving digital transformation in East Africa's automotive sector.",
     image: "/car-connect.png",
     categories: ["Enterprise", "Fullstack", "Marketplace", "Fintech"],
     year: 2025,
@@ -45,7 +45,7 @@ const projects = [
   {
     id: 3,
     title: "Android APK Builder",
-    description: "🚀 Revolutionary cloud-based Android APK compilation platform. Advanced web-to-mobile converter featuring intelligent code optimization, automated build processes, and seamless deployment pipeline. Empowers developers and businesses to transform web applications into native Android apps with zero configuration, reducing development time by 80% and democratizing mobile app creation.",
+    description:"Revolutionary cloud-based Android APK compilation platform. Advanced web-to-mobile converter featuring intelligent code optimization, automated build processes, and seamless deployment pipeline. Empowers developers and businesses to transform web applications into native Android apps with zero configuration, reducing development time by 80% and democratizing mobile app creation.",
     image: "/apk-builder.png",
     categories: ["Mobile Development", "Cloud Platform", "DevOps", "SaaS"],
     year: 2025,
@@ -63,7 +63,7 @@ const projects = [
   {
     id: 4,
     title: "ClinixPro",
-    description: "A comprehensive hospital management system with patient records, appointment scheduling, and medical inventory management.",
+    description:"A comprehensive hospital management system with patient records, appointment scheduling, and medical inventory management.",
     image: "/hospi.png",
     categories: ["Web Development", "Fullstack", "Healthcare"],
     year: 2025,
