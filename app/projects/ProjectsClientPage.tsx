@@ -76,32 +76,37 @@ const completedProjects = [
     category: "HR Technology"
   },
   {
-    id: 3,
+    id: 7,
     title: "Geenzura",
     description: "Advanced inventory management system with real-time tracking, analytics dashboard, seamless integrations, and comprehensive reporting tools.",
     image: "/genzura.png",
     year: 2025,
     github: "https://github.com/leandre000/genzura",
     live: "https://genzura-tau.vercel.app/",
-    featured: true
+    featured: true,
+    category: "Inventory Management"
   },
   {
-    id: 7,
+    id: 8,
     title: "Aguuka",
     description: "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
     image: "/aguka.jpg",
     year: 2023,
     github: "https://github.com/leandre000/Aguuka",
-    live: "https://aguka-one.vercel.app/"
+    live: "https://aguka-one.vercel.app/",
+    featured: true,
+    category: "AI Technology"
   },
   {
-    id: 6,
+    id: 9,
     title: "EduPlatform",
     description: "A cutting-edge frontend for an online learning platform with modern UI/UX and responsive design.",
     image: "/edu.jpg",
     year: 2023,
     github: "https://github.com/leandre000/EduPlatform-Frontend",
-    live: "https://eduplatform-iota.vercel.app/"
+    live: "https://eduplatform-iota.vercel.app/",
+    featured: true,
+    category: "Education Technology"
   }
 ];
 
