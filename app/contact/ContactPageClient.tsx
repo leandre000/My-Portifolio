@@ -24,7 +24,9 @@ export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [devMessage, setDevMessage] = useState<string | null>(null);
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,29 +35,81 @@ export default function ContactPageClient() {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateField = (fieldName: string, value: string) => {
+    let errorMessage = "";
+    
+    switch (fieldName) {
+      case "name":
+        if (!value.trim()) {
+          errorMessage = "Name is required";
+        } else if (value.trim().length < 2) {
+          errorMessage = "Name must be at least 2 characters";
+        } else if (value.trim().length > 50) {
+          errorMessage = "Name must be less than 50 characters";
+        }
+        break;
+        
+      case "email":
+        if (!value.trim()) {
+          errorMessage = "Email is required";
+        } else {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            errorMessage = "Please enter a valid email address";
+          }
+        }
+        break;
+        
+      case "subject":
+        if (!value.trim()) {
+          errorMessage = "Subject is required";
+        } else if (value.trim().length < 3) {
+          errorMessage = "Subject must be at least 3 characters";
+        } else if (value.trim().length > 100) {
+          errorMessage = "Subject must be less than 100 characters";
+        }
+        break;
+        
+      case "message":
+        if (!value.trim()) {
+          errorMessage = "Message is required";
+        } else if (value.trim().length < 10) {
+          errorMessage = "Message must be at least 10 characters";
+        } else if (value.trim().length > 1000) {
+          errorMessage = "Message must be less than 1000 characters";
+        }
+        break;
+    }
+    
+    setFieldErrors((prev) => ({ ...prev, [fieldName]: errorMessage }));
+    return errorMessage === "";
+  };
+
   const validateForm = () => {
-    if (!formState.name.trim()) {
-      setError("Please enter your name.");
-      return false;
+    const errors: Record<string, string> = {};
+    let isValid = true;
+    
+    // Validate all fields
+    Object.keys(formState).forEach((fieldName) => {
+      const value = formState[fieldName as keyof typeof formState];
+      if (!validateField(fieldName, value)) {
+        isValid = false;
+      }
+    });
+    
+    // Mark all fields as touched
+    setTouched({
+      name: true,
+      email: true,
+      subject: true,
+      message: true
+    });
+    
+    if (!isValid) {
+      setError("Please fix the errors above before submitting.");
     }
-    if (!formState.email.trim()) {
-      setError("Please enter your email address.");
-      return false;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formState.email)) {
-      setError("Please enter a valid email address.");
-      return false;
-    }
-    if (!formState.subject.trim()) {
-      setError("Please enter a subject.");
-      return false;
-    }
-    if (!formState.message.trim()) {
-      setError("Please enter your message.");
-      return false;
-    }
-    return true;
+    
+    return isValid;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -3,24 +3,130 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
+// Simple in-memory rate limiting (for production, use Redis or similar)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+
+function rateLimit(ip: string): boolean {
+  const now = Date.now();
+  const windowMs = 15 * 60 * 1000; // 15 minutes
+  const maxRequests = 5; // Max 5 requests per 15 minutes
+  
+  const record = rateLimitMap.get(ip);
+  
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + windowMs });
+    return true;
+  }
+  
+  if (record.count >= maxRequests) {
+    return false;
+  }
+  
+  record.count++;
+  return true;
+}
+
+function sanitizeInput(input: string): string {
+  return input
+    .trim()
+    .replace(/[<>"'&]/g, (match) => {
+      const entities: Record<string, string> = {
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        '&': '&amp;'
+      };
+      return entities[match] || match;
+    })
+    .substring(0, 2000); // Prevent extremely long inputs
+}
+
+function validateEmail(email: string): boolean {
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  return emailRegex.test(email) && email.length <= 254;
+}
+
+function detectSpam(content: string): boolean {
+  const spamPatterns = [
+    /\b(viagra|cialis|casino|lottery|winner|congratulations)\b/i,
+    /\b(click here|act now|limited time|urgent)\b/i,
+    /(http[s]?:\/\/[^\s]+){3,}/g, // Multiple URLs
+    /[A-Z]{10,}/, // Excessive caps
+    /(..)\1{4,}/ // Repeated characters
+  ];
+  
+  return spamPatterns.some(pattern => pattern.test(content));
+}
+
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { name, email, subject, message } = body;
-
-    // Validate required fields
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    // Rate limiting
+    const forwarded = request.headers.get("x-forwarded-for");
+    const ip = forwarded ? forwarded.split(",")[0] : "127.0.0.1";
+    
+    if (!rateLimit(ip)) {
       return NextResponse.json(
-        { error: "Name, email, and message are required fields." },
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
+    const body = await request.json();
+    const { name, email, subject, message, timestamp, userAgent, referrer } = body;
+
+    // Sanitize inputs
+    const sanitizedName = sanitizeInput(name || "");
+    const sanitizedEmail = sanitizeInput(email || "");
+    const sanitizedSubject = sanitizeInput(subject || "");
+    const sanitizedMessage = sanitizeInput(message || "");
+
+    // Validation with detailed error messages
+    const fieldErrors: Record<string, string> = {};
+    
+    if (!sanitizedName) {
+      fieldErrors.name = "Name is required";
+    } else if (sanitizedName.length < 2) {
+      fieldErrors.name = "Name must be at least 2 characters";
+    } else if (sanitizedName.length > 50) {
+      fieldErrors.name = "Name must be less than 50 characters";
+    }
+    
+    if (!sanitizedEmail) {
+      fieldErrors.email = "Email is required";
+    } else if (!validateEmail(sanitizedEmail)) {
+      fieldErrors.email = "Please enter a valid email address";
+    }
+    
+    if (!sanitizedSubject) {
+      fieldErrors.subject = "Subject is required";
+    } else if (sanitizedSubject.length < 3) {
+      fieldErrors.subject = "Subject must be at least 3 characters";
+    } else if (sanitizedSubject.length > 100) {
+      fieldErrors.subject = "Subject must be less than 100 characters";
+    }
+    
+    if (!sanitizedMessage) {
+      fieldErrors.message = "Message is required";
+    } else if (sanitizedMessage.length < 10) {
+      fieldErrors.message = "Message must be at least 10 characters";
+    } else if (sanitizedMessage.length > 1000) {
+      fieldErrors.message = "Message must be less than 1000 characters";
+    }
+    
+    if (Object.keys(fieldErrors).length > 0) {
+      return NextResponse.json(
+        { error: "Validation failed", fieldErrors },
         { status: 400 }
       );
     }
 
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    // Spam detection
+    const fullContent = `${sanitizedName} ${sanitizedEmail} ${sanitizedSubject} ${sanitizedMessage}`;
+    if (detectSpam(fullContent)) {
+      console.warn(`[contact] Potential spam detected from ${ip}:`, { name: sanitizedName, email: sanitizedEmail });
       return NextResponse.json(
-        { error: "Please enter a valid email address." },
+        { error: "Message could not be processed. Please try again." },
         { status: 400 }
       );
     }
