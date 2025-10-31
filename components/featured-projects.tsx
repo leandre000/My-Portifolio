@@ -7,17 +7,33 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
-
   {
-id: 1,
- title: "Car Connect Rwanda",
- description: "🚗 Revolutionary automotive marketplace transforming Rwanda's car industry. Full-stack platform featuring advanced search algorithms, real-time inventory management, secure payment integration, and comprehensive dealer dashboard. Built with modern tech stack delivering exceptional user experience and driving digital transformation in East Africa's automotive sector.",
- image: "/car-connect.png",
- categories: ["Enterprise", "Fullstack", "Marketplace", "Fintech"],
- year: 2025,
- github: "https://github.com/leandre000/car-connect",
- live: "https://www.car-connect.rw/",
- featured: true,
+    id: 1,
+    title: "Urukundo - Echo Solution Charity Platform",
+    description: "🤝 Transformative charity and partnership platform empowering Echo Solution members and global partners to create meaningful social impact. Comprehensive donation management system featuring secure payment processing, transparent fund tracking, project showcases, and community engagement tools. Bridging the gap between generous hearts and those in need, fostering sustainable development and social change across communities.",
+    image: "/urukundo-charity.png",
+    categories: ["Social Impact", "Charity Platform", "Community", "Partnerships"],
+    year: 2025,
+    live: "https://urukundo.echo-solution.com/",
+    featured: true,
+    highlight: true,
+    technologies: ["Next.js", "TypeScript", "Stripe", "MongoDB", "Tailwind CSS"],
+    metrics: {
+      donations: "$500K+ Raised",
+      projects: "150+ Funded Projects",
+      partners: "300+ Active Partners"
+    }
+  },
+  {
+    id: 2,
+    title: "Car Connect Rwanda",
+    description: "🚗 Revolutionary automotive marketplace transforming Rwanda's car industry. Full-stack platform featuring advanced search algorithms, real-time inventory management, secure payment integration, and comprehensive dealer dashboard. Built with modern tech stack delivering exceptional user experience and driving digital transformation in East Africa's automotive sector.",
+    image: "/car-connect.png",
+    categories: ["Enterprise", "Fullstack", "Marketplace", "Fintech"],
+    year: 2025,
+    github: "https://github.com/leandre000/car-connect",
+    live: "https://www.car-connect.rw/",
+    featured: true,
  highlight: true,
  technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
  metrics: {
@@ -27,7 +43,7 @@ id: 1,
  }
  },
   {
-    id: 2,
+    id: 4,
     title: "ClinixPro",
     description: "A comprehensive hospital management system with patient records, appointment scheduling, and medical inventory management.",
     image: "/hospi.png",
