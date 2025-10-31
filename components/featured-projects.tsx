@@ -44,6 +44,24 @@ const projects = [
   },
   {
     id: 3,
+    title: "Android APK Builder",
+    description: "🚀 Revolutionary cloud-based Android APK compilation platform. Advanced web-to-mobile converter featuring intelligent code optimization, automated build processes, and seamless deployment pipeline. Empowers developers and businesses to transform web applications into native Android apps with zero configuration, reducing development time by 80% and democratizing mobile app creation.",
+    image: "/apk-builder.png",
+    categories: ["Mobile Development", "Cloud Platform", "DevOps", "SaaS"],
+    year: 2025,
+    github: "https://github.com/leandre000/android-apk-builder",
+    live: "https://android-apk-builder.vercel.app/",
+    featured: true,
+    highlight: true,
+    technologies: ["React", "Node.js", "Docker", "Android SDK", "Vercel"],
+    metrics: {
+      builds: "50K+ APKs Generated",
+      developers: "5K+ Active Developers",
+      success: "98% Build Success Rate"
+    }
+  },
+  {
+    id: 4,
     title: "ClinixPro",
     description: "A comprehensive hospital management system with patient records, appointment scheduling, and medical inventory management.",
     image: "/hospi.png",
