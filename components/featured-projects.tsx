@@ -37,11 +37,11 @@ const projects = [
     highlight: true,
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
     metrics: {
-    users: "10K+ Active Users",
-    transactions: "$2M+ Processed",
-    dealers: "500+ Verified Dealers"
+      users: "10K+ Active Users",
+      transactions: "$2M+ Processed",
+      dealers: "500+ Verified Dealers"
     }
- },
+  },
   {
     id: 3,
     title: "ClinixPro",
