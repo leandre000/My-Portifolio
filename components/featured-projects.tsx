@@ -7,8 +7,27 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
+
   {
-    id: 1,
+id: 1,
+ title: "Car Connect Rwanda",
+ description: "🚗 Revolutionary automotive marketplace transforming Rwanda's car industry. Full-stack platform featuring advanced search algorithms, real-time inventory management, secure payment integration, and comprehensive dealer dashboard. Built with modern tech stack delivering exceptional user experience and driving digital transformation in East Africa's automotive sector.",
+ image: "/car-connect.png",
+ categories: ["Enterprise", "Fullstack", "Marketplace", "Fintech"],
+ year: 2025,
+ github: "https://github.com/leandre000/car-connect",
+ live: "https://www.car-connect.rw/",
+ featured: true,
+ highlight: true,
+ technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
+ metrics: {
+ users: "10K+ Active Users",
+ transactions: "$2M+ Processed",
+ dealers: "500+ Verified Dealers"
+ }
+ },
+  {
+    id: 2,
     title: "ClinixPro",
     description: "A comprehensive hospital management system with patient records, appointment scheduling, and medical inventory management.",
     image: "/hospi.png",
@@ -19,7 +38,7 @@ const projects = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     title: "Talent-Connect",
     description: "A modern talent management platform connecting skilled professionals with opportunities, featuring advanced matching algorithms and seamless user experience.",
     image: "/tale.png",
@@ -30,7 +49,7 @@ const projects = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Geenzura",
     description: "Advanced inventory management system with real-time tracking, analytics dashboard, and seamless integrations.",
     image: "/genzura.png",
@@ -41,7 +60,7 @@ const projects = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "Aguuka",
     description: "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
     image: "/aguka.jpg",
@@ -51,7 +70,7 @@ const projects = [
     live: "https://aguka-one.vercel.app/"
   },
   {
-    id: 5,
+    id: 6,
     title: "Stoka",
     description: "Stoka is an online inventory management system designed to help businesses track stock, sales, and analytics in real time. Features include product management, reporting, and seamless integrations.",
     image: "/blog/stoka-inventory.jpg",
@@ -61,7 +80,7 @@ const projects = [
     live: "https://stoka-green.vercel.app/"
   },
   {
-    id: 6,
+    id: 7,
     title: "EduPlatform",
     description: "A cutting-edge frontend for an online learning platform with modern UI/UX and responsive design.",
     image: "/edu.jpg",
