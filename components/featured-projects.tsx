@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -11,9 +10,10 @@ const projects = [
     id: 1,
     title: "Urukundo - Echo Solution Charity Platform",
     description: "🤝 Transformative charity and partnership platform empowering Echo Solution members and global partners to create meaningful social impact. Comprehensive donation management system featuring secure payment processing, transparent fund tracking, project showcases, and community engagement tools. Bridging the gap between generous hearts and those in need, fostering sustainable development and social change across communities.",
-    image: "/urukundo-charity.png",
+    image: "/urukundo.png",
     categories: ["Social Impact", "Charity Platform", "Community", "Partnerships"],
     year: 2025,
+    github: "https://github.com/leandre000/urukundo-charity",
     live: "https://urukundo.echo-solution.com/",
     featured: true,
     highlight: true,
@@ -34,16 +34,16 @@ const projects = [
     github: "https://github.com/leandre000/car-connect",
     live: "https://www.car-connect.rw/",
     featured: true,
- highlight: true,
- technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
- metrics: {
- users: "10K+ Active Users",
- transactions: "$2M+ Processed",
- dealers: "500+ Verified Dealers"
- }
+    highlight: true,
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "AWS"],
+    metrics: {
+    users: "10K+ Active Users",
+    transactions: "$2M+ Processed",
+    dealers: "500+ Verified Dealers"
+    }
  },
   {
-    id: 4,
+    id: 3,
     title: "ClinixPro",
     description: "A comprehensive hospital management system with patient records, appointment scheduling, and medical inventory management.",
     image: "/hospi.png",
@@ -54,7 +54,7 @@ const projects = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Talent-Connect",
     description: "A modern talent management platform connecting skilled professionals with opportunities, featuring advanced matching algorithms and seamless user experience.",
     image: "/tale.png",
@@ -65,7 +65,7 @@ const projects = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "Geenzura",
     description: "Advanced inventory management system with real-time tracking, analytics dashboard, and seamless integrations.",
     image: "/genzura.png",
@@ -76,7 +76,7 @@ const projects = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     title: "Aguuka",
     description: "Aguuka is a fullstack MERN app with AI integration for smarter content creation and task automation.",
     image: "/aguka.jpg",
@@ -86,7 +86,7 @@ const projects = [
     live: "https://aguka-one.vercel.app/"
   },
   {
-    id: 6,
+    id: 7,
     title: "Stoka",
     description: "Stoka is an online inventory management system designed to help businesses track stock, sales, and analytics in real time. Features include product management, reporting, and seamless integrations.",
     image: "/blog/stoka-inventory.jpg",
@@ -96,7 +96,7 @@ const projects = [
     live: "https://stoka-green.vercel.app/"
   },
   {
-    id: 7,
+    id: 8,
     title: "EduPlatform",
     description: "A cutting-edge frontend for an online learning platform with modern UI/UX and responsive design.",
     image: "/edu.jpg",
