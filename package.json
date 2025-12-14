@@ -70,7 +70,7 @@
     "input-otp": "^1.1.0",
     "@iconify/react": "^4.1.1",
     "lucide-react": "^0.330.0",
-    "next": "15.4.10",
+    "next": "^15.4.1",
     "next-themes": "^0.2.1",
     "pdfjs-dist": "^3.4.120",
     "postcss": "^8.4.35",
