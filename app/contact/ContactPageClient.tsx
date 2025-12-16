@@ -128,7 +128,19 @@ export default function ContactPageClient() {
         body: JSON.stringify(formState)
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Failed to send message");
+      if (!res.ok) {
+        // Handle field errors from server
+        if (data?.fieldErrors) {
+          setFieldErrors(data.fieldErrors);
+          setError(data?.error || "Please fix the errors above.");
+          setIsSubmitting(false);
+          return;
+        } else {
+          setError(data?.error || "Failed to send message");
+          setIsSubmitting(false);
+          return;
+        }
+      }
       // If server indicates dev fallback, surface a clearer message in the UI
       if (data?.dev) {
         setDevMessage(data.message || "Message saved locally (development fallback).");
@@ -137,6 +149,7 @@ export default function ContactPageClient() {
       }
       setIsSubmitted(true);
       setFormState({ name: "", email: "", subject: "", message: "" });
+      setFieldErrors({});
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to send message. Please try again later.");
     } finally {
@@ -203,9 +216,16 @@ export default function ContactPageClient() {
                       required
                       value={formState.name}
                       onChange={handleChange}
-                      className="text-lg py-3"
+                      onBlur={() => {
+                        setTouched((prev) => ({ ...prev, name: true }));
+                        validateField("name", formState.name);
+                      }}
+                      className={`text-lg py-3 ${fieldErrors.name ? "border-red-500" : ""}`}
                       placeholder="Your full name"
                     />
+                    {fieldErrors.name && (touched.name || error) && (
+                      <p className="text-sm text-red-600 dark:text-red-400">{fieldErrors.name}</p>
+                    )}
                   </div>
                   <div className="space-y-3">
                     <label htmlFor="email" className="text-lg font-semibold text-slate-700 dark:text-slate-300">
@@ -218,9 +238,16 @@ export default function ContactPageClient() {
                       required
                       value={formState.email}
                       onChange={handleChange}
-                      className="text-lg py-3"
+                      onBlur={() => {
+                        setTouched((prev) => ({ ...prev, email: true }));
+                        validateField("email", formState.email);
+                      }}
+                      className={`text-lg py-3 ${fieldErrors.email ? "border-red-500" : ""}`}
                       placeholder="your.email@example.com"
                     />
+                    {fieldErrors.email && (touched.email || error) && (
+                      <p className="text-sm text-red-600 dark:text-red-400">{fieldErrors.email}</p>
+                    )}
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -234,9 +261,16 @@ export default function ContactPageClient() {
                     required
                     value={formState.subject}
                     onChange={handleChange}
-                    className="text-lg py-3"
+                    onBlur={() => {
+                      setTouched((prev) => ({ ...prev, subject: true }));
+                      validateField("subject", formState.subject);
+                    }}
+                    className={`text-lg py-3 ${fieldErrors.subject ? "border-red-500" : ""}`}
                     placeholder="What's this about?"
                   />
+                  {fieldErrors.subject && (touched.subject || error) && (
+                    <p className="text-sm text-red-600 dark:text-red-400">{fieldErrors.subject}</p>
+                  )}
                 </div>
                 <div className="space-y-3">
                   <label htmlFor="message" className="text-lg font-semibold text-slate-700 dark:text-slate-300">
@@ -248,9 +282,16 @@ export default function ContactPageClient() {
                     required
                     value={formState.message}
                     onChange={handleChange}
-                    className="text-lg py-3 min-h-[120px]"
+                    onBlur={() => {
+                      setTouched((prev) => ({ ...prev, message: true }));
+                      validateField("message", formState.message);
+                    }}
+                    className={`text-lg py-3 min-h-[120px] ${fieldErrors.message ? "border-red-500" : ""}`}
                     placeholder="Tell me about your project or inquiry..."
                   />
+                  {fieldErrors.message && (touched.message || error) && (
+                    <p className="text-sm text-red-600 dark:text-red-400">{fieldErrors.message}</p>
+                  )}
                 </div>
                 <Button
                   type="submit"
